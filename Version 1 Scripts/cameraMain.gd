@@ -4,11 +4,15 @@ extends Camera3D
 @export var freeMouseSensitivity := 1
 @export var orbitMouseSensitivity := 0.5
 @export var orbitPivot : Node3D
+@export var orbitZoomSensitivity := 0.01
+@export var orbitMinZoom := 1.0
+@export var orbitMaxZoom := 10.0
+
 
 var mouse_delta := Vector2.ZERO
 var mouse_lock := false
 var camera_state := 0
-var orbit_distance := 1.0
+var orbit_zoom := 3.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,10 +33,9 @@ func _input(event: InputEvent) -> void:
 				mouse_lock = true
 		
 		# Changing camera
-		if Input.is_action_just_pressed("change_camera"):
+		if Input.is_action_just_pressed("changeCamera"):
 			camera_state += 1
 			camera_state %= 2
-			print("change camera to", camera_state)
 			
 			if camera_state == 0: # Free cam
 				print(global_rotation)
@@ -42,7 +45,7 @@ func _input(event: InputEvent) -> void:
 			
 			elif camera_state == 1: # Orbit cam
 				set_as_top_level(false)
-				position = Vector3(0, 0.5, -3)
+				position = Vector3(0, 0, -orbit_zoom)
 				rotation = Vector3(PI, 0, PI)
 				
 			elif camera_state == 2: # Cockpit cam
@@ -72,17 +75,17 @@ func freeCameraUpdate(delta: float) -> void:
 	var forward := Vector3(-sin(rotation.y), 0, -cos(rotation.y))
 	var right := Vector3(cos(rotation.y), 0, -sin(rotation.y))
 	
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_pressed("moveForward"):
 		move_delta += forward
-	if Input.is_action_pressed("move_backwards"):
+	if Input.is_action_pressed("moveBackwards"):
 		move_delta -= forward
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("moveRight"):
 		move_delta += right
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("moveLeft"):
 		move_delta -= right
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("moveUp"):
 		move_delta.y += 1
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("moveDown"):
 		move_delta.y -= 1
 
 	position += move_delta * moveSpeed * delta
@@ -101,6 +104,14 @@ func orbitCameraUpdate(delta: float):
 	var radialDistanceX = mouse_delta.x * orbitMouseSensitivity * delta
 	var radialDistanceY = mouse_delta.y * orbitMouseSensitivity * delta
 	orbitPivot.updateRotation(radialDistanceX, radialDistanceY)
+	if Input.is_action_pressed("orbitZoomIn"):
+		orbit_zoom -= orbitZoomSensitivity
+		orbit_zoom = clamp(orbit_zoom, orbitMinZoom, orbitMaxZoom)
+		position = Vector3(0, 0, -orbit_zoom)
+	elif Input.is_action_pressed("orbitZoomOut"):
+		orbit_zoom += orbitZoomSensitivity
+		orbit_zoom = clamp(orbit_zoom, orbitMinZoom, orbitMaxZoom)
+		position = Vector3(0, 0, -orbit_zoom)
 	
 func cockpitCameraUpdate(delta: float):
 	"""
