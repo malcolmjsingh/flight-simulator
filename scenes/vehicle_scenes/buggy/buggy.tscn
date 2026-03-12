@@ -1,0 +1,194 @@
+[gd_scene load_steps=13 format=3 uid="uid://8cos8r62iagj"]
+
+[ext_resource type="Script" uid="uid://dsohhifurdtup" path="res://scenes/vehicle_scenes/buggy/scripts/buggy.gd" id="1_84kpu"]
+[ext_resource type="Texture2D" uid="uid://byofqm11u6oy2" path="res://scenes/map_scenes/main_map/textures/SpeedometerBackdrop.png" id="2_vi2ms"]
+[ext_resource type="Texture2D" uid="uid://dqjutaewotmxo" path="res://scenes/map_scenes/main_map/textures/SpeedometerForeground.png" id="3_gj4v3"]
+[ext_resource type="FontFile" uid="uid://12hhfqg4c1oj" path="res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf" id="4_ey8w5"]
+[ext_resource type="Texture2D" uid="uid://dfijoc8m112ci" path="res://scenes/map_scenes/main_map/textures/CompassNOCOLOR.png" id="5_54ex5"]
+[ext_resource type="Script" uid="uid://365psumshjib" path="res://scenes/map_scenes/main_map/scripts/compass_texture.gd" id="6_23f0w"]
+[ext_resource type="Texture2D" uid="uid://bs5lq7wp8c2qo" path="res://scenes/map_scenes/main_map/textures/BarMeterBar.png" id="7_p837v"]
+[ext_resource type="Script" uid="uid://dwx87u72cd5ko" path="res://scenes/map_scenes/main_map/scripts/altitude_meter_background.gd" id="8_ktsvj"]
+[ext_resource type="Texture2D" uid="uid://dtngecne5hauo" path="res://scenes/map_scenes/main_map/textures/BarMeterForeground.png" id="9_oekpm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7g61j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0j3q"]
+size = Vector3(1.2, 0.5, 2.1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r6bgw"]
+
+[node name="Buggy" type="VehicleBody3D"]
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.5, 0)
+script = ExtResource("1_84kpu")
+
+[node name="BuggyMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("BoxMesh_7g61j")
+
+[node name="BuggyCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_u0j3q")
+
+[node name="BuggyFL" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 1)
+use_as_traction = true
+use_as_steering = true
+wheel_rest_length = 0.2
+wheel_friction_slip = 5.0
+suspension_stiffness = 50.0
+
+[node name="WheelMeshFL" type="MeshInstance3D" parent="BuggyFL"]
+transform = Transform3D(-4.371139e-08, -0.1, 0, 1, -4.371139e-09, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_r6bgw")
+
+[node name="BuggyFR" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 1)
+use_as_traction = true
+use_as_steering = true
+wheel_rest_length = 0.2
+wheel_friction_slip = 5.0
+suspension_stiffness = 50.0
+
+[node name="WheelMeshFR" type="MeshInstance3D" parent="BuggyFR"]
+transform = Transform3D(-4.371139e-08, -0.1, 0, 1, -4.371139e-09, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_r6bgw")
+
+[node name="BuggyBR" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -1)
+use_as_traction = true
+wheel_rest_length = 0.2
+wheel_friction_slip = 5.0
+suspension_stiffness = 50.0
+
+[node name="WheelMeshBR" type="MeshInstance3D" parent="BuggyBR"]
+transform = Transform3D(-4.371139e-08, -0.1, 0, 1, -4.371139e-09, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_r6bgw")
+
+[node name="BuggyBL" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, -1)
+use_as_traction = true
+wheel_rest_length = 0.2
+wheel_friction_slip = 5.0
+suspension_stiffness = 50.0
+
+[node name="WheelMeshBL" type="MeshInstance3D" parent="BuggyBL"]
+transform = Transform3D(-4.371139e-08, -0.1, 0, 1, -4.371139e-09, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_r6bgw")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Speedometer Control" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -220.0
+offset_right = 210.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Speedometer" type="TextureProgressBar" parent="UI/Speedometer Control"]
+layout_mode = 0
+offset_right = 420.0
+offset_bottom = 220.0
+max_value = 1.0
+step = 0.0
+fill_mode = 4
+radial_initial_angle = 270.0
+radial_fill_degrees = 180.0
+stretch_margin_left = 30
+texture_under = ExtResource("2_vi2ms")
+texture_progress = ExtResource("3_gj4v3")
+
+[node name="SpeedometerText" type="Label" parent="UI/Speedometer Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -22.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_ey8w5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Compass Control" type="Control" parent="UI"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_bottom = 19.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="Compass Texture" type="TextureRect" parent="UI/Compass Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1080.0
+offset_right = 1080.0
+offset_bottom = 75.0
+grow_horizontal = 2
+texture = ExtResource("5_54ex5")
+stretch_mode = 1
+script = ExtResource("6_23f0w")
+textureWidth = 720
+
+[node name="AltitudeMeter Control" type="Control" parent="UI"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.99988
+offset_top = -372.99997
+offset_right = -27.499878
+offset_bottom = -75.5
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.25, 1.25)
+
+[node name="AltitudeMeterText" type="Label" parent="UI/AltitudeMeter Control"]
+layout_mode = 0
+offset_left = 11.999902
+offset_top = 275.19995
+offset_right = 51.9999
+offset_bottom = 298.19995
+
+[node name="AltitudeMeterBackground" type="TextureRect" parent="UI/AltitudeMeter Control"]
+clip_contents = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = -221.0
+offset_right = 208.0
+offset_bottom = 2779.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_p837v")
+stretch_mode = 1
+script = ExtResource("8_ktsvj")
+textureHeight = 3000.0
+
+[node name="AltitudeMeterForeground" type="TextureRect" parent="UI/AltitudeMeter Control"]
+layout_mode = 1
+offset_right = 250.0
+offset_bottom = 1190.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_oekpm")

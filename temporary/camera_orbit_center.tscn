@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1hv0tkbajdqp"]
+
+[ext_resource type="Script" uid="uid://bc2a0a3ugivdl" path="res://scenes/map_scenes/main_map/scripts/camera_orbit_center.gd" id="1_dnxfv"]
+[ext_resource type="Script" uid="uid://cyqlp0drjvfkl" path="res://scenes/map_scenes/main_map/scripts/camera_3d.gd" id="2_ww3ao"]
+
+[node name="CameraOrbitCenter" type="Node3D"]
+visible = false
+script = ExtResource("1_dnxfv")
+
+[node name="CameraMain" type="Camera3D" parent="." node_paths=PackedStringArray("orbitPivot")]
+visible = false
+script = ExtResource("2_ww3ao")
+moveSpeed = 5.0
+orbitPivot = NodePath("..")
+
+[node name="debug mesh" type="MeshInstance3D" parent="."]
+visible = false
