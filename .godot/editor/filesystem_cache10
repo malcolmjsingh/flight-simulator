@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773422063
+::res://::1773422066
 README.md::TextFile::-1::1773421899::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773318621
 ::res://addons/godot_aerodynamic_physics/::1773318621
@@ -159,7 +159,7 @@ vector_3d.gdshader::Shader::5270827816771410601::1773318621::0::1::::<><><>0<>0<
 ::res://general_resources/text/::1773318621
 ::res://general_resources/textures/::1773318621
 ::res://general_resources/textures/GUI/::1773318621
-::res://scenes/::1773318621
+::res://scenes/::1773423619
 ::res://scenes/map_scenes/::1773318621
 ::res://scenes/map_scenes/main_map/::1773318621
 main_map.tscn::PackedScene::7230465751894859795::1773318621::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
@@ -193,10 +193,13 @@ JetBrainsMonoNL-Light.ttf::FontFile::7214475863585000427::1773318621::1773318621
 diagram_test.tscn::PackedScene::9149607177363196632::1773318621::0::1::::<><><>0<>0<><>::uid://2inmkt08qdry::::res://scenes/menu_scenes/diagram_test/scripts/diagram_test.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
 ::res://scenes/menu_scenes/diagram_test/scripts/::1773318621
 diagram_test.gd::GDScript::1912425106457578326::1773318621::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/menu_scenes/main_menu/::1773318621
-main_menu.tscn::PackedScene::1492468736166146198::1773318621::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
-::res://scenes/menu_scenes/main_menu/scripts/::1773318621
-main_menu.gd::GDScript::1375488518849932361::1773318621::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/menu_scenes/main_menu/::1773423470
+main_menu.tscn::PackedScene::1492468736166146198::1773423470::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
+::res://scenes/menu_scenes/main_menu/scripts/::1773423159
+main_menu.gd::GDScript::1375488518849932361::1773423159::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/utlity_scenes/::1773423648
+::res://scenes/utlity_scenes/vehicle_spawn_handler/::1773423689
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1773423689::0::1::::<><><>0<>0<><>::
 ::res://scenes/vehicle_scenes/::1773318621
 ::res://scenes/vehicle_scenes/buggy/::1773318621
 buggy.tscn::PackedScene::2321244538729330533::1773318621::0::1::::<><><>0<>0<><>::uid://dsohhifurdtup::::res://scenes/vehicle_scenes/buggy/scripts/buggy.gd<>uid://byofqm11u6oy2::::res://scenes/map_scenes/main_map/textures/SpeedometerBackdrop.png<>uid://dqjutaewotmxo::::res://scenes/map_scenes/main_map/textures/SpeedometerForeground.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://dfijoc8m112ci::::res://scenes/map_scenes/main_map/textures/CompassNOCOLOR.png<>uid://365psumshjib::::res://scenes/map_scenes/main_map/scripts/compass_texture.gd<>uid://bs5lq7wp8c2qo::::res://scenes/map_scenes/main_map/textures/BarMeterBar.png<>uid://dwx87u72cd5ko::::res://scenes/map_scenes/main_map/scripts/altitude_meter_background.gd<>uid://dtngecne5hauo::::res://scenes/map_scenes/main_map/textures/BarMeterForeground.png
@@ -205,8 +208,8 @@ buggy.gd::GDScript::8452000473469812459::1773318621::0::1::::<>VehicleBody3D<><>
 buggy_fl.gd::GDScript::5610898632721764956::1773318621::0::1::::<>VehicleWheel3D<><>0<>0<><>::
 ::res://scenes/vehicle_scenes/cessna/::1773318621
 cessna172.tscn::PackedScene::5392935557088075325::1773318621::0::1::::<><><>0<>0<><>::uid://bxxwpa0sowfbh::::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/cessna172.glb<>uid://cc5dwx5pqkaur::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_component.gd<>uid://d1725od371u4a::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_3d.gd<>uid://b4xqlunpiyivk::::res://addons/godot_aerodynamic_physics/utils/pid.gd<>uid://ctbwb7xlhft6t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_config.gd<>uid://dfbhcpt1rr3ai::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd<>uid://cbgqb7g7mmwtu::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd<>uid://cdp8dc63ytxx1::::res://addons/godot_aerodynamic_physics/core/flight_assist.gd<>uid://crkbhmxpjff4o::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/aero_surface_config.gd<>uid://cblxodmmwvpt6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_config.gd<>uid://bsu5rdrtiqph7::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_mover_3d/aero_propeller_3d.gd<>uid://c46td0go5kvp6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_axis_config.gd<>uid://blp6761y154ht::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_buoyancy_3d/aero_buoyancy_mesh_3d.gd<>uid://3mk7r4fvb7h4::::res://temporary/camera test sceene.tscn<>uid://cs0vlbs2pbabv::::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/fueslage_aero_mesh.res
-::res://scenes/vehicle_scenes/commercial_plane/::1773318621
-commercial_plane.tscn::PackedScene::4075436494240700505::1773318621::0::1::::<><><>0<>0<><>::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb<>uid://d1725od371u4a::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_3d.gd<>uid://ctbwb7xlhft6t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_config.gd<>uid://crkbhmxpjff4o::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/aero_surface_config.gd<>uid://c46td0go5kvp6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_axis_config.gd<>uid://cblxodmmwvpt6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_config.gd<>uid://3kjm0rdymoth::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_thruster_3d/aero_thruster_3d.gd<>uid://cc5dwx5pqkaur::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_component.gd<>uid://b4xqlunpiyivk::::res://addons/godot_aerodynamic_physics/utils/pid.gd<>uid://dfbhcpt1rr3ai::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd<>uid://cdp8dc63ytxx1::::res://addons/godot_aerodynamic_physics/core/flight_assist.gd<>uid://cbgqb7g7mmwtu::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd
+::res://scenes/vehicle_scenes/commercial_plane/::1773422260
+commercial_plane.tscn::PackedScene::4075436494240700505::1773422260::0::1::::<><><>0<>0<><>::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb<>uid://d1725od371u4a::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_3d.gd<>uid://ctbwb7xlhft6t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_config.gd<>uid://crkbhmxpjff4o::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/aero_surface_config.gd<>uid://c46td0go5kvp6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_axis_config.gd<>uid://cblxodmmwvpt6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_config.gd<>uid://3kjm0rdymoth::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_thruster_3d/aero_thruster_3d.gd<>uid://cc5dwx5pqkaur::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_component.gd<>uid://b4xqlunpiyivk::::res://addons/godot_aerodynamic_physics/utils/pid.gd<>uid://dfbhcpt1rr3ai::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd<>uid://cdp8dc63ytxx1::::res://addons/godot_aerodynamic_physics/core/flight_assist.gd<>uid://cbgqb7g7mmwtu::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd
 ::res://scenes/vehicle_scenes/commercial_plane/models/::1773318621
 realrealrealairliner.glb::PackedScene::5566386673278194472::1773318621::1773318621::1::::<><><>0<>0<>790c8b32db57b5dd3a99480eecdc7b57<>res://.godot/imported/realrealrealairliner.glb-041dbd62c7bbdca117c12f6284219340.scn::
 ::res://scenes/vehicle_scenes/f14/::1773318621
