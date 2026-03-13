@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://chkdnyeuanvyn"]
+
+[node name="Car" type="VehicleBody3D"]
+
+[node name="CarMesh" type="MeshInstance3D" parent="."]
+
+[node name="CarCollision" type="CollisionShape3D" parent="."]
+
+[node name="CarWheelFL" type="VehicleWheel3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarWheelFL"]
+
+[node name="CarWheelFR" type="VehicleWheel3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarWheelFR"]
+
+[node name="CarWheelBL" type="VehicleWheel3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarWheelBL"]
+
+[node name="CarWheelBR" type="VehicleWheel3D" parent="."]
+
+[node name="CarWheelMesh" type="MeshInstance3D" parent="CarWheelBR"]
