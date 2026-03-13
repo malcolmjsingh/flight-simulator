@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773422053
+::res://::1773423638
 README.md::TextFile::-1::1773421966::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773421966
 ::res://addons/godot_aerodynamic_physics/::1773422052
@@ -152,7 +152,9 @@ point_3d.gdshader::Shader::284347621797602891::1773421966::0::1::::<><><>0<>0<><
 ::res://addons/godot_aerodynamic_physics/utils/vector_3d/::1773421966
 vector_3d.gd::GDScript::8006300883023281852::1773421966::0::1::::AeroDebugVector3D<>MeshInstance3D<><>0<>1<><>::
 vector_3d.gdshader::Shader::5270827816771410601::1773421966::0::1::::<><><>0<>0<><>::
-::res://scenes/::1773421967
+::res://scenes/::1773423638
+::res://scenes/gameplay_ui/::1773423687
+ui.tscn::PackedScene::906011657646959739::1773423687::0::1::::<><><>0<>0<><>::
 ::res://scenes/map_scenes/::1773421966
 ::res://scenes/map_scenes/main_map/::1773423154
 main_map.tscn::PackedScene::7230465751894859795::1773423154::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
@@ -181,13 +183,11 @@ WhiteSquare.png::CompressedTexture2D::4999468513252668894::1773421967::177342205
 ::res://scenes/map_scenes/main_map/textures/Fonts/::1773422051
 JetBrainsMonoNL-Bold.ttf::FontFile::1881085941100252269::1773421967::1773422051::1::::<><><>0<>0<>7d6603ec4e87de3b573aa6c8b19e4ba6<>res://.godot/imported/JetBrainsMonoNL-Bold.ttf-17de79e14c060968d0095a1a88666ae3.fontdata::
 JetBrainsMonoNL-Light.ttf::FontFile::7214475863585000427::1773421967::1773422051::1::::<><><>0<>0<>8eef7ec4fb58af1a61aa36a7591b6db1<>res://.godot/imported/JetBrainsMonoNL-Light.ttf-72519e46eef59c73aef14b4e957ec789.fontdata::
-::res://scenes/menu_scenes/::1773422992
+::res://scenes/menu_scenes/::1773423638
 ::res://scenes/menu_scenes/diagram_test/::1773421967
 diagram_test.tscn::PackedScene::9149607177363196632::1773421967::0::1::::<><><>0<>0<><>::uid://2inmkt08qdry::::res://scenes/menu_scenes/diagram_test/scripts/diagram_test.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
 ::res://scenes/menu_scenes/diagram_test/scripts/::1773421967
 diagram_test.gd::GDScript::1912425106457578326::1773421967::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/menu_scenes/gameplay_ui/::1773423326
-ui.tscn::PackedScene::906011657646959739::1773423326::0::1::::<><><>0<>0<><>::
 ::res://scenes/menu_scenes/main_menu/::1773422311
 main_menu.tscn::PackedScene::1492468736166146198::1773422311::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
 ::res://scenes/menu_scenes/main_menu/scripts/::1773422311
