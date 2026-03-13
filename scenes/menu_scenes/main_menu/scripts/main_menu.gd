@@ -1,4 +1,5 @@
 extends Node3D
+@onready var realrealrealairliner: Node3D = $realrealrealairliner
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	realrealrealairliner.rotate_y(0.1 * delta)
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ground.tscn")

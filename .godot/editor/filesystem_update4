@@ -1,0 +1,4 @@
+res://scenes/vehicle_scenes/commercial_plane/commercial_plane.tscn
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
+res://scenes/utlity_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
