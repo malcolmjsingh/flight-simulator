@@ -80,3 +80,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4j71w")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 292.79825, 0)
