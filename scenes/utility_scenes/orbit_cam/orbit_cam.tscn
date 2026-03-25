@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://svjajx8mpn2s"]
+[gd_scene load_steps=6 format=3 uid="uid://svjajx8mpn2s"]
 
+[ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgmqw"]
@@ -15,20 +16,23 @@ sky = SubResource("Sky_660a4")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="OrbitCam" type="Node3D"]
+[node name="CameraFollow" type="Node3D"]
+script = ExtResource("1_660a4")
+
+[node name="OrbitCam" type="Node3D" parent="."]
 script = ExtResource("1_sgmqw")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="OrbitCam"]
 environment = SubResource("Environment_m3wi2")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="OrbitCam"]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
+[node name="SpringArm3D" type="SpringArm3D" parent="OrbitCam"]
 spring_length = 4.0
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="OrbitCam/SpringArm3D"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="OrbitCam"]
 radius = 0.053861175

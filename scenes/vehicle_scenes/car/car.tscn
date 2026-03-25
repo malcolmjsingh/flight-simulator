@@ -215,8 +215,16 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5tmc3")
 
 [node name="Airdrop" type="VehicleBody3D"]
-center_of_mass_mode = 1
+mass = 100.0
 script = ExtResource("1_cr2g6")
+wheel_friction = 4.0
+suspension_restlength = 0.05
+suspension_stiffness = 150.0
+suspension_force = 6000.0
+wheel_rollinfluence = 3.0
+engine_acceleration = 50.0
+braking_acceleration = 150.0
+braking_force = 300.0
 steering_sensitivity = 0.5
 driving_car = true
 

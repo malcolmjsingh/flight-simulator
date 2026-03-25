@@ -1,2 +1,10 @@
 res://scenes/vehicle_scenes/car/car.tscn
 res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
+<<<<<<< HEAD
+=======
+res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
+res://scenes/vehicle_scenes/buggy/buggy.tscn
+res://scenes/vehicle_scenes/car/scripts/car.gd
+res://scenes/map_scenes/main_map/main_map.tscn
+res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd
+>>>>>>> 6ce02d05589a7b980a672817c7c87e24507526fb
