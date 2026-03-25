@@ -11,6 +11,13 @@ extends Node3D
 
 var currentlyClampClicking: bool = false
 
+"""
+Hello I am the freaky creature, would you like to go to the theater?
+It is featureing me, the freaky creature.
+so you COULD call it a creature feature, featuring the freaky creature
+Also I am gonng freak you 
+"""
+
 func _input(event):
 	if event is InputEventMouseMotion and currentlyClampClicking:
 		orbit_cam.rotate_y(-event.relative.x * sensitivity)
