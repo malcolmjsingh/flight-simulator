@@ -9,6 +9,7 @@ extends VehicleBody3D
 
 @export var engine_acceleration := 100.0
 @export var engine_power := 200.0
+@export var boost_power := 300.0
 @export var braking_acceleration := 25.0
 @export var braking_force := 100.0
 @export var reverse_force := 50.0
@@ -31,16 +32,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	print(engine_force)
-	
 	if driving_car:
 		if Input.is_action_pressed("pitch_up"):
 			engine_force += engine_acceleration * delta
-			print("go forward ", engine_force)
 			if engine_force > engine_power:
-				engine_force = engine_power
-				print("true")
+				if Input.is_action_pressed("throttle_up"):
+					engine_force = boost_power
+				else:
+					engine_force = engine_power
+			
 				
 		elif Input.is_action_pressed("pitch_down"):
 			engine_force -= braking_acceleration * delta
@@ -49,6 +49,8 @@ func _process(delta: float) -> void:
 		else:
 			engine_force = 0
 			
+		if Input.is_action_just_pressed("pitch_down"):
+			angular_velocity = Vector3.ZERO
 		
 		if Input.is_action_pressed("roll_left"):
 			steering += steering_sensitivity * delta
@@ -68,5 +70,7 @@ func _process(delta: float) -> void:
 			else:
 				steering += steering_sensitivity * delta
 		
-		
+		if Input.is_action_pressed("throttle_down"):
+			rotation = Vector3.ZERO
+			position.y += 1.0
 		
