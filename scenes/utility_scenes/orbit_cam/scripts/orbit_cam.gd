@@ -8,7 +8,6 @@ extends Node3D
 @export var bottomClamp: float = -PI/4
 @export var closeZoomClamp: float = 1.0
 @export var farZoomClamp: float = 10.0
-@export var clampButton = MOUSE_BUTTON_MIDDLE
 
 var currentlyClampClicking: bool = false
 
@@ -27,9 +26,12 @@ func _input(event):
 		spring_arm_3d.spring_length = clamp(spring_arm_3d.spring_length, closeZoomClamp, farZoomClamp)
 
 func _process(delta: float) -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
+	
+	if Input.is_action_just_pressed("toggle_camera") and not currentlyClampClicking:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		currentlyClampClicking = true
-	else:
+		print("P is pressed")
+	elif Input.is_action_just_pressed("toggle_camera"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		currentlyClampClicking = false
+		

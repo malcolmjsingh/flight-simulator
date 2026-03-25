@@ -12,7 +12,7 @@ extends VehicleBody3D
 
 @export var traction = 1
 @export var suspension_restlength = 0.5
-@export var suspension_force = 20
+@export var suspension_force = 2000000
 @export var suspension_travel = 0.2
 @export var roll_influence = 0.8
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=4 uid="uid://chkdnyeuanvyn"]
+[gd_scene load_steps=22 format=4 uid="uid://chkdnyeuanvyn"]
 
 [ext_resource type="Script" uid="uid://nd5byntogp40" path="res://scenes/vehicle_scenes/car/scripts/car.gd" id="1_cr2g6"]
 [ext_resource type="Texture2D" uid="uid://b7k16hgx7odqm" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png" id="1_naplk"]
 [ext_resource type="Texture2D" uid="uid://dom2y24s40tny" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png" id="2_cr2g6"]
+[ext_resource type="PackedScene" uid="uid://svjajx8mpn2s" path="res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn" id="2_k7txe"]
 [ext_resource type="Texture2D" uid="uid://b4mgv2uyaqrs5" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png" id="3_k7txe"]
 [ext_resource type="Texture2D" uid="uid://b3uhwtwehc2u" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png" id="4_sh266"]
 [ext_resource type="Texture2D" uid="uid://bifq8nmdqox17" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png" id="5_3lp4m"]
@@ -214,7 +215,13 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5tmc3")
 
 [node name="Airdrop" type="VehicleBody3D"]
+center_of_mass_mode = 1
 script = ExtResource("1_cr2g6")
+steering_sensitivity = 0.5
+driving_car = true
+
+[node name="OrbitCam" parent="." instance=ExtResource("2_k7txe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73129135, 0)
 
 [node name="Airdrop-body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4617038, -0.10598021)
@@ -226,33 +233,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51019335, 0)
 shape = SubResource("BoxShape3D_naplk")
 
 [node name="CarWheelFL" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, 0.448, 0.206, 0.794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.448, 0.206, 0.794)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.2
 
 [node name="Airdrop-wheel_Ft_L" type="MeshInstance3D" parent="CarWheelFL"]
-transform = Transform3D(2.469136, 0, 0, 0, 2.469136, 0, 0, 0, 2.469136, -0.0003193617, 0.0012077689, 3.1232834e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003193617, 0.0012077689, 3.1232834e-05)
 mesh = SubResource("ArrayMesh_eoqg6")
 skeleton = NodePath("")
 
 [node name="CarWheelFR" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, -0.448, 0.206, 0.794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448, 0.206, 0.794)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.2
 
 [node name="Airdrop-wheel_Ft_R" type="MeshInstance3D" parent="CarWheelFR"]
-transform = Transform3D(2.469136, 0, 0, 0, 2.469136, 0, 0, 0, 2.469136, 0.00031852722, 0.0012077689, 3.1232834e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00031852722, 0.0012077689, 3.1232834e-05)
 mesh = SubResource("ArrayMesh_o8f6h")
 skeleton = NodePath("")
 
 [node name="CarWheelBL" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.448, 0.206, -0.809)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.448, 0.206, -0.809)
+use_as_traction = true
+wheel_radius = 0.2
 
 [node name="Airdrop-wheel_Bk_L" type="MeshInstance3D" parent="CarWheelBL"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.0003232956, 0.0012228489, 0.00030493736)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003232956, 0.0012228489, 0.00030493736)
 mesh = SubResource("ArrayMesh_fl0oq")
 skeleton = NodePath("")
 
 [node name="CarWheelBR" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.448, 0.206, -0.809)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448, 0.206, -0.809)
+use_as_traction = true
+wheel_radius = 0.2
 
 [node name="Airdrop-wheel_Bk_R" type="MeshInstance3D" parent="CarWheelBR"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.00032258034, 0.0012228489, 0.00030493736)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00032258034, 0.0012228489, 0.00030493736)
 mesh = SubResource("ArrayMesh_o68g4")
 skeleton = NodePath("")
