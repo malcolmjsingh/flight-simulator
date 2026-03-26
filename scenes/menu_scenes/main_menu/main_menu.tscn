@@ -47,34 +47,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_rhvh2"]
-resource_name = "ui_transition"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("behindBox:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.56666666),
-"transitions": PackedFloat32Array(0.1593201, 14.928532),
-"update": 0,
-"values": [Vector2(11, 97), Vector2(467.11, 97)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("behindBox:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(0.15389317, 14.419985),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_1wnqw"]
 resource_name = "ui_transition_bwd"
 length = 0.6
@@ -101,6 +73,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(0.21763714, 2.5491226),
 "update": 0,
 "values": [Vector2(467.11, 97), Vector2(11, 97)]
+}
+
+[sub_resource type="Animation" id="Animation_rhvh2"]
+resource_name = "ui_transition"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("behindBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(0.1593201, 14.928532),
+"update": 0,
+"values": [Vector2(11, 97), Vector2(467.11, 97)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("behindBox:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.15389317, 14.419985),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1wnqw"]
@@ -139,6 +139,13 @@ offset_bottom = 99.0
 bbcode_enabled = true
 text = "[font_size=40]Dinesh Flight Simulator[/font_size]"
 
+[node name="toDiagramCollisionBox" type="BoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 251.0
+offset_right = 462.0
+offset_bottom = 402.0
+
 [node name="collisionBox" type="BoxContainer" parent="Control"]
 visibility_layer = 2
 custom_minimum_size = Vector2(0, 100)
@@ -164,29 +171,24 @@ vertical = true
 [node name="Button" type="Button" parent="Control/behindBox"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
 
 [node name="Button2" type="Button" parent="Control/behindBox"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
 
 [node name="Button3" type="Button" parent="Control/behindBox"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
 
 [node name="Button4" type="Button" parent="Control/behindBox"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
 
 [node name="Button5" type="Button" parent="Control/behindBox"]
 custom_minimum_size = Vector2(0, 115)
 layout_mode = 2
-disabled = true
 
-[node name="frontBox" type="BoxContainer" parent="Control"]
+[node name="mainBox" type="BoxContainer" parent="Control"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_left = 11.0
@@ -196,22 +198,22 @@ offset_bottom = 636.0
 theme = SubResource("Theme_rhvh2")
 vertical = true
 
-[node name="Start" type="Button" parent="Control/frontBox"]
+[node name="Start" type="Button" parent="Control/mainBox"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Free Flight"
 
-[node name="toDiagram" type="Button" parent="Control/frontBox"]
+[node name="toDiagram" type="Button" parent="Control/mainBox"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Diagram Placeholder"
 
-[node name="Options" type="Button" parent="Control/frontBox"]
+[node name="Options" type="Button" parent="Control/mainBox"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "Options"
 
-[node name="Quit" type="Button" parent="Control/frontBox"]
+[node name="Quit" type="Button" parent="Control/mainBox"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 text = "Quit"
@@ -227,8 +229,8 @@ transform = Transform3D(0.6738512, 0, -0.7388671, 0, 1, 0, 0.7388671, 0, 0.67385
 [connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]
 [connection signal="mouse_entered" from="Control/collisionBox" to="." method="_on_collision_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/collisionBox" to="." method="_on_collision_box_mouse_exited"]
-[connection signal="pressed" from="Control/frontBox/Start" to="." method="_on_start_pressed"]
-[connection signal="mouse_entered" from="Control/frontBox/toDiagram" to="." method="_on_to_diagram_mouse_entered"]
-[connection signal="mouse_exited" from="Control/frontBox/toDiagram" to="." method="_on_to_diagram_mouse_exited"]
-[connection signal="pressed" from="Control/frontBox/toDiagram" to="." method="_on_to_diagram_pressed"]
-[connection signal="pressed" from="Control/frontBox/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/mainBox/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="Control/mainBox/toDiagram" to="." method="_on_to_diagram_mouse_entered"]
+[connection signal="mouse_exited" from="Control/mainBox/toDiagram" to="." method="_on_to_diagram_mouse_exited"]
+[connection signal="pressed" from="Control/mainBox/toDiagram" to="." method="_on_to_diagram_pressed"]
+[connection signal="pressed" from="Control/mainBox/Quit" to="." method="_on_quit_pressed"]

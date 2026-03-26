@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://bv23xiqq6lorb"]
+[gd_scene load_steps=5 format=3 uid="uid://bv23xiqq6lorb"]
+
+[sub_resource type="Theme" id="Theme_vr1l0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7qj7w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3aca"]
+texture = SubResource("NoiseTexture2D_7qj7w")
+
+[sub_resource type="Theme" id="Theme_1haq7"]
 
 [node name="VehicleSpawnHandler" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Control" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 250.0
+
+[node name="Panel" type="Panel" parent="Control/Control"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 250.0
+theme = SubResource("Theme_vr1l0")
+theme_override_styles/panel = SubResource("StyleBoxTexture_h3aca")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Control"]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 32.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Control/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_1haq7")
+text = "Title Gna gna ggfgfffff"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/Control"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 182.0
+offset_bottom = 234.0
