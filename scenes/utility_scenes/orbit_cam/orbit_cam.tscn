@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://svjajx8mpn2s"]
+[gd_scene load_steps=7 format=3 uid="uid://svjajx8mpn2s"]
 
 [ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
@@ -16,6 +16,10 @@ sky = SubResource("Sky_660a4")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_660a4"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.26666668)
+
 [node name="CameraFollow" type="Node3D"]
 script = ExtResource("1_660a4")
 
@@ -31,4 +35,5 @@ spring_length = 4.0
 [node name="Camera3D" type="Camera3D" parent="OrbitCam/SpringArm3D"]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="OrbitCam"]
-radius = 0.053861175
+radius = 0.03
+material = SubResource("StandardMaterial3D_660a4")
