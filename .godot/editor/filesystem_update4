@@ -1,7 +1,1 @@
-res://scenes/vehicle_scenes/car/car.tscn
-res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/vehicle_scenes/buggy/buggy.tscn
-res://scenes/vehicle_scenes/car/scripts/car.gd
-res://scenes/map_scenes/main_map/main_map.tscn
-res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd
+res://scenes/menu_scenes/gameplay_ui/ui.tscn

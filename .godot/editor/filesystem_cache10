@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774449160
+::res://::1774539726
 README.md::TextFile::-1::1773421966::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773421966
 ::res://addons/godot_aerodynamic_physics/::1773422052
@@ -154,8 +154,8 @@ vector_3d.gd::GDScript::8006300883023281852::1773421966::0::1::::AeroDebugVector
 vector_3d.gdshader::Shader::5270827816771410601::1773421966::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1773423925
 ::res://scenes/map_scenes/::1773421966
-::res://scenes/map_scenes/main_map/::1774448865
-main_map.tscn::PackedScene::7230465751894859795::1774448865::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
+::res://scenes/map_scenes/main_map/::1774451792
+main_map.tscn::PackedScene::7230465751894859795::1774451792::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
 ::res://scenes/map_scenes/main_map/models/::1773422068
 terrain5.glb::PackedScene::2576861199777891088::1773421966::1773422068::1::::<><><>0<>0<>8874d145420e51c7f4bd757db5065c54<>res://.godot/imported/terrain5.glb-83187bc4959f6877b1d6a889ae60a418.scn::uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
 terrain5_TerrainTexture5.png::CompressedTexture2D::1184933211667797981::1773421967::1773422062::1::::<><><>0<>0<>c3772405bccd37dac2f10101484c3579<>res://.godot/imported/terrain5_TerrainTexture5.png-9c97c16fceee85d7a62edd2664b32d07.s3tc.ctex::
@@ -193,10 +193,10 @@ main_menu.tscn::PackedScene::1492468736166146198::1773423925::0::1::::<><><>0<>0
 ::res://scenes/menu_scenes/main_menu/scripts/::1773423925
 main_menu.gd::GDScript::1375488518849932361::1773423925::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/::1774362691
-::res://scenes/utility_scenes/orbit_cam/::1774449160
-camera_follow_node.gd::GDScript::702970124986398288::1774449123::0::1::::<>Node3D<><>0<>0<><>::
-orbit_cam.tscn::PackedScene::1307298081011399796::1774443669::0::1::::<><><>0<>0<><>::uid://ca8lw8667gkpl::::res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
-::res://scenes/utility_scenes/orbit_cam/scripts/::1774443793
+::res://scenes/utility_scenes/orbit_cam/::1774531170
+orbit_cam.tscn::PackedScene::1307298081011399796::1774531170::0::1::::<><><>0<>0<><>::uid://kar2yoylujvs::::res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd<>uid://ca8lw8667gkpl::::res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
+::res://scenes/utility_scenes/orbit_cam/scripts/::1774449176
+camera_follow_node.gd::GDScript::702970124986398288::1774449176::0::1::::<>Node3D<><>0<>0<><>::
 orbit_cam.gd::GDScript::4841674790267513985::1774443793::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/::1773423925
 vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1773423925::0::1::::<><><>0<>0<><>::
@@ -206,8 +206,8 @@ buggy.tscn::PackedScene::2321244538729330533::1774444050::0::1::::<><><>0<>0<><>
 ::res://scenes/vehicle_scenes/buggy/scripts/::1774368368
 buggy.gd::GDScript::8452000473469812459::1774368368::0::1::::<>VehicleBody3D<><>0<>0<><>::
 buggy_fl.gd::GDScript::5610898632721764956::1773421967::0::1::::<>VehicleWheel3D<><>0<>0<><>::
-::res://scenes/vehicle_scenes/car/::1774448874
-car.tscn::PackedScene::5285013684340955257::1774448874::0::1::::<><><>0<>0<><>::uid://nd5byntogp40::::res://scenes/vehicle_scenes/car/scripts/car.gd<>uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
+::res://scenes/vehicle_scenes/car/::1774452204
+car.tscn::PackedScene::5285013684340955257::1774452204::0::1::::<><><>0<>0<><>::uid://nd5byntogp40::::res://scenes/vehicle_scenes/car/scripts/car.gd<>uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
 ::res://scenes/vehicle_scenes/car/models/::1774283718
 Airdrop.glb::PackedScene::1768628876079176277::1774272755::1774283718::1::::<><><>0<>0<>ad80482d3ba67466123ad5ef8a297328<>res://.godot/imported/Airdrop.glb-c7fbd6bcc9137c4ed5ee3f33d53b4a22.scn::uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
 Airdrop_Airdrop-bodyTextureColor.png::CompressedTexture2D::4654741837094324232::1774272755::1774283717::1::::<><><>0<>0<>581f931613ee11d5fe204258fa6205cf<>res://.godot/imported/Airdrop_Airdrop-bodyTextureColor.png-1415dd6feb257c8228ce010e9cf76b95.s3tc.ctex::
@@ -215,8 +215,8 @@ Airdrop_Airdrop-bodyTextureEmission.png::CompressedTexture2D::816836207670626424
 Airdrop_Airdrop-wheel.png::CompressedTexture2D::4447072935991000646::1774272755::1774283717::1::::<><><>0<>0<>1ebe52d25268b9527424fe6219e9ffdc<>res://.godot/imported/Airdrop_Airdrop-wheel.png-6e1a42c9af247d51ab3d22ccbb6441cc.s3tc.ctex::
 Airdrop_Airdrop-wheel_3.png::CompressedTexture2D::129219447034559786::1774272755::1774283717::1::::<><><>0<>0<>673e848c0ef7a34518cb63cc7de4a009<>res://.godot/imported/Airdrop_Airdrop-wheel_3.png-2efd5c00eb9e0ae41593f8a43ca0ff19.s3tc.ctex::
 Airdrop_Airdrop-wheel_4.png::CompressedTexture2D::2959284426150254272::1774272755::1774283717::1::::<><><>0<>0<>1595b800f0b8d53b48cccbf73468274f<>res://.godot/imported/Airdrop_Airdrop-wheel_4.png-a3b8f9e445192f5b0d3ecca27d10c0db.s3tc.ctex::
-::res://scenes/vehicle_scenes/car/scripts/::1774448425
-car.gd::GDScript::920472677658595935::1774448425::0::1::::<>VehicleBody3D<><>0<>0<><>::
+::res://scenes/vehicle_scenes/car/scripts/::1774449599
+car.gd::GDScript::920472677658595935::1774449599::0::1::::<>VehicleBody3D<><>0<>0<><>::
 ::res://scenes/vehicle_scenes/cessna/::1774362691
 cessna172.tscn::PackedScene::5392935557088075325::1774362691::0::1::::<><><>0<>0<><>::uid://bxxwpa0sowfbh::::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/cessna172.glb<>uid://cc5dwx5pqkaur::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_component.gd<>uid://d1725od371u4a::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_3d.gd<>uid://b4xqlunpiyivk::::res://addons/godot_aerodynamic_physics/utils/pid.gd<>uid://ctbwb7xlhft6t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/manual_aero_surface_3d/manual_aero_surface_config.gd<>uid://dfbhcpt1rr3ai::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd<>uid://cbgqb7g7mmwtu::::res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd<>uid://cdp8dc63ytxx1::::res://addons/godot_aerodynamic_physics/core/flight_assist.gd<>uid://crkbhmxpjff4o::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_surface_3d/aero_surface_config.gd<>uid://cblxodmmwvpt6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_config.gd<>uid://bsu5rdrtiqph7::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_mover_3d/aero_propeller_3d.gd<>uid://c46td0go5kvp6::::res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_axis_config.gd<>uid://blp6761y154ht::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_buoyancy_3d/aero_buoyancy_mesh_3d.gd<>uid://cs0vlbs2pbabv::::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/fueslage_aero_mesh.res
 ::res://scenes/vehicle_scenes/commercial_plane/::1773422082

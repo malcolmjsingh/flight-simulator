@@ -8,18 +8,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Speedometer" type="Control" parent="."]
+[node name="Main Hud" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Fuel Guage" type="Control" parent="Speedometer"]
+[node name="Fuel Guage" type="Control" parent="Main Hud"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="The Button" type="Control" parent="Speedometer"]
+[node name="Fuel Guage Progress" type="TextureProgressBar" parent="Main Hud/Fuel Guage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="The Button" type="Control" parent="Main Hud"]
 anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button Texuter" type="TextureButton" parent="Main Hud/The Button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Main Hud Texture" type="TextureRect" parent="Main Hud"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Speedometer Progress" type="TextureProgressBar" parent="Main Hud"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 

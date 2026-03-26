@@ -64,6 +64,9 @@ data = PackedVector3Array(-27.1297, 1.6791999, -14.7029, -26.4473, 9.6461, -14.1
 
 [node name="Environment" type="Node3D"]
 
+[node name="Airdrop" parent="." instance=ExtResource("1_octsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.261093, 0)
+
 [node name="HDRI" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t44pu")
 
@@ -81,8 +84,3 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4j71w")
-
-[node name="Airdrop Scaling" type="Node3D" parent="."]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 16.207993, 0)
-
-[node name="Airdrop" parent="Airdrop Scaling" instance=ExtResource("1_octsl")]

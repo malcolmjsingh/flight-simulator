@@ -53,17 +53,17 @@ func _process(delta: float) -> void:
 			angular_velocity = Vector3.ZERO
 		
 		if Input.is_action_pressed("roll_left"):
-			steering += steering_sensitivity * delta
+			steering += steering_sensitivity * delta * 3
 			if steering > max_steer:
 				steering = max_steer	
 		
 		elif Input.is_action_pressed("roll_right"):
-			steering -= steering_sensitivity * delta
+			steering -= steering_sensitivity * delta * 3
 			if steering < -max_steer:
 				steering = -max_steer
 		
 		elif steering != 0.0:
-			if steering - 2 * steering_sensitivity < steering and steering < steering + 2 * steering_sensitivity:
+			if 2 * steering_sensitivity < steering and steering < 2 * steering_sensitivity:
 				steering = 0.0
 			elif steering > 0:
 				steering -= steering_sensitivity * delta
