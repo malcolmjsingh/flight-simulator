@@ -96,4 +96,6 @@ offset_right = 201.0
 offset_bottom = 162.0
 text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
 
+[node name="Camera3D" type="Camera3D" parent="."]
+
 [connection signal="pressed" from="Control/spawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]

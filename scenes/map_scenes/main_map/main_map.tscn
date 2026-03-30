@@ -83,3 +83,4 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_4j71w")
 
 [node name="VehicleSpawnHandler" parent="." instance=ExtResource("3_octsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 62.874603, 0)

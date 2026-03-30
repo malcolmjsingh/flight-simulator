@@ -18,6 +18,7 @@ extends VehicleBody3D
 
 @export var driving_car := false
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$OrbitCam/OrbitCam/SpringArm3D/Camera3D.mainCameraInstanced.connect($UI/Compass/Compass_Texture.setTexturePosition)
