@@ -26,6 +26,10 @@ AeroUnits="*res://addons/godot_aerodynamic_physics/core/singletons/aero_units.gd
 
 enabled=PackedStringArray("res://addons/godot_aerodynamic_physics/plugin.cfg")
 
+[global_group]
+
+camera=""
+
 [input]
 
 pitch_up={

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://dbaqykawe3oo6"]
 
 [ext_resource type="Texture2D" uid="uid://dkojklqwnmpmj" path="res://scenes/map_scenes/main_map/textures/sky.hdr" id="1_68yp2"]
-[ext_resource type="PackedScene" uid="uid://chkdnyeuanvyn" path="res://scenes/vehicle_scenes/car/car.tscn" id="1_octsl"]
+[ext_resource type="PackedScene" uid="uid://bv23xiqq6lorb" path="res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn" id="3_octsl"]
 [ext_resource type="Texture2D" uid="uid://q48xap51ooif" path="res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png" id="4_y8ter"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t3xe5"]
@@ -64,9 +64,6 @@ data = PackedVector3Array(-27.1297, 1.6791999, -14.7029, -26.4473, 9.6461, -14.1
 
 [node name="Environment" type="Node3D"]
 
-[node name="Airdrop" parent="." instance=ExtResource("1_octsl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.261093, 0)
-
 [node name="HDRI" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t44pu")
 
@@ -84,3 +81,5 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4j71w")
+
+[node name="VehicleSpawnHandler" parent="." instance=ExtResource("3_octsl")]

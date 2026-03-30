@@ -230,9 +230,6 @@ steering_sensitivity = 0.5
 max_steer = 0.7
 driving_car = true
 
-[node name="OrbitCam" parent="." instance=ExtResource("2_k7txe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73129135, 0)
-
 [node name="Airdrop-body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4617038, -0.10598021)
 mesh = SubResource("ArrayMesh_6dk67")
@@ -283,3 +280,6 @@ wheel_radius = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00032258034, 0.0012228489, 0.00030493736)
 mesh = SubResource("ArrayMesh_o68g4")
 skeleton = NodePath("")
+
+[node name="CameraFollow" parent="." instance=ExtResource("2_k7txe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5017171, 0)

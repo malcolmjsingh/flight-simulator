@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="vehicle" load_steps=3 format=3 uid="uid://bid088j2comy6"]
+
+[ext_resource type="PackedScene" uid="uid://chkdnyeuanvyn" path="res://scenes/vehicle_scenes/car/car.tscn" id="1_ff50x"]
+[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="2_pe37m"]
+
+[resource]
+script = ExtResource("2_pe37m")
+name = "car"
+scene = ExtResource("1_ff50x")
+descriptionString = "car.... like from.... car 2......?"
+metadata/_custom_type_script = "uid://efdvg5fmieny"

@@ -1,6 +1,9 @@
-res://scenes/map_scenes/main_map/main_map.tscn
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/vehicle_scenes/car/scripts/car.gd
-res://scenes/menu_scenes/main_menu/main_menu.tscn
-res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://scenes/vehicle_scenes/car/car.tscn
+res://scenes/vehicle_scenes/commercial_plane/commercial_plane.tscn
+res://scenes/vehicle_scenes/f14/f14.tscn
+res://scenes/vehicle_scenes/cessna/cessna172.tscn
+res://scenes/vehicle_scenes/buggy/buggy.tscn
+res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
+res://scenes/map_scenes/main_map/main_map.tscn

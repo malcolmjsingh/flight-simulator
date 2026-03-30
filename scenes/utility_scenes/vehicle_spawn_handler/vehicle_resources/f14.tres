@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="vehicle" load_steps=3 format=3 uid="uid://by7mpjsx4xs4l"]
+
+[ext_resource type="PackedScene" uid="uid://cbno0ejht5pgn" path="res://scenes/vehicle_scenes/f14/f14.tscn" id="1_j1gpo"]
+[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="1_mt2pw"]
+
+[resource]
+script = ExtResource("1_mt2pw")
+name = "f14"
+scene = ExtResource("1_j1gpo")
+descriptionString = "f14?, what about f13? or f12.... or f11!!!"
+metadata/_custom_type_script = "uid://efdvg5fmieny"

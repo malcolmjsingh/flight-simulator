@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://ci3m4i8in8ba8"]
+[gd_scene load_steps=69 format=3 uid="uid://ci3m4i8in8ba8"]
 
 [ext_resource type="PackedScene" uid="uid://bxxwpa0sowfbh" path="res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/cessna172.glb" id="1_7rcro"]
 [ext_resource type="Script" uid="uid://cc5dwx5pqkaur" path="res://addons/godot_aerodynamic_physics/core/controls/aero_control_component.gd" id="2_4u4b6"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bsu5rdrtiqph7" path="res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_mover_3d/aero_propeller_3d.gd" id="5_keinb"]
 [ext_resource type="Script" uid="uid://c46td0go5kvp6" path="res://addons/godot_aerodynamic_physics/core/controls/aero_influencer_control_axis_config.gd" id="5_o4ret"]
 [ext_resource type="Script" uid="uid://blp6761y154ht" path="res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/aero_buoyancy_3d/aero_buoyancy_mesh_3d.gd" id="14_lo3t1"]
+[ext_resource type="PackedScene" uid="uid://svjajx8mpn2s" path="res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn" id="15_dvun1"]
 [ext_resource type="ArrayMesh" uid="uid://cs0vlbs2pbabv" path="res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/fueslage_aero_mesh.res" id="15_op60t"]
 
 [sub_resource type="Resource" id="Resource_scrto"]
@@ -567,3 +568,5 @@ material = SubResource("StandardMaterial3D_4tt3o")
 script = ExtResource("14_lo3t1")
 buoyancy_mesh = ExtResource("15_op60t")
 metadata/_custom_type_script = "uid://blp6761y154ht"
+
+[node name="CameraFollow" parent="." index="20" groups=["camera"] instance=ExtResource("15_dvun1")]

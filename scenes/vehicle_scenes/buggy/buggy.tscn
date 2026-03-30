@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://8cos8r62iagj"]
+[gd_scene load_steps=14 format=3 uid="uid://8cos8r62iagj"]
 
 [ext_resource type="Script" uid="uid://dsohhifurdtup" path="res://scenes/vehicle_scenes/buggy/scripts/buggy.gd" id="1_84kpu"]
 [ext_resource type="Texture2D" uid="uid://byofqm11u6oy2" path="res://scenes/map_scenes/main_map/textures/SpeedometerBackdrop.png" id="2_vi2ms"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bs5lq7wp8c2qo" path="res://scenes/map_scenes/main_map/textures/BarMeterBar.png" id="7_p837v"]
 [ext_resource type="Script" uid="uid://dwx87u72cd5ko" path="res://scenes/map_scenes/main_map/scripts/altitude_meter_background.gd" id="8_ktsvj"]
 [ext_resource type="Texture2D" uid="uid://dtngecne5hauo" path="res://scenes/map_scenes/main_map/textures/BarMeterForeground.png" id="9_oekpm"]
+[ext_resource type="PackedScene" uid="uid://svjajx8mpn2s" path="res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn" id="10_gj4v3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7g61j"]
 
@@ -192,3 +193,5 @@ offset_right = 250.0
 offset_bottom = 1190.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_oekpm")
+
+[node name="CameraFollow" parent="." groups=["camera"] instance=ExtResource("10_gj4v3")]
