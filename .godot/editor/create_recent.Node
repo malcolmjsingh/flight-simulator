@@ -1,6 +1,7 @@
+Button
+CheckButton
 Camera3D
 RichTextLabel
-Button
 Control
 Panel
 PanelContainer
@@ -11,5 +12,3 @@ BoxContainer
 Container
 TextureButton
 TextureProgressBar
-TextureRect
-Node3D
