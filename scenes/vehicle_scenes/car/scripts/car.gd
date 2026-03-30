@@ -20,6 +20,9 @@ extends VehicleBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$OrbitCam/OrbitCam/SpringArm3D/Camera3D.mainCameraInstanced.connect($UI/Compass/Compass_Texture.setTexturePosition)
+	
+
 	
 	for child in get_children():
 		if child is VehicleWheel3D:

@@ -1,1 +1,12 @@
 res://scenes/menu_scenes/gameplay_ui/ui.tscn
+res://scenes/menu_scenes/gameplay_ui/compass_texture.gd
+res://scenes/vehicle_scenes/car/car.tscn
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
+res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
+res://scenes/utility_scenes/orbit_cam/camera_3d.gd
+res://scenes/map_scenes/main_map/scripts/compass_texture.gd
+res://scenes/vehicle_scenes/car/scripts/car.gd
+res://scenes/map_scenes/main_map/main_map.tscn
+res://scenes/menu_scenes/diagram_test/diagram_test.tscn
+res://temporary/compass_texture.gd

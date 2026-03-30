@@ -111,7 +111,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Compass Texture" type="TextureRect" parent="Compass"]
+[node name="Compass_Texture" type="TextureRect" parent="Compass"]
 clip_contents = true
 layout_mode = 1
 offset_right = 2160.0
@@ -121,3 +121,4 @@ texture = ExtResource("3_tc83t")
 expand_mode = 3
 stretch_mode = 4
 script = ExtResource("4_5k5yk")
+textureWidth = 720

@@ -25,7 +25,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	realrealrealairliner.rotate_y(0.1 * delta)
-	print(current_gui_state)
 	mouse_position = get_viewport().get_mouse_position()
 	
 	if collision_box_rect.has_point(mouse_position):

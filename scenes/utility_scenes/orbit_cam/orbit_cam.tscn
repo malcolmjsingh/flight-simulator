@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://svjajx8mpn2s"]
+[gd_scene load_steps=5 format=3 uid="uid://svjajx8mpn2s"]
 
 [ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
+[ext_resource type="Script" uid="uid://b8ais8jmk5i03" path="res://scenes/utility_scenes/orbit_cam/camera_3d.gd" id="3_m3wi2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_660a4"]
 transparency = 1
@@ -17,6 +18,7 @@ script = ExtResource("1_sgmqw")
 spring_length = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="OrbitCam/SpringArm3D"]
+script = ExtResource("3_m3wi2")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="OrbitCam"]
 radius = 0.03
