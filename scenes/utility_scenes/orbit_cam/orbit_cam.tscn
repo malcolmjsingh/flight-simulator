@@ -1,20 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://svjajx8mpn2s"]
+[gd_scene load_steps=4 format=3 uid="uid://svjajx8mpn2s"]
 
 [ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgmqw"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_660a4"]
-sky_material = SubResource("ProceduralSkyMaterial_sgmqw")
-
-[sub_resource type="Environment" id="Environment_m3wi2"]
-background_mode = 2
-sky = SubResource("Sky_660a4")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_660a4"]
 transparency = 1
@@ -25,9 +12,6 @@ script = ExtResource("1_660a4")
 
 [node name="OrbitCam" type="Node3D" parent="."]
 script = ExtResource("1_sgmqw")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="OrbitCam"]
-environment = SubResource("Environment_m3wi2")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="OrbitCam"]
 spring_length = 4.0
