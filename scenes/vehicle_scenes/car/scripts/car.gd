@@ -20,7 +20,7 @@ extends VehicleBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$OrbitCam/OrbitCam/SpringArm3D/Camera3D.mainCameraInstanced.connect($UI/Compass/Compass_Texture.setTexturePosition)
+	#$OrbitCam/OrbitCam/SpringArm3D/Camera3D.mainCameraInstanced.connect($UI/Compass/Compass_Texture.setTexturePosition)
 	
 
 	
@@ -56,11 +56,15 @@ func _process(delta: float) -> void:
 			angular_velocity = Vector3.ZERO
 		
 		if Input.is_action_pressed("roll_left"):
+			if steering < 0:
+				steering = 0
 			steering += steering_sensitivity * delta * 3
 			if steering > max_steer:
 				steering = max_steer	
 		
 		elif Input.is_action_pressed("roll_right"):
+			if steering > 0:
+				steering = 0
 			steering -= steering_sensitivity * delta * 3
 			if steering < -max_steer:
 				steering = -max_steer

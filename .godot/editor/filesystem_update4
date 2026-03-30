@@ -1,9 +1,13 @@
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
-res://scenes/vehicle_scenes/car/car.tscn
-res://scenes/vehicle_scenes/commercial_plane/commercial_plane.tscn
-res://scenes/vehicle_scenes/f14/f14.tscn
-res://scenes/vehicle_scenes/cessna/cessna172.tscn
-res://scenes/vehicle_scenes/buggy/buggy.tscn
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/tilt_rotor/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/sailboat/hull.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/missile/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/floaty_ball/Buoyancy mesh ball.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/f14/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/catalina/fueslage.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/catalina/float.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/boat/hull.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/blackhawk/fueslage_aero_mesh.res
 res://scenes/map_scenes/main_map/main_map.tscn
+res://scenes/vehicle_scenes/car/scripts/car.gd
+res://scenes/vehicle_scenes/car/car.tscn
