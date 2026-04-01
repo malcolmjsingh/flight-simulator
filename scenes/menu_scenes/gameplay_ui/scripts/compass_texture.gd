@@ -3,6 +3,10 @@ extends TextureRect
 @export var textureWidth := 0
 
 # Called when the node enters the scene tree for the first time.
+
+func _on_do_something() -> void:
+	print("signal test")
+
 func _ready() -> void:
 	
 	

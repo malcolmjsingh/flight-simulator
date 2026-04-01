@@ -1,14 +1,15 @@
-Panel
-Control
-Button
-OptionButton      - Matches the "dropdown" keyword.
-Node3D
-ScrollContainer
-VBoxContainer
-CheckButton
-Camera3D
+Label      - Matches the "text" keyword.
+MeshInstance3D
 RichTextLabel
+Button
+Control
+Panel
 PanelContainer
+VBoxContainer
+ScrollContainer
 VScrollBar
 BoxContainer
 Container
+TextureButton
+TextureProgressBar
+TextureRect

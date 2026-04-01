@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://m54454bhrpv4"]
+[gd_scene load_steps=7 format=3 uid="uid://m54454bhrpv4"]
 
+[ext_resource type="Script" uid="uid://cwj2wmlvau0eh" path="res://scenes/menu_scenes/gameplay_ui/scripts/ui.gd" id="1_4s3kd"]
 [ext_resource type="Texture2D" uid="uid://cfyjsqm5oe2kg" path="res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png" id="1_xntb7"]
+[ext_resource type="Script" uid="uid://drduhmdxjv513" path="res://scenes/menu_scenes/gameplay_ui/scripts/current_speed.gd" id="2_714ls"]
 [ext_resource type="Texture2D" uid="uid://ccws7qoj57sad" path="res://scenes/menu_scenes/gameplay_ui/textures/Altimeter Background.png" id="2_jgeb1"]
 [ext_resource type="Texture2D" uid="uid://dfijoc8m112ci" path="res://scenes/map_scenes/main_map/textures/CompassNOCOLOR.png" id="3_tc83t"]
-[ext_resource type="Script" uid="uid://b81uuj2e3t8tc" path="res://scenes/menu_scenes/gameplay_ui/compass_texture.gd" id="4_5k5yk"]
+[ext_resource type="Script" uid="uid://b81uuj2e3t8tc" path="res://scenes/menu_scenes/gameplay_ui/scripts/compass_texture.gd" id="4_5k5yk"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -12,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4s3kd")
 
 [node name="Main Hud" type="Control" parent="."]
 layout_mode = 1
@@ -68,6 +71,14 @@ offset_right = 362.5
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_xntb7")
+
+[node name="Current Speed" type="Label" parent="Main Hud"]
+layout_mode = 0
+offset_left = -324.5
+offset_top = -30.0
+offset_right = -284.5
+offset_bottom = -7.0
+script = ExtResource("2_714ls")
 
 [node name="Altimeter" type="Control" parent="."]
 layout_mode = 1
