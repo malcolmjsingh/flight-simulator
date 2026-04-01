@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var count := 100
+@export var count := 50
 @export var water_mesh : MeshInstance3D
 @export var water_size := 20.0
 @export var water_level := -100.0
@@ -12,8 +12,8 @@ func _ready() -> void:
 	var xPos = position.x
 	var zPos = position.z
 	
-	for z in range(count):
-		for x in range(count):
+	for z in range(-count, count):
+		for x in range(-count, count):
 			var instance = water_mesh.duplicate()
 			instance.position = Vector3(xPos + x * water_size, yPos + water_level, zPos + z * water_size)
 			add_child(instance)

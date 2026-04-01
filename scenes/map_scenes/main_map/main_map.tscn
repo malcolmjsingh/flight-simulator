@@ -131,7 +131,7 @@ mesh = SubResource("ArrayMesh_ids5g")
 skeleton = NodePath("")
 
 [node name="WaterNode" type="Node3D" parent="." node_paths=PackedStringArray("water_mesh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4455.5205, 0, -3542.392)
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 script = ExtResource("5_t86b3")
 water_mesh = NodePath("../WaterPlane")
-water_level = -150.0
+water_level = -11.0
