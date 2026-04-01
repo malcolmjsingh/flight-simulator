@@ -25,7 +25,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	mouse_position = get_viewport().get_mouse_position()
 	dragbox_global_rect = dragbox.get_global_rect()
-	if Input.is_mouse_button_pressed()
 
 
 func _input(event: InputEvent) -> void:

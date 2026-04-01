@@ -1,3 +1,4 @@
+Node3D
 Label      - Matches the "text" keyword.
 MeshInstance3D
 RichTextLabel
@@ -12,4 +13,3 @@ BoxContainer
 Container
 TextureButton
 TextureProgressBar
-TextureRect
