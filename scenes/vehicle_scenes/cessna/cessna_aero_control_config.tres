@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="AeroControlConfig" load_steps=9 format=3 uid="uid://b7wqkkn4w0h2g"]
+
+[ext_resource type="Script" uid="uid://dfbhcpt1rr3ai" path="res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd" id="1_ejxnj"]
+[ext_resource type="Script" uid="uid://cbgqb7g7mmwtu" path="res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd" id="2_pbdx3"]
+
+[sub_resource type="Resource" id="Resource_34386"]
+resource_name = "pitch"
+script = ExtResource("1_ejxnj")
+axis_name = "pitch"
+positive_event = &"pitch_up"
+negative_event = &"pitch_down"
+
+[sub_resource type="Resource" id="Resource_o6rpv"]
+resource_name = "yaw"
+script = ExtResource("1_ejxnj")
+axis_name = "yaw"
+positive_event = &"yaw_left"
+negative_event = &"yaw_right"
+
+[sub_resource type="Resource" id="Resource_wtjbh"]
+resource_name = "roll"
+script = ExtResource("1_ejxnj")
+axis_name = "roll"
+positive_event = &"roll_left"
+negative_event = &"roll_right"
+
+[sub_resource type="Resource" id="Resource_jsx6i"]
+resource_name = "throttle"
+script = ExtResource("1_ejxnj")
+axis_name = "throttle"
+min_limit = 0.0
+cumulative_positive_event = &"throttle_up"
+cumulative_negative_event = &"throttle_down"
+
+[sub_resource type="Resource" id="Resource_b1qmm"]
+resource_name = "brake"
+script = ExtResource("1_ejxnj")
+axis_name = "brake"
+min_limit = 0.0
+positive_event = &"brake_up"
+metadata/_custom_type_script = "uid://dfbhcpt1rr3ai"
+
+[sub_resource type="Resource" id="Resource_ey0gl"]
+resource_name = "flaps"
+script = ExtResource("1_ejxnj")
+axis_name = "flaps"
+min_limit = 0.0
+cumulative_positive_event = &"collective_up"
+cumulative_negative_event = &"collective_down"
+metadata/_custom_type_script = "uid://dfbhcpt1rr3ai"
+
+[resource]
+script = ExtResource("2_pbdx3")
+axis_configs = Array[ExtResource("1_ejxnj")]([SubResource("Resource_34386"), SubResource("Resource_o6rpv"), SubResource("Resource_wtjbh"), SubResource("Resource_jsx6i"), SubResource("Resource_b1qmm"), SubResource("Resource_ey0gl")])

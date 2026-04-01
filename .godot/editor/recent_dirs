@@ -1,3 +1,6 @@
+res://scenes/map_scenes/main_map/spawn_positions
+res://general_resources
+res://scenes/vehicle_scenes/cessna
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources
 res://temporary
 res://scenes/menu_scenes/gameplay_ui

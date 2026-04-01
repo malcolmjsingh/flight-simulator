@@ -1,30 +1,49 @@
 extends Node3D
 
-@onready var dragbox: Panel = $Control/spawnerGUI/dragbox
-@onready var dragbox_global_rect: Rect2 = $Control/spawnerGUI/dragbox.get_global_rect()
-@onready var spawnerGUI: Control = $Control/spawnerGUI
-@onready var vehicle_select_v_box: VBoxContainer = $Control/spawnerGUI/vehicleSelectPanel/ScrollContainer/vehicleSelectVBox
-@onready var info_display_panel: RichTextLabel = $Control/spawnerGUI/Control/infoDisplayPanel
-@onready var spawn_button: Button = $Control/spawnerGUI/Control/spawnButton
-@onready var check_button: CheckButton = $Control/spawnerGUI/dragbox/CheckButton
+@onready var dragbox: Panel = $Control/SpawnerGUI/dragbox
+@onready var dragbox_global_rect: Rect2 = $Control/SpawnerGUI/dragbox.get_global_rect()
+@onready var spawnerGUI: Control = $Control/SpawnerGUI
+@onready var vehicle_select_v_box: VBoxContainer = $Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer/vehicleSelectVBox
+@onready var info_display_panel: RichTextLabel = $Control/SpawnerGUI/Control/infoDisplayPanel
+@onready var spawn_button: Button = $Control/SpawnerGUI/Control/spawnButton
+@onready var check_button: CheckButton = $Control/SpawnerGUI/dragbox/CheckButton
+@onready var vehicle_spawn_handler: Node3D = $"."
+@onready var spawn_option_button: OptionButton = $Control/SpawnerGUI/SpawnOptionButton
+@onready var active_vehicles_box: VBoxContainer = $Control/ActiveVehiclesBox/ScrollContainer/activeVehiclesBox
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
 var selectedVehicleButton:Button
 var canGrab = false
+var vehicle_spawn_handler_storage = Node3D.new()
 
 var activeVehicle
 var activeCamera
 
-func _ready() -> void:
-	process_vehicle_resources_in_folder("res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/")
-	setup_vehicle_buttons()
+signal newVehicleAdded
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready() -> void:
+	
+	self.newVehicleAdded.connect(_on_new_vehicle_added)
+	
+	vehicle_spawn_handler_storage.name = "VehicleSpawnHandlerStorage"
+	vehicle_spawn_handler.add_sibling.call_deferred(vehicle_spawn_handler_storage)
+	# add_sibling doesnt work properly if not call_deferred
+	# so need to call_deferred (called at the end of the frame)
+	# and use await to wait until the end of the frame to have things run properly
+	await get_tree().process_frame
+	process_vehicle_resources_in_folder("res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/")
+	var spawn_positions_path_string = get_tree().current_scene.get_meta("spawn_positions_path")
+	collect_spawn_positions_from_directory(spawn_positions_path_string)
+	spawn_option_button.select(-1)
 
 func _process(delta: float) -> void:
 	mouse_position = get_viewport().get_mouse_position()
 	dragbox_global_rect = dragbox.get_global_rect()
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		print("pressed ui accept")
+		create_active_vehicle_display_buttons_from_scene()
 
 
 func _input(event: InputEvent) -> void:
@@ -57,13 +76,12 @@ func process_vehicle_resources_in_folder(path:String):
 				var full_path = path + "/" + file_name
 				var resource = ResourceLoader.load(full_path)
 				if resource is vehicle:
-					print("Processing Vehicle:")
-					print("Name: %s" % resource.name)
 					var button = Button.new()
 					button.text = resource.name
 					button.name = resource.name
 					button.set_meta("VehicleResource", resource)
 					button.add_to_group("vehicleButtons")
+					button.pressed.connect(_on_vehicle_button_pressed.bind(button))
 					vehicle_select_v_box.add_child(button)
 					
 			file_name = dir.get_next()
@@ -71,11 +89,43 @@ func process_vehicle_resources_in_folder(path:String):
 	else:
 		push_error("Error: Directory not found")
 
-func setup_vehicle_buttons():
-	var all_vehicle_buttons = get_tree().get_nodes_in_group("vehicleButtons")
-	print(all_vehicle_buttons)
-	for button in all_vehicle_buttons:
-		button.pressed.connect(_on_vehicle_button_pressed.bind(button))
+func collect_spawn_positions_from_directory(path:String):
+	var dir = DirAccess.open(path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if (not dir.current_is_dir()) and ((file_name.ends_with(".tres")) or (file_name.ends_with(".res"))):
+				var full_path = path + "/" + file_name
+				var resource = ResourceLoader.load(full_path)
+				
+				if resource is spawn_position:
+					var spawn_pos_array = spawn_option_button.get_meta("spawn_position_resources_array")
+					spawn_pos_array.append(resource)
+					spawn_option_button.add_item(resource.name)
+					
+			file_name = dir.get_next()
+		dir.list_dir_end()
+	else:
+		push_error("Error: Directory not found")
+
+func create_active_vehicle_display_buttons_from_scene():
+	var active_vehicle_box_children = active_vehicles_box.get_children()
+	for box_child in active_vehicle_box_children:
+		box_child.queue_free()
+	
+	var vehicle_spawn_handler_childern = vehicle_spawn_handler_storage.get_children()
+	for child in vehicle_spawn_handler_childern:
+		var button = Button.new()
+		button.text = child.name
+		button.name = child.name
+		button.set_meta("AssociatedVehicle", child)
+		button.add_to_group("activeVehicleButtons")
+		active_vehicles_box.add_child(button)
+		button.pressed.connect(_on_active_vehicle_button_pressed.bind(button))
+
+func _on_active_vehicle_button_pressed(myButton: Button):
+	pass
 
 func _on_vehicle_button_pressed(myButton: Button):
 	var buttonVehicleResource = myButton.get_meta("VehicleResource")
@@ -90,19 +140,24 @@ func _on_spawn_button_pressed() -> void:
 		info_display_panel.text = "Please select a Vehicle before attempting to spawn."
 
 func spawnProcedure(scene:PackedScene):
-	var sceneInstance = scene.instantiate()
-	get_tree().current_scene.add_child(sceneInstance)
-	
-	for child in sceneInstance.get_children():
-		if child.is_in_group("camera"):
-			var cameraChild = child
-			if cameraChild is Camera3D:
-				cameraChild.make_current()
-			else:
-				var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
-				if cameraInstance is Camera3D:
-					cameraInstance.make_current()
-
+	if spawn_option_button.get_selected() == -1:
+		info_display_panel.text = "Please select a Location before attempting to spawn. (You can select a location using the dropdown.)"
+	elif spawn_option_button.get_selected() >= 0:
+		var sceneInstance = scene.instantiate()
+		get_tree().current_scene.get_node("VehicleSpawnHandlerStorage").add_child(sceneInstance)
+		var spawnOptionsArray = spawn_option_button.get_meta("spawn_position_resources_array")
+		var spawnOptionResource = spawnOptionsArray[spawn_option_button.get_selected()]
+		sceneInstance.position = spawnOptionResource.vec3Position
+		newVehicleAdded.emit()
+		for child in sceneInstance.get_children():
+			if child.is_in_group("camera"):
+				var cameraChild = child
+				if cameraChild is Camera3D:
+					cameraChild.make_current()
+				else:
+					var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
+					if cameraInstance is Camera3D:
+						cameraInstance.make_current()
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -112,3 +167,6 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		currentlyGrabbing = false
 		canGrab = false
 		spawnerGUI.position = Vector2(750, 645)
+
+func _on_new_vehicle_added() -> void:
+	create_active_vehicle_display_buttons_from_scene()
