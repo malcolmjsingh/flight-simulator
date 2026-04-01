@@ -22,15 +22,17 @@ script = ExtResource("1_7qj7w")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 647.0
 
 [node name="spawnerGUI" type="Control" parent="Control"]
 anchors_preset = 0
-offset_left = 364.0
-offset_top = 204.0
-offset_right = 764.0
-offset_bottom = 454.0
+offset_left = 756.0
+offset_top = 644.0
+offset_right = 1156.0
+offset_bottom = 894.0
 
 [node name="Panel" type="Panel" parent="Control/spawnerGUI"]
 layout_mode = 0
@@ -64,11 +66,19 @@ size_flags_horizontal = 3
 
 [node name="dragbox" type="Panel" parent="Control/spawnerGUI"]
 layout_mode = 0
-offset_left = -2.0
 offset_top = -11.0
 offset_right = 400.0
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7qj7w")
+
+[node name="CheckButton" type="CheckButton" parent="Control/spawnerGUI/dragbox"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = -5.0
+offset_right = 406.0
+offset_bottom = 19.0
+focus_mode = 0
+alignment = 2
 
 [node name="Control" type="Control" parent="Control/spawnerGUI"]
 anchors_preset = 0
@@ -88,6 +98,7 @@ offset_left = 101.0
 offset_top = 163.0
 offset_right = 201.0
 offset_bottom = 194.0
+focus_mode = 0
 text = "spawn"
 
 [node name="infoDisplayPanel" type="RichTextLabel" parent="Control/spawnerGUI/Control"]
@@ -96,4 +107,7 @@ offset_right = 201.0
 offset_bottom = 162.0
 text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
 
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[connection signal="toggled" from="Control/spawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/spawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]
