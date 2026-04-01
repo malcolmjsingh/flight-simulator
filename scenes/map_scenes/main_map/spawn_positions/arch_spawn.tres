@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="spawn_position" load_steps=2 format=3 uid="uid://b2dmhykgxadyt"]
+
+[ext_resource type="Script" uid="uid://4vagotmvokj0" path="res://general_resources/spawn_position_resource.gd" id="1_pxg4m"]
+
+[resource]
+script = ExtResource("1_pxg4m")
+name = "Arch"
+vec3Position = Vector3(-2145, 500, -60)
+metadata/_custom_type_script = "uid://4vagotmvokj0"

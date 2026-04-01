@@ -120,7 +120,6 @@ fit_to_longest_item = false
 metadata/spawn_position_resources_array = []
 
 [node name="ActiveVehiclesBox" type="Control" parent="Control"]
-visible = false
 anchors_preset = 0
 offset_left = 6.0
 offset_top = 3.0
@@ -144,7 +143,6 @@ size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_7qj7w")
 
 [node name="ActiveVehiclesSelectBox" type="Control" parent="Control"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
