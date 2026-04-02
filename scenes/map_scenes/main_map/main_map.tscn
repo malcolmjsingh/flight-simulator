@@ -87,4 +87,4 @@ shape = SubResource("ConcavePolygonShape3D_4j71w")
 [node name="VehicleSpawnHandler" parent="." instance=ExtResource("3_octsl")]
 
 [node name="water" parent="." instance=ExtResource("4_s5lbr")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -68.74658, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 127.512375, 0)

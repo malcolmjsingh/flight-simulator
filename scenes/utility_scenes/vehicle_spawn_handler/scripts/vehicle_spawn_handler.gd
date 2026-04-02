@@ -10,15 +10,18 @@ extends Node3D
 @onready var vehicle_spawn_handler: Node3D = $"."
 @onready var spawn_option_button: OptionButton = $Control/SpawnerGUI/SpawnOptionButton
 @onready var active_vehicles_box: VBoxContainer = $Control/ActiveVehiclesBox/ScrollContainer/activeVehiclesBox
+@onready var active_vehicle_display_label: RichTextLabel = $Control/ActiveVehiclesSelectBox/ActiveVehicleDisplayLabel
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
-var selectedVehicleButton:Button
+var currentlySelectedVehicleButton:Button
+var currentySelectedActiveVehicleButton:Button
 var canGrab = false
 var vehicle_spawn_handler_storage = Node3D.new()
 
 var activeVehicle
 var activeCamera
+var currentlySelectedActiveVehicleScene
 
 signal newVehicleAdded
 
@@ -40,7 +43,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	mouse_position = get_viewport().get_mouse_position()
 	dragbox_global_rect = dragbox.get_global_rect()
-	
+	if currentlySelectedActiveVehicleScene:
+		update_current_active_vehicle_ui()
 	if Input.is_action_just_pressed("ui_accept"):
 		print("pressed ui accept")
 		create_active_vehicle_display_buttons_from_scene()
@@ -61,7 +65,7 @@ func _input(event: InputEvent) -> void:
 						canGrab = true
 						spawnerGUI.position = Vector2(750, 400)
 						check_button.button_pressed = true
-	
+
 	if event is InputEventMouseMotion:
 		if currentlyGrabbing:
 			spawnerGUI.position = spawnerGUI.position + event.relative
@@ -125,16 +129,23 @@ func create_active_vehicle_display_buttons_from_scene():
 		button.pressed.connect(_on_active_vehicle_button_pressed.bind(button))
 
 func _on_active_vehicle_button_pressed(myButton: Button):
-	pass
+	currentlySelectedActiveVehicleScene = myButton.get_meta("AssociatedVehicle")
+	update_current_active_vehicle_ui()
+	currentySelectedActiveVehicleButton = myButton
 
+func update_current_active_vehicle_ui():
+	var nameStringdojgij = currentlySelectedActiveVehicleScene.name
+	var scenePositione = currentlySelectedActiveVehicleScene.position
+	active_vehicle_display_label.text = "Name: %s \n Currently Active: Havent Impleneted lmao \n Position: \n X: %d \nY: %d\nZ: %d" % [nameStringdojgij,scenePositione.x, scenePositione.y, scenePositione.z ]
+	
 func _on_vehicle_button_pressed(myButton: Button):
 	var buttonVehicleResource = myButton.get_meta("VehicleResource")
 	info_display_panel.text = buttonVehicleResource.descriptionString
-	selectedVehicleButton = myButton
+	currentlySelectedVehicleButton = myButton
 
 func _on_spawn_button_pressed() -> void:
-	if selectedVehicleButton:
-		var buttonVehicleResource = selectedVehicleButton.get_meta("VehicleResource")
+	if currentlySelectedVehicleButton:
+		var buttonVehicleResource = currentlySelectedVehicleButton.get_meta("VehicleResource")
 		spawnProcedure(buttonVehicleResource.scene)
 	else:
 		info_display_panel.text = "Please select a Vehicle before attempting to spawn."

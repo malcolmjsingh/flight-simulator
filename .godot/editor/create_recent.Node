@@ -1,7 +1,8 @@
+RichTextLabel
+Label
+Button
 Label      - Matches the "text" keyword.
 MeshInstance3D
-RichTextLabel
-Button
 Control
 Panel
 PanelContainer
@@ -11,5 +12,3 @@ VScrollBar
 BoxContainer
 Container
 TextureButton
-TextureProgressBar
-TextureRect

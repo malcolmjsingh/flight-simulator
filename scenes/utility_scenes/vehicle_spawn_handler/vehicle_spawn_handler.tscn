@@ -120,7 +120,6 @@ fit_to_longest_item = false
 metadata/spawn_position_resources_array = []
 
 [node name="ActiveVehiclesBox" type="Control" parent="Control"]
-visible = false
 anchors_preset = 0
 offset_left = 6.0
 offset_top = 3.0
@@ -144,7 +143,6 @@ size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_7qj7w")
 
 [node name="ActiveVehiclesSelectBox" type="Control" parent="Control"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -155,6 +153,35 @@ offset_left = 148.0
 offset_top = 3.0
 offset_right = 471.0
 offset_bottom = 232.0
+
+[node name="DeleteVehicle" type="Button" parent="Control/ActiveVehiclesSelectBox"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 198.0
+offset_right = 364.0
+offset_bottom = 229.0
+text = "Delete"
+
+[node name="MakeActive" type="Button" parent="Control/ActiveVehiclesSelectBox"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 199.0
+offset_right = 469.0
+offset_bottom = 230.0
+text = "Make Active
+"
+
+[node name="ActiveVehicleDisplayLabel" type="RichTextLabel" parent="Control/ActiveVehiclesSelectBox"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 10.0
+offset_right = 462.0
+offset_bottom = 198.0
+text = "Name: No Name Selected
+Currently Active: No
+Position: X: N/A Y: N/A Z: N/A
+
+"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775064424
+::res://::1775136554
 README.md::TextFile::-1::1774359898::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774359898
 ::res://addons/godot_aerodynamic_physics/::1774360026
@@ -157,9 +157,9 @@ spawn_position_resource.gd::GDScript::2078839878353660019::1775047655::0::1::::s
 vehicle_resource.gd::GDScript::291297277700496642::1774824552::0::1::::vehicle<>Resource<><>0<>0<><>::
 ::res://scenes/::1774359898
 ::res://scenes/map_scenes/::1774359898
-::res://scenes/map_scenes/main_map/::1775064254
-main_map.tscn::PackedScene::7230465751894859795::1775064254::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://cn6hbc5b5tag5::::res://scenes/map_scenes/main_map/models/water.glb<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
-::res://scenes/map_scenes/main_map/models/::1775064164
+::res://scenes/map_scenes/main_map/::1775065124
+main_map.tscn::PackedScene::7230465751894859795::1775065124::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://cn6hbc5b5tag5::::res://scenes/map_scenes/main_map/models/water.glb<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
+::res://scenes/map_scenes/main_map/models/::1775064429
 terrain5.glb::PackedScene::2576861199777891088::1774359898::1774360038::1::::<><><>0<>0<>8874d145420e51c7f4bd757db5065c54<>res://.godot/imported/terrain5.glb-83187bc4959f6877b1d6a889ae60a418.scn::uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
 terrain5_TerrainTexture5.png::CompressedTexture2D::1184933211667797981::1774359898::1774360035::1::::<><><>0<>0<>c3772405bccd37dac2f10101484c3579<>res://.godot/imported/terrain5_TerrainTexture5.png-9c97c16fceee85d7a62edd2664b32d07.s3tc.ctex::
 water.glb::PackedScene::5749719001276851586::1775064164::1775064429::1::::<><><>0<>0<>563de0644f06b831ea1fd9959aaa4eed<>res://.godot/imported/water.glb-52fc8d260905848fed04790f47ed038a.scn::uid://c6hfk5twok70n::::res://scenes/map_scenes/main_map/models/water_waterTexture.png
@@ -216,10 +216,10 @@ orbit_cam.tscn::PackedScene::1307298081011399796::1774891234::0::1::::<><><>0<>0
 ::res://scenes/utility_scenes/orbit_cam/scripts/::1774450206
 camera_follow_node.gd::GDScript::702970124986398288::1774450206::0::1::::<>Node3D<><>0<>0<><>::
 orbit_cam.gd::GDScript::4841674790267513985::1774446161::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/::1775064128
-vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775064128::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
-::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775063854
-vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775063854::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/utility_scenes/vehicle_spawn_handler/::1775090199
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775090199::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775090156
+vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775090156::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1774891234
 asdfsdafsfda.tres::Resource/vehicle::2345288858002010642::1774891234::0::1::::<><><>0<>0<><>::uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
 car2.tres::Resource/vehicle::8464066970064583996::1774886112::0::1::::<><><>0<>0<><>::uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
@@ -234,8 +234,8 @@ buggy.tscn::PackedScene::2321244538729330533::1774885918::0::1::::<><><>0<>0<><>
 ::res://scenes/vehicle_scenes/buggy/scripts/::1774445823
 buggy.gd::GDScript::8452000473469812459::1774445823::0::1::::<>VehicleBody3D<><>0<>0<><>::
 buggy_fl.gd::GDScript::5610898632721764956::1774359898::0::1::::<>VehicleWheel3D<><>0<>0<><>::
-::res://scenes/vehicle_scenes/car/::1775064164
-car.tscn::PackedScene::5285013684340955257::1775064164::0::1::::<><><>0<>0<><>::uid://nd5byntogp40::::res://scenes/vehicle_scenes/car/scripts/car.gd<>uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
+::res://scenes/vehicle_scenes/car/::1775064436
+car.tscn::PackedScene::5285013684340955257::1775064436::0::1::::<><><>0<>0<><>::uid://nd5byntogp40::::res://scenes/vehicle_scenes/car/scripts/car.gd<>uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
 ::res://scenes/vehicle_scenes/car/models/::1774360036
 Airdrop.glb::PackedScene::1768628876079176277::1774359898::1774360036::1::::<><><>0<>0<>ad80482d3ba67466123ad5ef8a297328<>res://.godot/imported/Airdrop.glb-c7fbd6bcc9137c4ed5ee3f33d53b4a22.scn::uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png
 Airdrop_Airdrop-bodyTextureColor.png::CompressedTexture2D::4654741837094324232::1774359898::1774360028::1::::<><><>0<>0<>581f931613ee11d5fe204258fa6205cf<>res://.godot/imported/Airdrop_Airdrop-bodyTextureColor.png-1415dd6feb257c8228ce010e9cf76b95.s3tc.ctex::

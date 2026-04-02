@@ -1,2 +1,1 @@
-res://scenes/vehicle_scenes/car/car.tscn
-res://scenes/map_scenes/main_map/main_map.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
