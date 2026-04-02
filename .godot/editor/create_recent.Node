@@ -1,8 +1,9 @@
-RichTextLabel
-Label
-Button
-Label      - Matches the "text" keyword.
+Node3D
+CollisionShape3D
+StaticBody3D
 MeshInstance3D
+RichTextLabel
+Button
 Control
 Panel
 PanelContainer
@@ -11,4 +12,3 @@ ScrollContainer
 VScrollBar
 BoxContainer
 Container
-TextureButton
