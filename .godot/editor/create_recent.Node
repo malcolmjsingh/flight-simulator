@@ -1,5 +1,6 @@
 Node3D
-Label      - Matches the "text" keyword.
+CollisionShape3D
+StaticBody3D
 MeshInstance3D
 RichTextLabel
 Button
@@ -11,5 +12,3 @@ ScrollContainer
 VScrollBar
 BoxContainer
 Container
-TextureButton
-TextureProgressBar
