@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775093343
+::res://::1775096935
 README.md::TextFile::-1::1775093269::0::1::::<><><>0<>0<><>::
 ::res://addons/::1775093269
 ::res://addons/godot_aerodynamic_physics/::1775093270
@@ -157,8 +157,8 @@ spawn_position_resource.gd::GDScript::2078839878353660019::1775093270::0::1::::s
 vehicle_resource.gd::GDScript::291297277700496642::1775093270::0::1::::vehicle<>Resource<><>0<>0<><>::
 ::res://scenes/::1775093270
 ::res://scenes/map_scenes/::1775094159
-::res://scenes/map_scenes/main_map/::1775094083
-main_map.tscn::PackedScene::7230465751894859795::1775094363::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://c6hfk5twok70n::::res://scenes/map_scenes/main_map/models/water_waterTexture.png<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png<>uid://0o3k8pko6tdm::::res://scenes/map_scenes/main_map/scripts/water.gd<>uid://bwww8nihws15k::::res://scenes/map_scenes/map2 electric boogaloo/map.glb
+::res://scenes/map_scenes/main_map/::1775095422
+main_map.tscn::PackedScene::7230465751894859795::1775095422::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://c6hfk5twok70n::::res://scenes/map_scenes/main_map/models/water_waterTexture.png<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png<>uid://0o3k8pko6tdm::::res://scenes/map_scenes/main_map/scripts/water.gd
 ::res://scenes/map_scenes/main_map/models/::1775093270
 terrain5.glb::PackedScene::2576861199777891088::1775093270::1775093270::1::::<><><>0<>0<>8874d145420e51c7f4bd757db5065c54<>res://.godot/imported/terrain5.glb-83187bc4959f6877b1d6a889ae60a418.scn::uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
 terrain5_TerrainTexture5.png::CompressedTexture2D::1184933211667797981::1775093270::1775093270::1::::<><><>0<>0<>c3772405bccd37dac2f10101484c3579<>res://.godot/imported/terrain5_TerrainTexture5.png-9c97c16fceee85d7a62edd2664b32d07.s3tc.ctex::
@@ -189,9 +189,11 @@ WhiteSquare.png::CompressedTexture2D::4999468513252668894::1775093270::177509327
 ::res://scenes/map_scenes/main_map/textures/Fonts/::1775093270
 JetBrainsMonoNL-Bold.ttf::FontFile::1881085941100252269::1775093270::1775093270::1::::<><><>0<>0<>7d6603ec4e87de3b573aa6c8b19e4ba6<>res://.godot/imported/JetBrainsMonoNL-Bold.ttf-17de79e14c060968d0095a1a88666ae3.fontdata::
 JetBrainsMonoNL-Light.ttf::FontFile::7214475863585000427::1775093270::1775093270::1::::<><><>0<>0<>8eef7ec4fb58af1a61aa36a7591b6db1<>res://.godot/imported/JetBrainsMonoNL-Light.ttf-72519e46eef59c73aef14b4e957ec789.fontdata::
-::res://scenes/map_scenes/map2 electric boogaloo/::1775094216
-map.glb::PackedScene::3977386954869025470::1775094216::1775094216::1::::<><><>0<>0<>a11b56a313fd726fcad1166f327e2f12<>res://.godot/imported/map.glb-81e9fcdd8e652d1baebb9d58e55a03b1.scn::
-map.tscn::PackedScene::4720882621653390845::1775094485::0::1::::<><><>0<>0<><>::uid://bwww8nihws15k::::res://scenes/map_scenes/map2 electric boogaloo/map.glb
+::res://scenes/map_scenes/map2 electric boogaloo/::1775096935
+map.tscn::PackedScene::4720882621653390845::1775096900::0::1::::<><><>0<>0<><>::uid://bwww8nihws15k::::res://scenes/map_scenes/map2 electric boogaloo/models/map.glb
+::res://scenes/map_scenes/map2 electric boogaloo/models/::1775096974
+map.glb::PackedScene::3977386954869025470::1775094216::1775096901::1::::<><><>0<>0<>5983a7a99bec8c8a8d2454544ee77fac<>res://.godot/imported/map.glb-3bb6c829ed551543390af4de71d2720a.scn::
+map_middle.glb::PackedScene::5850095084514902506::1775096974::1775096974::1::::<><><>0<>0<>3e7e530784ebda7561912ba293531f23<>res://.godot/imported/map_middle.glb-4ad3e16272fc95fe501369c1fff92539.scn::
 ::res://scenes/menu_scenes/::1775093270
 ::res://scenes/menu_scenes/diagram_test/::1775093270
 diagram_test.tscn::PackedScene::9149607177363196632::1775093270::0::1::::<><><>0<>0<><>::uid://2inmkt08qdry::::res://scenes/menu_scenes/diagram_test/scripts/diagram_test.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb

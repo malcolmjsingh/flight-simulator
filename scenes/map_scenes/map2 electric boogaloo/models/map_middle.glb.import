@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwww8nihws15k"
-path="res://.godot/imported/map.glb-81e9fcdd8e652d1baebb9d58e55a03b1.scn"
+uid="uid://cpl3hgkhb6mgg"
+path="res://.godot/imported/map_middle.glb-4ad3e16272fc95fe501369c1fff92539.scn"
 
 [deps]
 
-source_file="res://scenes/map_scenes/map2 electric boogaloo/map.glb"
-dest_files=["res://.godot/imported/map.glb-81e9fcdd8e652d1baebb9d58e55a03b1.scn"]
+source_file="res://scenes/map_scenes/map2 electric boogaloo/models/map_middle.glb"
+dest_files=["res://.godot/imported/map_middle.glb-4ad3e16272fc95fe501369c1fff92539.scn"]
 
 [params]
 
