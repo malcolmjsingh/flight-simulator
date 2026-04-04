@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775136554
+::res://::1775334260
 README.md::TextFile::-1::1774359898::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774359898
 ::res://addons/godot_aerodynamic_physics/::1774360026
@@ -156,21 +156,20 @@ vector_3d.gdshader::Shader::5270827816771410601::1774359898::0::1::::<><><>0<>0<
 spawn_position_resource.gd::GDScript::2078839878353660019::1775047655::0::1::::spawn_position<>Resource<><>0<>0<><>::
 vehicle_resource.gd::GDScript::291297277700496642::1774824552::0::1::::vehicle<>Resource<><>0<>0<><>::
 ::res://scenes/::1774359898
-::res://scenes/map_scenes/::1774359898
-::res://scenes/map_scenes/main_map/::1775065124
-main_map.tscn::PackedScene::7230465751894859795::1775065124::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://cn6hbc5b5tag5::::res://scenes/map_scenes/main_map/models/water.glb<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
+::res://scenes/map_scenes/::1775136769
+::res://scenes/map_scenes/main_map/::1775167149
+main_map.tscn::PackedScene::7230465751894859795::1775167149::0::1::::<><><>0<>0<><>::uid://dkojklqwnmpmj::::res://scenes/map_scenes/main_map/textures/sky.hdr<>uid://bv23xiqq6lorb::::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn<>uid://c6hfk5twok70n::::res://scenes/map_scenes/main_map/models/water_waterTexture.png<>uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png<>uid://0o3k8pko6tdm::::res://scenes/map_scenes/main_map/scripts/water.gd
 ::res://scenes/map_scenes/main_map/models/::1775064429
 terrain5.glb::PackedScene::2576861199777891088::1774359898::1774360038::1::::<><><>0<>0<>8874d145420e51c7f4bd757db5065c54<>res://.godot/imported/terrain5.glb-83187bc4959f6877b1d6a889ae60a418.scn::uid://q48xap51ooif::::res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png
 terrain5_TerrainTexture5.png::CompressedTexture2D::1184933211667797981::1774359898::1774360035::1::::<><><>0<>0<>c3772405bccd37dac2f10101484c3579<>res://.godot/imported/terrain5_TerrainTexture5.png-9c97c16fceee85d7a62edd2664b32d07.s3tc.ctex::
 water.glb::PackedScene::5749719001276851586::1775064164::1775064429::1::::<><><>0<>0<>563de0644f06b831ea1fd9959aaa4eed<>res://.godot/imported/water.glb-52fc8d260905848fed04790f47ed038a.scn::uid://c6hfk5twok70n::::res://scenes/map_scenes/main_map/models/water_waterTexture.png
 water_waterTexture.png::CompressedTexture2D::6963469213417012879::1775064164::1775064428::1::::<><><>0<>0<>62eb331ade667a915f6ec0d3603ade35<>res://.godot/imported/water_waterTexture.png-fd11a5fe54d0775d6a4a3ca1d303a932.s3tc.ctex::
-::res://scenes/map_scenes/main_map/scripts/::1774886916
+::res://scenes/map_scenes/main_map/scripts/::1775136769
 altitude_meter_background.gd::GDScript::8752959206755966706::1774359898::0::1::::<>TextureRect<><>0<>0<><>::
-camera_3d.gd::GDScript::6491099651096367883::1774359898::0::1::::<>Camera3D<><>0<>0<><>::
-camera_orbit_center.gd::GDScript::2582581259347991141::1774359898::0::1::::<>Node3D<><>0<>0<><>::
 compass_texture.gd::GDScript::2031132605818283021::1774886916::0::1::::<>TextureRect<><>0<>0<><>::
 progress_bar.gd::GDScript::4865410782218896617::1774359898::0::1::::<>ProgressBar<><>0<>0<><>::
 rain.gd::GDScript::2404212254347133001::1774359898::0::1::::<>GPUParticles3D<><>0<>0<><>::
+water.gd::GDScript::1785342070161080854::1775136769::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/map_scenes/main_map/spawn_positions/::1775048227
 air_spawn.tres::Resource/spawn_position::8523093179570926368::1775048227::0::1::::<><><>0<>0<><>::uid://4vagotmvokj0::::res://general_resources/spawn_position_resource.gd
 arch_spawn.tres::Resource/spawn_position::4288454975964486783::1775048227::0::1::::<><><>0<>0<><>::uid://4vagotmvokj0::::res://general_resources/spawn_position_resource.gd
@@ -190,6 +189,11 @@ WhiteSquare.png::CompressedTexture2D::4999468513252668894::1774359898::177436002
 ::res://scenes/map_scenes/main_map/textures/Fonts/::1774360026
 JetBrainsMonoNL-Bold.ttf::FontFile::1881085941100252269::1774359898::1774360026::1::::<><><>0<>0<>7d6603ec4e87de3b573aa6c8b19e4ba6<>res://.godot/imported/JetBrainsMonoNL-Bold.ttf-17de79e14c060968d0095a1a88666ae3.fontdata::
 JetBrainsMonoNL-Light.ttf::FontFile::7214475863585000427::1774359898::1774360026::1::::<><><>0<>0<>8eef7ec4fb58af1a61aa36a7591b6db1<>res://.godot/imported/JetBrainsMonoNL-Light.ttf-72519e46eef59c73aef14b4e957ec789.fontdata::
+::res://scenes/map_scenes/map2 electric boogaloo/::1775136769
+map.tscn::PackedScene::4720882621653390845::1775136769::0::1::::<><><>0<>0<><>::uid://bwww8nihws15k::::res://scenes/map_scenes/map2 electric boogaloo/models/map.glb
+::res://scenes/map_scenes/map2 electric boogaloo/models/::1775136769
+map.glb::PackedScene::3977386954869025470::1775136769::1775136769::1::::<><><>0<>0<>ff09b355d318c8a67ffa8d53cbb6a4db<>res://.godot/imported/map.glb-3bb6c829ed551543390af4de71d2720a.scn::
+map_middle.glb::PackedScene::5850095084514902506::1775136769::1775136769::1::::<><><>0<>0<>52a9b7b13c8e10af3a4c695a32efa8e4<>res://.godot/imported/map_middle.glb-4ad3e16272fc95fe501369c1fff92539.scn::
 ::res://scenes/menu_scenes/::1774359898
 ::res://scenes/menu_scenes/diagram_test/::1774359898
 diagram_test.tscn::PackedScene::9149607177363196632::1774359898::0::1::::<><><>0<>0<><>::uid://2inmkt08qdry::::res://scenes/menu_scenes/diagram_test/scripts/diagram_test.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
@@ -216,8 +220,8 @@ orbit_cam.tscn::PackedScene::1307298081011399796::1774891234::0::1::::<><><>0<>0
 ::res://scenes/utility_scenes/orbit_cam/scripts/::1774450206
 camera_follow_node.gd::GDScript::702970124986398288::1774450206::0::1::::<>Node3D<><>0<>0<><>::
 orbit_cam.gd::GDScript::4841674790267513985::1774446161::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/::1775090199
-vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775090199::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+::res://scenes/utility_scenes/vehicle_spawn_handler/::1775136734
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775136734::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
 ::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775090156
 vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775090156::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1774891234

@@ -19,8 +19,8 @@ var currentySelectedActiveVehicleButton:Button
 var canGrab = false
 var vehicle_spawn_handler_storage = Node3D.new()
 
-var activeVehicle
-var activeCamera
+var vehicleThatWasJustAdded
+var vehicleWithCurrentlyActiveCamera
 var currentlySelectedActiveVehicleScene
 
 signal newVehicleAdded
@@ -48,7 +48,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		print("pressed ui accept")
 		create_active_vehicle_display_buttons_from_scene()
-
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -115,6 +114,10 @@ func collect_spawn_positions_from_directory(path:String):
 
 func create_active_vehicle_display_buttons_from_scene():
 	var active_vehicle_box_children = active_vehicles_box.get_children()
+	
+	#this is like not efficent
+	#but also like it works well enough
+	#so im probably not going to change it
 	for box_child in active_vehicle_box_children:
 		box_child.queue_free()
 	
@@ -127,6 +130,8 @@ func create_active_vehicle_display_buttons_from_scene():
 		button.add_to_group("activeVehicleButtons")
 		active_vehicles_box.add_child(button)
 		button.pressed.connect(_on_active_vehicle_button_pressed.bind(button))
+		if child == vehicleThatWasJustAdded:
+			_on_active_vehicle_button_pressed(button)
 
 func _on_active_vehicle_button_pressed(myButton: Button):
 	currentlySelectedActiveVehicleScene = myButton.get_meta("AssociatedVehicle")
@@ -134,9 +139,7 @@ func _on_active_vehicle_button_pressed(myButton: Button):
 	currentySelectedActiveVehicleButton = myButton
 
 func update_current_active_vehicle_ui():
-	var nameStringdojgij = currentlySelectedActiveVehicleScene.name
-	var scenePositione = currentlySelectedActiveVehicleScene.position
-	active_vehicle_display_label.text = "Name: %s \n Currently Active: Havent Impleneted lmao \n Position: \n X: %d \nY: %d\nZ: %d" % [nameStringdojgij,scenePositione.x, scenePositione.y, scenePositione.z ]
+	active_vehicle_display_label.text = create_active_vehicle_ui_string(currentlySelectedActiveVehicleScene.name, currentlySelectedActiveVehicleScene.get_meta("is_camera_active"), currentlySelectedActiveVehicleScene.position)
 	
 func _on_vehicle_button_pressed(myButton: Button):
 	var buttonVehicleResource = myButton.get_meta("VehicleResource")
@@ -155,13 +158,18 @@ func spawnProcedure(scene:PackedScene):
 		info_display_panel.text = "Please select a Location before attempting to spawn. (You can select a location using the dropdown.)"
 	elif spawn_option_button.get_selected() >= 0:
 		var sceneInstance = scene.instantiate()
+		vehicleThatWasJustAdded = sceneInstance
+		sceneInstance.set_block_signals(false)
+		sceneInstance.set_meta("is_camera_active", false)
 		get_tree().current_scene.get_node("VehicleSpawnHandlerStorage").add_child(sceneInstance)
 		var spawnOptionsArray = spawn_option_button.get_meta("spawn_position_resources_array")
 		var spawnOptionResource = spawnOptionsArray[spawn_option_button.get_selected()]
 		sceneInstance.position = spawnOptionResource.vec3Position
 		newVehicleAdded.emit()
+		
 		for child in sceneInstance.get_children():
 			if child.is_in_group("camera"):
+				sceneInstance.set_meta("is_camera_active", true)
 				var cameraChild = child
 				if cameraChild is Camera3D:
 					cameraChild.make_current()
@@ -169,6 +177,8 @@ func spawnProcedure(scene:PackedScene):
 					var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
 					if cameraInstance is Camera3D:
 						cameraInstance.make_current()
+				vehicleWithCurrentlyActiveCamera = sceneInstance
+				break
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -181,3 +191,33 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 
 func _on_new_vehicle_added() -> void:
 	create_active_vehicle_display_buttons_from_scene()
+
+
+func _on_delete_vehicle_pressed() -> void:
+	if currentlySelectedActiveVehicleScene:
+		currentlySelectedActiveVehicleScene.queue_free()
+		currentySelectedActiveVehicleButton.queue_free()
+
+func create_active_vehicle_ui_string(vehicle_name: String, is_camera_active: bool, vehicle_position: Vector3) -> String:
+	return "Name: %s \nCamera Target: %s \nPosition: \nX: %d Y: %d Z: %d" % [vehicle_name, str(is_camera_active), vehicle_position.x, vehicle_position.y, vehicle_position.z]
+
+func _on_target_camera_pressed() -> void:
+	if currentlySelectedActiveVehicleScene and vehicleWithCurrentlyActiveCamera:
+		if currentlySelectedActiveVehicleScene != vehicleWithCurrentlyActiveCamera:
+			var foundCam = false
+			for child in currentlySelectedActiveVehicleScene.get_children():
+				if child.is_in_group("camera"):
+					foundCam = true
+					vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
+					currentlySelectedActiveVehicleScene.set_meta("is_camera_active", true)
+					var cameraChild = child
+					if cameraChild is Camera3D:
+						cameraChild.make_current()
+					else:
+						var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
+						if cameraInstance is Camera3D:
+							cameraInstance.make_current()
+
+				print("Failed to find camera")
+		else:
+			print("Note: Selected vehicle already has camera targeted")

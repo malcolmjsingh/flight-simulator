@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv23xiqq6lorb"]
+[gd_scene format=3 uid="uid://bv23xiqq6lorb"]
 
 [ext_resource type="Script" uid="uid://on4r2xu76vly" path="res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd" id="1_7qj7w"]
 
@@ -19,10 +19,10 @@ texture = SubResource("NoiseTexture2D_vr1l0")
 [sub_resource type="Theme" id="Theme_7qj7w"]
 default_font_size = 12
 
-[node name="VehicleSpawnHandler" type="Node3D"]
+[node name="VehicleSpawnHandler" type="Node3D" unique_id=781708877]
 script = ExtResource("1_7qj7w")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=387138731]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -4.0
@@ -30,51 +30,51 @@ offset_top = -1.0
 offset_right = 1148.0
 offset_bottom = 647.0
 
-[node name="SpawnerGUI" type="Control" parent="Control"]
+[node name="SpawnerGUI" type="Control" parent="Control" unique_id=1559167798]
 anchors_preset = 0
 offset_left = 756.0
 offset_top = 644.0
 offset_right = 1156.0
 offset_bottom = 894.0
 
-[node name="Panel" type="Panel" parent="Control/SpawnerGUI"]
+[node name="Panel" type="Panel" parent="Control/SpawnerGUI" unique_id=324896364]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 250.0
 theme = SubResource("Theme_vr1l0")
 theme_override_styles/panel = SubResource("StyleBoxTexture_h3aca")
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/SpawnerGUI"]
+[node name="PanelContainer" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=675110224]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 32.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/SpawnerGUI/PanelContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/SpawnerGUI/PanelContainer" unique_id=1875776556]
 layout_mode = 2
 theme = SubResource("Theme_1haq7")
 text = "Title Gna gna ggfgfffff"
 
-[node name="vehicleSelectPanel" type="PanelContainer" parent="Control/SpawnerGUI"]
+[node name="vehicleSelectPanel" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=875614553]
 layout_mode = 0
 offset_top = 40.0
 offset_right = 182.0
 offset_bottom = 234.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/SpawnerGUI/vehicleSelectPanel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/SpawnerGUI/vehicleSelectPanel" unique_id=1059364216]
 layout_mode = 2
 
-[node name="vehicleSelectVBox" type="VBoxContainer" parent="Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer"]
+[node name="vehicleSelectVBox" type="VBoxContainer" parent="Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer" unique_id=1772719834]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="dragbox" type="Panel" parent="Control/SpawnerGUI"]
+[node name="dragbox" type="Panel" parent="Control/SpawnerGUI" unique_id=308438317]
 layout_mode = 0
 offset_top = -11.0
 offset_right = 400.0
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7qj7w")
 
-[node name="CheckButton" type="CheckButton" parent="Control/SpawnerGUI/dragbox"]
+[node name="CheckButton" type="CheckButton" parent="Control/SpawnerGUI/dragbox" unique_id=675955169]
 layout_mode = 0
 offset_left = 362.0
 offset_top = -5.0
@@ -83,19 +83,19 @@ offset_bottom = 19.0
 focus_mode = 0
 alignment = 2
 
-[node name="Control" type="Control" parent="Control/SpawnerGUI"]
+[node name="Control" type="Control" parent="Control/SpawnerGUI" unique_id=824789851]
 anchors_preset = 0
 offset_left = 193.0
 offset_top = 39.0
 offset_right = 395.0
 offset_bottom = 233.0
 
-[node name="PanelContainer3" type="PanelContainer" parent="Control/SpawnerGUI/Control"]
+[node name="PanelContainer3" type="PanelContainer" parent="Control/SpawnerGUI/Control" unique_id=1703148338]
 layout_mode = 0
 offset_right = 201.0
 offset_bottom = 194.0
 
-[node name="spawnButton" type="Button" parent="Control/SpawnerGUI/Control"]
+[node name="spawnButton" type="Button" parent="Control/SpawnerGUI/Control" unique_id=1619201867]
 layout_mode = 0
 offset_left = 101.0
 offset_top = 166.495
@@ -104,13 +104,13 @@ offset_bottom = 197.495
 focus_mode = 0
 text = "spawn"
 
-[node name="infoDisplayPanel" type="RichTextLabel" parent="Control/SpawnerGUI/Control"]
+[node name="infoDisplayPanel" type="RichTextLabel" parent="Control/SpawnerGUI/Control" unique_id=348958375]
 layout_mode = 0
 offset_right = 201.0
 offset_bottom = 162.0
 text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
 
-[node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI"]
+[node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI" unique_id=289923040]
 layout_mode = 0
 offset_left = 193.0
 offset_top = 205.0
@@ -119,59 +119,59 @@ offset_bottom = 235.57
 fit_to_longest_item = false
 metadata/spawn_position_resources_array = []
 
-[node name="ActiveVehiclesBox" type="Control" parent="Control"]
+[node name="ActiveVehiclesBox" type="Control" parent="Control" unique_id=721736797]
 anchors_preset = 0
 offset_left = 6.0
 offset_top = 3.0
 offset_right = 146.0
 offset_bottom = 233.0
 
-[node name="Panel" type="Panel" parent="Control/ActiveVehiclesBox"]
+[node name="Panel" type="Panel" parent="Control/ActiveVehiclesBox" unique_id=367309059]
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 229.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/ActiveVehiclesBox"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/ActiveVehiclesBox" unique_id=1816559651]
 layout_mode = 0
 offset_right = 141.0
 offset_bottom = 227.0
 
-[node name="activeVehiclesBox" type="VBoxContainer" parent="Control/ActiveVehiclesBox/ScrollContainer"]
+[node name="activeVehiclesBox" type="VBoxContainer" parent="Control/ActiveVehiclesBox/ScrollContainer" unique_id=563766094]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_7qj7w")
 
-[node name="ActiveVehiclesSelectBox" type="Control" parent="Control"]
+[node name="ActiveVehiclesSelectBox" type="Control" parent="Control" unique_id=1196156487]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel" type="Panel" parent="Control/ActiveVehiclesSelectBox"]
+[node name="Panel" type="Panel" parent="Control/ActiveVehiclesSelectBox" unique_id=1289041514]
 layout_mode = 0
 offset_left = 148.0
 offset_top = 3.0
 offset_right = 471.0
 offset_bottom = 232.0
 
-[node name="DeleteVehicle" type="Button" parent="Control/ActiveVehiclesSelectBox"]
+[node name="DeleteVehicle" type="Button" parent="Control/ActiveVehiclesSelectBox" unique_id=1014140781]
 layout_mode = 0
-offset_left = 305.0
-offset_top = 198.0
-offset_right = 364.0
-offset_bottom = 229.0
+offset_left = 182.0
+offset_top = 199.0
+offset_right = 241.0
+offset_bottom = 230.0
 text = "Delete"
 
-[node name="MakeActive" type="Button" parent="Control/ActiveVehiclesSelectBox"]
+[node name="ToggleInput" type="Button" parent="Control/ActiveVehiclesSelectBox" unique_id=143030613]
 layout_mode = 0
-offset_left = 367.0
+offset_left = 365.0
 offset_top = 199.0
 offset_right = 469.0
 offset_bottom = 230.0
-text = "Make Active
+text = "Toggle Input
 "
 
-[node name="ActiveVehicleDisplayLabel" type="RichTextLabel" parent="Control/ActiveVehiclesSelectBox"]
+[node name="ActiveVehicleDisplayLabel" type="RichTextLabel" parent="Control/ActiveVehiclesSelectBox" unique_id=1112611480]
 layout_mode = 0
 offset_left = 153.0
 offset_top = 10.0
@@ -183,7 +183,18 @@ Position: X: N/A Y: N/A Z: N/A
 
 "
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="TargetCamera" type="Button" parent="Control/ActiveVehiclesSelectBox" unique_id=325693237]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 199.0
+offset_right = 364.0
+offset_bottom = 230.0
+text = "Target Camera"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=417570880]
 
 [connection signal="toggled" from="Control/SpawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/SpawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]
+[connection signal="pressed" from="Control/ActiveVehiclesSelectBox/DeleteVehicle" to="." method="_on_delete_vehicle_pressed"]
+[connection signal="pressed" from="Control/ActiveVehiclesSelectBox/ToggleInput" to="." method="_on_toggle_input_pressed"]
+[connection signal="pressed" from="Control/ActiveVehiclesSelectBox/TargetCamera" to="." method="_on_target_camera_pressed"]

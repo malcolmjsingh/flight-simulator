@@ -1,1 +1,4 @@
+res://scenes/map_scenes/main_map/main_map.tscn
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
