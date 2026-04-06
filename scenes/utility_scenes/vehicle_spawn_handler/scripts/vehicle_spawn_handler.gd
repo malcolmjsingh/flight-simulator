@@ -11,6 +11,9 @@ extends Node3D
 @onready var spawn_option_button: OptionButton = $Control/SpawnerGUI/SpawnOptionButton
 @onready var active_vehicles_box: VBoxContainer = $Control/ActiveVehiclesBox/ScrollContainer/activeVehiclesBox
 @onready var active_vehicle_display_label: RichTextLabel = $Control/ActiveVehiclesSelectBox/ActiveVehicleDisplayLabel
+@onready var active_vehicles_select_box: Control = $Control/ActiveVehiclesSelectBox
+@onready var active_vehicles_box_root: Control = $Control/ActiveVehiclesBox
+
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
@@ -21,12 +24,12 @@ var vehicle_spawn_handler_storage = Node3D.new()
 
 var vehicleThatWasJustAdded
 var vehicleWithCurrentlyActiveCamera
-var currentlySelectedActiveVehicleScene
+var currentlySelectedActiveVehicleScene = null
 
 signal newVehicleAdded
 
 func _ready() -> void:
-	
+	active_vehicles_select_box.visible = false
 	self.newVehicleAdded.connect(_on_new_vehicle_added)
 	
 	vehicle_spawn_handler_storage.name = "VehicleSpawnHandlerStorage"
@@ -134,6 +137,7 @@ func create_active_vehicle_display_buttons_from_scene():
 			_on_active_vehicle_button_pressed(button)
 
 func _on_active_vehicle_button_pressed(myButton: Button):
+	active_vehicles_select_box.visible = true
 	currentlySelectedActiveVehicleScene = myButton.get_meta("AssociatedVehicle")
 	update_current_active_vehicle_ui()
 	currentySelectedActiveVehicleButton = myButton
@@ -159,7 +163,6 @@ func spawnProcedure(scene:PackedScene):
 	elif spawn_option_button.get_selected() >= 0:
 		var sceneInstance = scene.instantiate()
 		vehicleThatWasJustAdded = sceneInstance
-		sceneInstance.set_block_signals(false)
 		sceneInstance.set_meta("is_camera_active", false)
 		get_tree().current_scene.get_node("VehicleSpawnHandlerStorage").add_child(sceneInstance)
 		var spawnOptionsArray = spawn_option_button.get_meta("spawn_position_resources_array")
@@ -170,6 +173,11 @@ func spawnProcedure(scene:PackedScene):
 		for child in sceneInstance.get_children():
 			if child.is_in_group("camera"):
 				sceneInstance.set_meta("is_camera_active", true)
+				
+				if vehicleWithCurrentlyActiveCamera:
+					vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
+				vehicleWithCurrentlyActiveCamera = sceneInstance
+				
 				var cameraChild = child
 				if cameraChild is Camera3D:
 					cameraChild.make_current()
@@ -177,7 +185,7 @@ func spawnProcedure(scene:PackedScene):
 					var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
 					if cameraInstance is Camera3D:
 						cameraInstance.make_current()
-				vehicleWithCurrentlyActiveCamera = sceneInstance
+				
 				break
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
@@ -189,19 +197,36 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		canGrab = false
 		spawnerGUI.position = Vector2(750, 645)
 
+func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		active_vehicles_box_root.position = Vector2(6, 3)
+		active_vehicles_select_box.position = Vector2(0,0)
+	else:
+		active_vehicles_box_root.position = Vector2(6, -230)
+		active_vehicles_select_box.position = Vector2(0,-230)
+
+
 func _on_new_vehicle_added() -> void:
 	create_active_vehicle_display_buttons_from_scene()
 
 
 func _on_delete_vehicle_pressed() -> void:
-	if currentlySelectedActiveVehicleScene:
+	active_vehicles_select_box.visible = false
+	if is_instance_valid(currentlySelectedActiveVehicleScene):
+		
+		if currentlySelectedActiveVehicleScene == vehicleWithCurrentlyActiveCamera:
+			vehicleWithCurrentlyActiveCamera = null
+		
 		currentlySelectedActiveVehicleScene.queue_free()
 		currentySelectedActiveVehicleButton.queue_free()
+		currentlySelectedActiveVehicleScene = null
+		currentlySelectedVehicleButton = null
 
 func create_active_vehicle_ui_string(vehicle_name: String, is_camera_active: bool, vehicle_position: Vector3) -> String:
 	return "Name: %s \nCamera Target: %s \nPosition: \nX: %d Y: %d Z: %d" % [vehicle_name, str(is_camera_active), vehicle_position.x, vehicle_position.y, vehicle_position.z]
 
 func _on_target_camera_pressed() -> void:
+	
 	if currentlySelectedActiveVehicleScene and vehicleWithCurrentlyActiveCamera:
 		if currentlySelectedActiveVehicleScene != vehicleWithCurrentlyActiveCamera:
 			var foundCam = false
@@ -217,7 +242,9 @@ func _on_target_camera_pressed() -> void:
 						var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
 						if cameraInstance is Camera3D:
 							cameraInstance.make_current()
-
+					vehicleWithCurrentlyActiveCamera = currentlySelectedActiveVehicleScene
+					break
+			if foundCam == false:
 				print("Failed to find camera")
 		else:
 			print("Note: Selected vehicle already has camera targeted")
