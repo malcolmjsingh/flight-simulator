@@ -3,10 +3,15 @@
 [ext_resource type="Script" uid="uid://on4r2xu76vly" path="res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd" id="1_7qj7w"]
 [ext_resource type="Texture2D" uid="uid://cfyjsqm5oe2kg" path="res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png" id="2_h3aca"]
 [ext_resource type="FontFile" uid="uid://12hhfqg4c1oj" path="res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf" id="3_1haq7"]
+[ext_resource type="Texture2D" uid="uid://d1gm74jlox2aq" path="res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png" id="4_nphxd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nphxd"]
 font = ExtResource("3_1haq7")
 font_size = 58
+
+[sub_resource type="LabelSettings" id="LabelSettings_2hkos"]
+font = ExtResource("3_1haq7")
+font_size = 48
 
 [sub_resource type="Theme" id="Theme_vr1l0"]
 
@@ -100,14 +105,42 @@ max_value = 999.0
 step = 1.0
 show_percentage = false
 
-[node name="AltimeterForeground" type="TextureRect" parent="Control/GameplayGUI" unique_id=603362488]
+[node name="Altimeter" type="Control" parent="Control/GameplayGUI" unique_id=1486960063]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 6.0
 grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+
+[node name="AltimeterBackground" type="TextureRect" parent="Control/GameplayGUI/Altimeter" unique_id=603362488]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -1000.0
+offset_right = 200.0
+grow_vertical = 0
+texture = ExtResource("4_nphxd")
+
+[node name="AltimeterLabel" type="Label" parent="Control/GameplayGUI/Altimeter" unique_id=686714601]
+layout_mode = 0
+offset_left = 13.333333
+offset_top = -86.666664
+offset_right = 53.333332
+offset_bottom = -63.666664
+text = "0m"
+label_settings = SubResource("LabelSettings_2hkos")
+
+[node name="TextureRect" type="TextureRect" parent="Control/GameplayGUI/Altimeter" unique_id=1721318603]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -243.33333
+offset_right = 120.0
+offset_bottom = -203.33333
 
 [node name="SpawnerGUI" type="Control" parent="Control" unique_id=1559167798]
 anchors_preset = 0

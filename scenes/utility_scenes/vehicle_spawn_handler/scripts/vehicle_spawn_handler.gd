@@ -18,6 +18,8 @@ extends Node3D
 @onready var speedometer_text_box = $Control/GameplayGUI/MainHUDPiece/Backdrop/SpeedLabel
 @onready var speedometer_progress_bar = $Control/GameplayGUI/MainHUDPiece/Backdrop/Speedmeter
 
+@onready var altimeter_label = $Control/GameplayGUI/Altimeter/AltimeterLabel
+
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
@@ -57,6 +59,7 @@ func _process(delta: float) -> void:
 		create_active_vehicle_display_buttons_from_scene()
 		
 	update_speedometer()
+	update_altimeter()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -211,10 +214,8 @@ func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 		active_vehicles_box_root.position = Vector2(6, -230)
 		active_vehicles_select_box.position = Vector2(0,-230)
 
-
 func _on_new_vehicle_added() -> void:
 	create_active_vehicle_display_buttons_from_scene()
-
 
 func _on_delete_vehicle_pressed() -> void:
 	active_vehicles_select_box.visible = false
@@ -263,3 +264,10 @@ func update_speedometer():
 		var multiplier = 3
 		speedometer_text_box.text = str(int(velocity * multiplier)).pad_zeros(3)
 		speedometer_progress_bar.value = int(velocity * multiplier)
+		
+func update_altimeter():
+	if vehicleWithCurrentlyActiveCamera:
+		var height = vehicleWithCurrentlyActiveCamera.position.y
+		var sea_level = 220
+		var multiplier = 1
+		altimeter_label.text = str(int((height + sea_level) * multiplier)) + "m"

@@ -1,5 +1,7 @@
-CheckButton
+TextureRect
+Label
 Control
+CheckButton
 Node3D
 CollisionShape3D
 StaticBody3D
@@ -11,5 +13,3 @@ PanelContainer
 VBoxContainer
 ScrollContainer
 VScrollBar
-BoxContainer
-Container
