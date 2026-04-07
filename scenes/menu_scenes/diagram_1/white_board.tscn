@@ -1,0 +1,5 @@
+[gd_scene load_steps=0 format=3 uid="uid://2o552u5441p3"]
+
+[ext_resource type="PackedScene" uid="uid://ccncbyed8to31" path="res://White_board/White_board.fbx" id="1_agmk7"]
+
+[node name="White_board" unique_id=213778082 instance=ExtResource("1_agmk7")]
