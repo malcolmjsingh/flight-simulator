@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://dvah4epjjygox"]
+[gd_scene load_steps=15 format=3 uid="uid://bv23xiqq6lorb"]
 
 [ext_resource type="Script" uid="uid://on4r2xu76vly" path="res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd" id="1_7qj7w"]
 [ext_resource type="Texture2D" uid="uid://cfyjsqm5oe2kg" path="res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png" id="2_h3aca"]
 [ext_resource type="FontFile" uid="uid://12hhfqg4c1oj" path="res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf" id="3_1haq7"]
 [ext_resource type="Texture2D" uid="uid://d1gm74jlox2aq" path="res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png" id="4_nphxd"]
+[ext_resource type="Texture2D" uid="uid://53d6hdg6uxmu" path="res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png" id="5_2hkos"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nphxd"]
 font = ExtResource("3_1haq7")
@@ -30,10 +31,10 @@ texture = SubResource("NoiseTexture2D_vr1l0")
 [sub_resource type="Theme" id="Theme_7qj7w"]
 default_font_size = 12
 
-[node name="VehicleSpawnHandler" type="Node3D" unique_id=781708877]
+[node name="VehicleSpawnHandler" type="Node3D"]
 script = ExtResource("1_7qj7w")
 
-[node name="Control" type="Control" parent="." unique_id=387138731]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -4.0
@@ -41,7 +42,7 @@ offset_top = -1.0
 offset_right = 1148.0
 offset_bottom = 647.0
 
-[node name="GameplayGUI" type="Control" parent="Control" unique_id=1871089626]
+[node name="GameplayGUI" type="Control" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,7 +50,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainHUDPiece" type="Control" parent="Control/GameplayGUI" unique_id=309219879]
+[node name="MainHUDPiece" type="Control" parent="Control/GameplayGUI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -63,7 +64,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 
-[node name="Backdrop" type="TextureRect" parent="Control/GameplayGUI/MainHUDPiece" unique_id=1464365262]
+[node name="Backdrop" type="TextureRect" parent="Control/GameplayGUI/MainHUDPiece"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -77,7 +78,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_h3aca")
 
-[node name="SpeedLabel" type="Label" parent="Control/GameplayGUI/MainHUDPiece/Backdrop" unique_id=295599606]
+[node name="SpeedLabel" type="Label" parent="Control/GameplayGUI/MainHUDPiece/Backdrop"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -95,7 +96,7 @@ label_settings = SubResource("LabelSettings_nphxd")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Speedmeter" type="ProgressBar" parent="Control/GameplayGUI/MainHUDPiece/Backdrop" unique_id=1435664736]
+[node name="Speedmeter" type="ProgressBar" parent="Control/GameplayGUI/MainHUDPiece/Backdrop"]
 layout_mode = 0
 offset_left = 33.333332
 offset_top = 159.0
@@ -105,7 +106,7 @@ max_value = 999.0
 step = 1.0
 show_percentage = false
 
-[node name="Altimeter" type="Control" parent="Control/GameplayGUI" unique_id=1486960063]
+[node name="Altimeter" type="Control" parent="Control/GameplayGUI"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -116,7 +117,7 @@ offset_right = 6.0
 grow_vertical = 0
 scale = Vector2(0.3, 0.3)
 
-[node name="AltimeterBackground" type="TextureRect" parent="Control/GameplayGUI/Altimeter" unique_id=603362488]
+[node name="AltimeterBackground" type="TextureRect" parent="Control/GameplayGUI/Altimeter"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -126,7 +127,7 @@ offset_right = 200.0
 grow_vertical = 0
 texture = ExtResource("4_nphxd")
 
-[node name="AltimeterLabel" type="Label" parent="Control/GameplayGUI/Altimeter" unique_id=686714601]
+[node name="AltimeterLabel" type="Label" parent="Control/GameplayGUI/Altimeter"]
 layout_mode = 0
 offset_left = 13.333333
 offset_top = -86.666664
@@ -135,58 +136,111 @@ offset_bottom = -63.666664
 text = "0m"
 label_settings = SubResource("LabelSettings_2hkos")
 
-[node name="TextureRect" type="TextureRect" parent="Control/GameplayGUI/Altimeter" unique_id=1721318603]
+[node name="AltimeterIcon" type="TextureRect" parent="Control/GameplayGUI/Altimeter"]
 layout_mode = 0
-offset_left = 80.0
-offset_top = -243.33333
-offset_right = 120.0
-offset_bottom = -203.33333
+offset_left = 40.0
+offset_top = -226.66663
+offset_right = 552.0
+offset_bottom = 285.33337
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_2hkos")
 
-[node name="SpawnerGUI" type="Control" parent="Control" unique_id=1559167798]
+[node name="Compass" type="Control" parent="Control/GameplayGUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 1.0
+grow_horizontal = 0
+
+[node name="CompassBackground" type="TextureRect" parent="Control/GameplayGUI/Compass"]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 39.0
+offset_right = -28.0
+offset_bottom = 79.0
+
+[node name="CameraOrientation" type="TextureRect" parent="Control/GameplayGUI/Compass/CompassBackground"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="Control/GameplayGUI/Compass/CompassBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -0.5
+offset_right = 0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+
+[node name="PlaneOrientation" type="TextureRect" parent="Control/GameplayGUI/Compass/CompassBackground/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2hkos")
+
+[node name="SpawnerGUI" type="Control" parent="Control"]
 anchors_preset = 0
 offset_left = 756.0
 offset_top = 644.0
 offset_right = 1156.0
 offset_bottom = 894.0
 
-[node name="Panel" type="Panel" parent="Control/SpawnerGUI" unique_id=324896364]
+[node name="Panel" type="Panel" parent="Control/SpawnerGUI"]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 250.0
 theme = SubResource("Theme_vr1l0")
 theme_override_styles/panel = SubResource("StyleBoxTexture_h3aca")
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=675110224]
+[node name="PanelContainer" type="PanelContainer" parent="Control/SpawnerGUI"]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 32.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/SpawnerGUI/PanelContainer" unique_id=1875776556]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/SpawnerGUI/PanelContainer"]
 layout_mode = 2
 theme = SubResource("Theme_1haq7")
 text = "Title Gna gna ggfgfffff"
 
-[node name="vehicleSelectPanel" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=875614553]
+[node name="vehicleSelectPanel" type="PanelContainer" parent="Control/SpawnerGUI"]
 layout_mode = 0
 offset_top = 40.0
 offset_right = 182.0
 offset_bottom = 234.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/SpawnerGUI/vehicleSelectPanel" unique_id=1059364216]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/SpawnerGUI/vehicleSelectPanel"]
 layout_mode = 2
 
-[node name="vehicleSelectVBox" type="VBoxContainer" parent="Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer" unique_id=1772719834]
+[node name="vehicleSelectVBox" type="VBoxContainer" parent="Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="dragbox" type="Panel" parent="Control/SpawnerGUI" unique_id=308438317]
+[node name="dragbox" type="Panel" parent="Control/SpawnerGUI"]
 layout_mode = 0
 offset_top = -11.0
 offset_right = 400.0
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7qj7w")
 
-[node name="CheckButton" type="CheckButton" parent="Control/SpawnerGUI/dragbox" unique_id=675955169]
+[node name="CheckButton" type="CheckButton" parent="Control/SpawnerGUI/dragbox"]
 layout_mode = 0
 offset_left = 362.0
 offset_top = -5.0
@@ -195,19 +249,19 @@ offset_bottom = 19.0
 focus_mode = 0
 alignment = 2
 
-[node name="Control" type="Control" parent="Control/SpawnerGUI" unique_id=824789851]
+[node name="Control" type="Control" parent="Control/SpawnerGUI"]
 anchors_preset = 0
 offset_left = 193.0
 offset_top = 39.0
 offset_right = 395.0
 offset_bottom = 233.0
 
-[node name="PanelContainer3" type="PanelContainer" parent="Control/SpawnerGUI/Control" unique_id=1703148338]
+[node name="PanelContainer3" type="PanelContainer" parent="Control/SpawnerGUI/Control"]
 layout_mode = 0
 offset_right = 201.0
 offset_bottom = 194.0
 
-[node name="spawnButton" type="Button" parent="Control/SpawnerGUI/Control" unique_id=1619201867]
+[node name="spawnButton" type="Button" parent="Control/SpawnerGUI/Control"]
 layout_mode = 0
 offset_left = 101.0
 offset_top = 166.495
@@ -216,13 +270,13 @@ offset_bottom = 197.495
 focus_mode = 0
 text = "spawn"
 
-[node name="infoDisplayPanel" type="RichTextLabel" parent="Control/SpawnerGUI/Control" unique_id=348958375]
+[node name="infoDisplayPanel" type="RichTextLabel" parent="Control/SpawnerGUI/Control"]
 layout_mode = 0
 offset_right = 201.0
 offset_bottom = 162.0
 text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
 
-[node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI" unique_id=289923040]
+[node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI"]
 layout_mode = 0
 offset_left = 193.0
 offset_top = 205.0
@@ -231,49 +285,49 @@ offset_bottom = 235.57
 fit_to_longest_item = false
 metadata/spawn_position_resources_array = []
 
-[node name="ActiveVehiclesBox" type="Control" parent="Control" unique_id=721736797]
+[node name="ActiveVehiclesBox" type="Control" parent="Control"]
 anchors_preset = 0
 offset_left = 6.0
 offset_top = -230.0
 offset_right = 146.0
 
-[node name="Panel" type="Panel" parent="Control/ActiveVehiclesBox" unique_id=367309059]
+[node name="Panel" type="Panel" parent="Control/ActiveVehiclesBox"]
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 229.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/ActiveVehiclesBox" unique_id=1816559651]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/ActiveVehiclesBox"]
 layout_mode = 0
 offset_right = 141.0
 offset_bottom = 227.0
 
-[node name="activeVehiclesBox" type="VBoxContainer" parent="Control/ActiveVehiclesBox/ScrollContainer" unique_id=563766094]
+[node name="activeVehiclesBox" type="VBoxContainer" parent="Control/ActiveVehiclesBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_7qj7w")
 
-[node name="ActiveVehicleCheckButton" type="CheckButton" parent="Control/ActiveVehiclesBox" unique_id=176465495]
+[node name="ActiveVehicleCheckButton" type="CheckButton" parent="Control/ActiveVehiclesBox"]
 layout_mode = 0
 offset_left = -7.0
 offset_top = 227.0
 offset_right = 37.0
 offset_bottom = 251.0
 
-[node name="ActiveVehiclesSelectBox" type="Control" parent="Control" unique_id=1196156487]
+[node name="ActiveVehiclesSelectBox" type="Control" parent="Control"]
 anchors_preset = 0
 offset_top = -233.0
 offset_right = 40.0
 offset_bottom = -193.0
 
-[node name="Panel" type="Panel" parent="Control/ActiveVehiclesSelectBox" unique_id=1289041514]
+[node name="Panel" type="Panel" parent="Control/ActiveVehiclesSelectBox"]
 layout_mode = 0
 offset_left = 148.0
 offset_top = 3.0
 offset_right = 471.0
 offset_bottom = 232.0
 
-[node name="DeleteVehicle" type="Button" parent="Control/ActiveVehiclesSelectBox" unique_id=1014140781]
+[node name="DeleteVehicle" type="Button" parent="Control/ActiveVehiclesSelectBox"]
 layout_mode = 0
 offset_left = 287.0
 offset_top = 199.0
@@ -281,7 +335,7 @@ offset_right = 346.0
 offset_bottom = 230.0
 text = "Delete"
 
-[node name="ActiveVehicleDisplayLabel" type="RichTextLabel" parent="Control/ActiveVehiclesSelectBox" unique_id=1112611480]
+[node name="ActiveVehicleDisplayLabel" type="RichTextLabel" parent="Control/ActiveVehiclesSelectBox"]
 layout_mode = 0
 offset_left = 153.0
 offset_top = 10.0
@@ -293,7 +347,7 @@ Position: X: N/A Y: N/A Z: N/A
 
 "
 
-[node name="TargetCamera" type="Button" parent="Control/ActiveVehiclesSelectBox" unique_id=325693237]
+[node name="TargetCamera" type="Button" parent="Control/ActiveVehiclesSelectBox"]
 layout_mode = 0
 offset_left = 347.0
 offset_top = 199.0
@@ -301,7 +355,7 @@ offset_right = 469.0
 offset_bottom = 230.0
 text = "Target Camera"
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=417570880]
+[node name="Camera3D" type="Camera3D" parent="."]
 
 [connection signal="toggled" from="Control/SpawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/SpawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]

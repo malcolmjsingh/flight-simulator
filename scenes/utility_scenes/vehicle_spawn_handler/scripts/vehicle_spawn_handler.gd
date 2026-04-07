@@ -19,6 +19,7 @@ extends Node3D
 @onready var speedometer_progress_bar = $Control/GameplayGUI/MainHUDPiece/Backdrop/Speedmeter
 
 @onready var altimeter_label = $Control/GameplayGUI/Altimeter/AltimeterLabel
+@onready var altimeter_icon = $Control/GameplayGUI/Altimeter/AltimeterIcon
 
 
 var mouse_position: Vector2
@@ -271,3 +272,12 @@ func update_altimeter():
 		var sea_level = 220
 		var multiplier = 1
 		altimeter_label.text = str(int((height + sea_level) * multiplier)) + "m"
+		
+		var max_icon_pos = -970.0
+		var min_icon_pos = -220.0
+		var max_altitude = 800.0
+		var min_altitude = 0.0
+		
+		var percent_offset = (height + sea_level) * multiplier / (max_altitude - min_altitude)
+		
+		altimeter_icon.position.y = clamp(percent_offset * (max_icon_pos - min_icon_pos) + min_icon_pos, -970.0, -220.0)
