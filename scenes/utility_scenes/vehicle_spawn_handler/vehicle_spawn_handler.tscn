@@ -1,6 +1,12 @@
-[gd_scene format=3 uid="uid://bv23xiqq6lorb"]
+[gd_scene format=3 uid="uid://dvah4epjjygox"]
 
 [ext_resource type="Script" uid="uid://on4r2xu76vly" path="res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd" id="1_7qj7w"]
+[ext_resource type="Texture2D" uid="uid://cfyjsqm5oe2kg" path="res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png" id="2_h3aca"]
+[ext_resource type="FontFile" uid="uid://12hhfqg4c1oj" path="res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf" id="3_1haq7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nphxd"]
+font = ExtResource("3_1haq7")
+font_size = 58
 
 [sub_resource type="Theme" id="Theme_vr1l0"]
 
@@ -29,6 +35,79 @@ offset_left = -4.0
 offset_top = -1.0
 offset_right = 1148.0
 offset_bottom = 647.0
+
+[node name="GameplayGUI" type="Control" parent="Control" unique_id=1871089626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainHUDPiece" type="Control" parent="Control/GameplayGUI" unique_id=309219879]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -1.0
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+
+[node name="Backdrop" type="TextureRect" parent="Control/GameplayGUI/MainHUDPiece" unique_id=1464365262]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -362.5
+offset_top = -196.0
+offset_right = 362.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_h3aca")
+
+[node name="SpeedLabel" type="Label" parent="Control/GameplayGUI/MainHUDPiece/Backdrop" unique_id=295599606]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "000"
+label_settings = SubResource("LabelSettings_nphxd")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Speedmeter" type="ProgressBar" parent="Control/GameplayGUI/MainHUDPiece/Backdrop" unique_id=1435664736]
+layout_mode = 0
+offset_left = 33.333332
+offset_top = 159.0
+offset_right = 693.3333
+offset_bottom = 186.0
+max_value = 999.0
+step = 1.0
+show_percentage = false
+
+[node name="AltimeterForeground" type="TextureRect" parent="Control/GameplayGUI" unique_id=603362488]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
 
 [node name="SpawnerGUI" type="Control" parent="Control" unique_id=1559167798]
 anchors_preset = 0

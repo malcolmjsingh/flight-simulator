@@ -14,6 +14,10 @@ extends Node3D
 @onready var active_vehicles_select_box: Control = $Control/ActiveVehiclesSelectBox
 @onready var active_vehicles_box_root: Control = $Control/ActiveVehiclesBox
 
+# GUI variables
+@onready var speedometer_text_box = $Control/GameplayGUI/MainHUDPiece/Backdrop/SpeedLabel
+@onready var speedometer_progress_bar = $Control/GameplayGUI/MainHUDPiece/Backdrop/Speedmeter
+
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
@@ -51,6 +55,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		print("pressed ui accept")
 		create_active_vehicle_display_buttons_from_scene()
+		
+	update_speedometer()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -248,3 +254,12 @@ func _on_target_camera_pressed() -> void:
 				print("Failed to find camera")
 		else:
 			print("Note: Selected vehicle already has camera targeted")
+
+# GUI Functions
+
+func update_speedometer():
+	if vehicleWithCurrentlyActiveCamera:
+		var velocity = vehicleWithCurrentlyActiveCamera.linear_velocity.length()
+		var multiplier = 3
+		speedometer_text_box.text = str(int(velocity * multiplier)).pad_zeros(3)
+		speedometer_progress_bar.value = int(velocity * multiplier)
