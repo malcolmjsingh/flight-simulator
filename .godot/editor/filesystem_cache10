@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775654269
+::res://::1775749192
 README.md::TextFile::-1::1774887462::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774887462
 ::res://addons/godot_aerodynamic_physics/::1774887506
@@ -251,7 +251,7 @@ ui.tscn::PackedScene::906011657646959739::1775135273::0::1::::<><><>0<>0<><>::ui
 compass_texture.gd::GDScript::4757576915726966308::1774967839::0::1::::<>TextureRect<><>0<>0<><>::
 current_speed.gd::GDScript::8359893002573214304::1774967431::0::1::::<>Label<><>0<>0<><>::
 ui.gd::GDScript::6337254621708064115::1774967898::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menu_scenes/gameplay_ui/textures/::1775744892
+::res://scenes/menu_scenes/gameplay_ui/textures/::1775744893
 Altimeter Background.png::CompressedTexture2D::4959786278977486539::1774887463::1775569126::1::::<><><>0<>0<>678c81fb876083721aa048e86f7cbae6<>res://.godot/imported/Altimeter Background.png-ab09970850f2630a8cd9da12f06504bc.ctex::
 Altimeter.png::CompressedTexture2D::8997345539110485556::1775569117::1775569126::1::::<><><>0<>0<>e599ad1d7f94d6c2d6cbd3f14a308b83<>res://.godot/imported/Altimeter.png-8d4236176386ba5606a1e5c948ec2a1c.ctex::
 Bottom GUI Part.png::CompressedTexture2D::5173910109192200454::1774887463::1775569126::1::::<><><>0<>0<>0144c27406fe89f1283359f5e90435f2<>res://.godot/imported/Bottom GUI Part.png-f44c79856f696b3592a35ccf0f5e8c8d.ctex::
@@ -270,11 +270,11 @@ orbit_cam.tscn::PackedScene::1307298081011399796::1775049008::0::1::::<><><>0<>0
 ::res://scenes/utility_scenes/orbit_cam/scripts/::1774887463
 camera_follow_node.gd::GDScript::702970124986398288::1774887463::0::1::::<>Node3D<><>0<>0<><>::
 orbit_cam.gd::GDScript::4841674790267513985::1774887463::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/::1775744602
+::res://scenes/utility_scenes/vehicle_spawn_handler/::1775746124
 gameplay_gui.tscn::PackedScene::9062508693774492370::1775570542::0::1::::<><><>0<>0<><>::uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png
-vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775744602::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png<>uid://cnutrgawtqixc::::res://scenes/menu_scenes/gameplay_ui/textures/CompassBackground.png
-::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775571164
-vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775571164::0::1::::<>Node3D<><>0<>0<><>::
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775746124::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png<>uid://cnutrgawtqixc::::res://scenes/menu_scenes/gameplay_ui/textures/CompassBackground.png<>uid://caig8csegm6vh::::res://scenes/menu_scenes/gameplay_ui/textures/CompassCamera.png
+::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775745975
+vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775745975::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1775049066
 asdfsdafsfda.tres::Resource/vehicle::2345288858002010642::1775049066::0::1::::<><><>0<>0<><>::uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
 car2.tres::Resource/vehicle::8464066970064583996::1774887463::0::1::::<><><>0<>0<><>::uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd

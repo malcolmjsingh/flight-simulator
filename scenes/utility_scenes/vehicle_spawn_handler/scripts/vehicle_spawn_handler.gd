@@ -33,7 +33,9 @@ var vehicle_spawn_handler_storage = Node3D.new()
 
 var vehicleThatWasJustAdded
 var vehicleWithCurrentlyActiveCamera
+var currentlyActiveCamera
 var currentlySelectedActiveVehicleScene = null
+
 
 signal newVehicleAdded
 
@@ -249,10 +251,12 @@ func _on_target_camera_pressed() -> void:
 					var cameraChild = child
 					if cameraChild is Camera3D:
 						cameraChild.make_current()
+						currentlyActiveCamera = cameraChild
 					else:
 						var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
 						if cameraInstance is Camera3D:
 							cameraInstance.make_current()
+							currentlyActiveCamera = cameraInstance
 					vehicleWithCurrentlyActiveCamera = currentlySelectedActiveVehicleScene
 					break
 			if foundCam == false:
@@ -286,9 +290,9 @@ func update_altimeter():
 		altimeter_icon.position.y = clamp(percent_offset * (max_icon_pos - min_icon_pos) + min_icon_pos, -970.0, -220.0)
 
 func update_compass():
-	if vehicleWithCurrentlyActiveCamera:
+	if vehicleWithCurrentlyActiveCamera and currentlyActiveCamera:
 		var vehicle_rotation = vehicleWithCurrentlyActiveCamera.rotation
-		var camera_rotation = Vector3.ZERO
+		var camera_rotation = currentlyActiveCamera.global_rotation
 		
-		compass_camera.rotation = camera_rotation.y
+		compass_camera.rotation = -camera_rotation.y
 		compass_plane.rotation = -vehicle_rotation.y
