@@ -282,7 +282,7 @@ func update_altimeter():
 		
 		var max_icon_pos = -970.0
 		var min_icon_pos = -220.0
-		var max_altitude = 800.0
+		var max_altitude = 1000.0
 		var min_altitude = 0.0
 		
 		var percent_offset = (height + sea_level) * multiplier / (max_altitude - min_altitude)
@@ -290,9 +290,9 @@ func update_altimeter():
 		altimeter_icon.position.y = clamp(percent_offset * (max_icon_pos - min_icon_pos) + min_icon_pos, -970.0, -220.0)
 
 func update_compass():
-	if vehicleWithCurrentlyActiveCamera and currentlyActiveCamera:
+	if vehicleWithCurrentlyActiveCamera:
 		var vehicle_rotation = vehicleWithCurrentlyActiveCamera.rotation
-		var camera_rotation = currentlyActiveCamera.global_rotation
+		var camera_rotation = get_viewport().get_camera_3d().global_rotation
 		
 		compass_camera.rotation = -camera_rotation.y
 		compass_plane.rotation = -vehicle_rotation.y
