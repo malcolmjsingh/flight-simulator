@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775577849
+::res://::1775654269
 README.md::TextFile::-1::1774887462::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774887462
 ::res://addons/godot_aerodynamic_physics/::1774887506
@@ -195,13 +195,18 @@ map.tscn::PackedScene::4720882621653390845::1775134287::0::1::::<><><>0<>0<><>::
 map.glb::PackedScene::3977386954869025470::1775134287::1775569133::1::::<><><>0<>0<>5983a7a99bec8c8a8d2454544ee77fac<>res://.godot/imported/map.glb-3bb6c829ed551543390af4de71d2720a.scn::
 map_middle.glb::PackedScene::5850095084514902506::1775134287::1775569134::1::::<><><>0<>0<>3e7e530784ebda7561912ba293531f23<>res://.godot/imported/map_middle.glb-4ad3e16272fc95fe501369c1fff92539.scn::
 ::res://scenes/menu_scenes/::1775577880
-::res://scenes/menu_scenes/diagram_1/::1775578349
+::res://scenes/menu_scenes/diagram_1/::1775578802
 aileron.gd::GDScript::5582578547309159051::1775578270::0::1::::<>Area3D<><>0<>0<><>::
-airplane.tscn::PackedScene::4387255767328167398::1775578324::0::1::::<><><>0<>0<><>::res://uploads_files_3026156_737+southwest.glb<>uid://d1y5mtxhtsutj::::res://scenes/menu_scenes/diagram_1/rudder.gd<>uid://bt8xtmwqgl0i::::res://scenes/menu_scenes/diagram_1/horizontalstabilizer.gd<>uid://bpjuhu0nh82qr::::res://scenes/menu_scenes/diagram_1/White_board/gear.gd<>uid://bibssqd1nt7e3::::res://scenes/menu_scenes/diagram_1/White_board/flaps.gd<>uid://clsiiur325uvr::::res://scenes/menu_scenes/diagram_1/aileron.gd<>res://engine.gd<>res://wing.gd<>res://winglet.gd<>res://slats.gd<>res://fuselage.gd<>res://cockpit.gd<>res://pitot.gd<>res://verticalStabilizer.gd
-freecam.gd::GDScript::8824804540949333448::1775578035::0::1::::<>Camera3D<><>0<>0<><>::
-hangar.tscn::PackedScene::6104138471588417409::1775578221::0::1::::<><><>0<>0<><>::uid://386o4av37trj::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1.glb<>res://scenes/menu_scenes/diagram_1/airplane.tscn<>uid://dxy2iheygt377::::res://scenes/menu_scenes/diagram_1/freecam.gd<>uid://ccncbyed8to31::::res://scenes/menu_scenes/diagram_1/White_board/White_board.fbx<>uid://bmtdvbolc1oqp::::res://scenes/menu_scenes/diagram_1/text.gd
+airplane.tscn::PackedScene::4387255767328167398::1775578475::0::1::::<><><>0<>0<><>::uid://dnb4bbrc6i5ho::::res://scenes/menu_scenes/diagram_1/uploads_files_3026156_737+southwest.glb<>uid://d1y5mtxhtsutj::::res://scenes/menu_scenes/diagram_1/rudder.gd<>uid://bt8xtmwqgl0i::::res://scenes/menu_scenes/diagram_1/horizontalstabilizer.gd<>uid://bpjuhu0nh82qr::::res://scenes/menu_scenes/diagram_1/White_board/gear.gd<>uid://bibssqd1nt7e3::::res://scenes/menu_scenes/diagram_1/White_board/flaps.gd<>uid://clsiiur325uvr::::res://scenes/menu_scenes/diagram_1/aileron.gd<>uid://dnas0mf1l23id::::res://scenes/menu_scenes/diagram_1/engine.gd<>uid://bkwqja8l1bbbt::::res://scenes/menu_scenes/diagram_1/wing.gd<>uid://dpybclflpvubd::::res://scenes/menu_scenes/diagram_1/winglet.gd<>uid://cy6874i21cttf::::res://scenes/menu_scenes/diagram_1/slats.gd<>uid://d154jb8rg1npb::::res://scenes/menu_scenes/diagram_1/fuselage.gd<>uid://c1ilfy1sdhr3i::::res://scenes/menu_scenes/diagram_1/cockpit.gd<>uid://byopkeahcofm0::::res://scenes/menu_scenes/diagram_1/pitot.gd<>uid://ymvkxnjqmjgg::::res://scenes/menu_scenes/diagram_1/verticalStabilizer.gd
+cockpit.gd::GDScript::6614944441444938540::1775578436::0::1::::<>Area3D<><>0<>0<><>::
+engine.gd::GDScript::8072855208292481291::1775578412::0::1::::<>Area3D<><>0<>0<><>::
+freecam.gd::GDScript::8824804540949333448::1775578723::0::1::::<>Camera3D<><>0<>0<><>::
+fuselage.gd::GDScript::9047880287508663491::1775578422::0::1::::<>Area3D<><>0<>0<><>::
+hangar.tscn::PackedScene::6104138471588417409::1775578802::0::1::::<><><>0<>0<><>::uid://386o4av37trj::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1.glb<>uid://b3rhpxq4qg6mc::::res://scenes/menu_scenes/diagram_1/airplane.tscn<>uid://dxy2iheygt377::::res://scenes/menu_scenes/diagram_1/freecam.gd<>uid://ccncbyed8to31::::res://scenes/menu_scenes/diagram_1/White_board/White_board.fbx<>uid://bmtdvbolc1oqp::::res://scenes/menu_scenes/diagram_1/text.gd
 horizontalstabilizer.gd::GDScript::111457772488789878::1775578259::0::1::::<>Area3D<><>0<>0<><>::
+pitot.gd::GDScript::4100783042807938741::1775578471::0::1::::<>Area3D<><>0<>0<><>::
 rudder.gd::GDScript::9035561024893756351::1775578254::0::1::::<>Area3D<><>0<>0<><>::
+slats.gd::GDScript::6523431668038274279::1775578365::0::1::::<>Area3D<><>0<>0<><>::
 text.gd::GDScript::3268129711981040567::1775578118::0::1::::<>SubViewport<><>0<>0<><>::
 uploads_files_3026156_737+southwest.glb::PackedScene::8075544053629588132::1775578349::1775578357::1::::<><><>0<>0<>dee2883c33b5a62aa257cfa6776d7339<>res://.godot/imported/uploads_files_3026156_737+southwest.glb-db7bf76e5d49b27250af4e64da1a61e9.scn::
 uploads_files_4309630_NATO_Shelter_V1.glb::PackedScene::2035320839809304055::1775578187::1775578207::1::::<><><>0<>0<>25ed0b097e981d600c6eb1712fec142e<>res://.godot/imported/uploads_files_4309630_NATO_Shelter_V1.glb-3564dd8fc5648bbdb4c44e5738986889.scn::uid://bejgjkdqj7p2v::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_DOOR_Global_V1_BaseColor.png<>uid://dy1xr7022ebv4::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_DOOR_Global_V1_Metallic-DOOR_Global_V1_Roughness.png<>uid://ce3j7gemkmjcv::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_DOOR_Global_V1_Normal.png<>uid://bdrodvuxc47qj::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_MUR DOOR DETAIL INTERIEUR_V1_BaseColor.png<>uid://cawh6p4y7tka5::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_MUR DOOR DETAIL INTERIEUR_V1_Metallic-MUR DOOR DETAIL INTERIEUR_V1_Roughness.png<>uid://k435tr262xe7::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_MUR DOOR DETAIL INTERIEUR_V1_Emissive.png<>uid://bh5a1rxjn53tt::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_MUR DOOR DETAIL INTERIEUR_V1_Normal.png<>uid://uhtfvvi3yq7v::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_BaseColor.png<>uid://c8rqnerbc4mwg::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Metallic-SOL MURET HOUSE PLAK_V1_Roughness.png<>uid://lt8c37klmj7v::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Normal.png<>uid://ci1ywfrcyu2i4::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_Shelter_INTERIEUR_V1_BaseColor.png<>uid://bt7fq7vrftwtd::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_Shelter_INTERIEUR_V1_Metallic-Shelter_INTERIEUR_V1_Roughness.png<>uid://cwktc4t2g8t75::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_Shelter_INTERIEUR_V1_Normal.png<>uid://d4u6pbj78453::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SHELTER_EXTERIEUR_V1_BaseColor.png<>uid://dd4fqekbjrde5::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SHELTER_EXTERIEUR_V1_Metallic-SHELTER_EXTERIEUR_V1_Roughness.png<>uid://dl88i4lr2i88j::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SHELTER_EXTERIEUR_V1_Emissive.png<>uid://bnj5iqgdloflk::::res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1_SHELTER_EXTERIEUR_V1_Normal.png
@@ -222,7 +227,10 @@ uploads_files_4309630_NATO_Shelter_V1_Shelter_INTERIEUR_V1_Normal.png::Compresse
 uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_BaseColor.png::CompressedTexture2D::1419391204704262869::1775578188::1775578190::1::::<><><>0<>0<>a98acf5739c52d734e5ec4faa5080bd7<>res://.godot/imported/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_BaseColor.png-8424aa432c6faa0022163ed08847fe3b.s3tc.ctex::
 uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Metallic-SOL MURET HOUSE PLAK_V1_Roughness.png::CompressedTexture2D::7125162552869652234::1775578188::1775578191::1::::<><><>0<>0<>5cfc5070b65aca72f1b7351944d5dbba<>res://.godot/imported/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Metallic-SOL MURET HOUSE PLAK_V1_Roughness.png-4fdacb2d9c46838474ee900b6b4bf02e.s3tc.ctex::
 uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Normal.png::CompressedTexture2D::813309210251677513::1775578188::1775578190::1::::<><><>0<>0<>4b43de4d9c57670025bdd25f960698c6<>res://.godot/imported/uploads_files_4309630_NATO_Shelter_V1_SOL MURET HOUSE PLAK_V1_Normal.png-fc88e4a9ddee2b4f306734b5d783689c.s3tc.ctex::
+verticalStabilizer.gd::GDScript::1710598923698932406::1775578452::0::1::::<>Area3D<><>0<>0<><>::
 white_board.tscn::PackedScene::-1::1775577943::0::1::::<><><>0<>0<><>::
+wing.gd::GDScript::3134713026205268097::1775578387::0::1::::<>Area3D<><>0<>0<><>::
+winglet.gd::GDScript::8261704646329356717::1775578395::0::1::::<>Area3D<><>0<>0<><>::
 ::res://scenes/menu_scenes/diagram_1/White_board/::1775578277
 flaps.gd::GDScript::2951121706918997260::1775578277::0::1::::<>Area3D<><>0<>0<><>::
 gear.gd::GDScript::3459060668151245301::1775578264::0::1::::<>Area3D<><>0<>0<><>::
@@ -243,16 +251,18 @@ ui.tscn::PackedScene::906011657646959739::1775135273::0::1::::<><><>0<>0<><>::ui
 compass_texture.gd::GDScript::4757576915726966308::1774967839::0::1::::<>TextureRect<><>0<>0<><>::
 current_speed.gd::GDScript::8359893002573214304::1774967431::0::1::::<>Label<><>0<>0<><>::
 ui.gd::GDScript::6337254621708064115::1774967898::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menu_scenes/gameplay_ui/textures/::1775569440
+::res://scenes/menu_scenes/gameplay_ui/textures/::1775744892
 Altimeter Background.png::CompressedTexture2D::4959786278977486539::1774887463::1775569126::1::::<><><>0<>0<>678c81fb876083721aa048e86f7cbae6<>res://.godot/imported/Altimeter Background.png-ab09970850f2630a8cd9da12f06504bc.ctex::
 Altimeter.png::CompressedTexture2D::8997345539110485556::1775569117::1775569126::1::::<><><>0<>0<>e599ad1d7f94d6c2d6cbd3f14a308b83<>res://.godot/imported/Altimeter.png-8d4236176386ba5606a1e5c948ec2a1c.ctex::
 Bottom GUI Part.png::CompressedTexture2D::5173910109192200454::1774887463::1775569126::1::::<><><>0<>0<>0144c27406fe89f1283359f5e90435f2<>res://.godot/imported/Bottom GUI Part.png-f44c79856f696b3592a35ccf0f5e8c8d.ctex::
+CompassBackground.png::CompressedTexture2D::5727768187286474144::1775741634::1775741636::1::::<><><>0<>0<>50cf10768fd2666150c91e9eed0a9315<>res://.godot/imported/CompassBackground.png-fd1ae311e645a370b2de3925d8317470.ctex::
+CompassCamera.png::CompressedTexture2D::4789779755617588365::1775744892::1775744893::1::::<><><>0<>0<>218917646738bb8337fd2d1678280788<>res://.godot/imported/CompassCamera.png-5e4d73bd5cb2dc081248b4ef7c3b7291.ctex::
 Full GUI Static.png::CompressedTexture2D::2756938185698150480::1774887463::1775569128::1::::<><><>0<>0<>8811b732415a7b9054bfd45b3f3e322f<>res://.godot/imported/Full GUI Static.png-b24d6f449f9dfb0358d8c4d853582182.ctex::
 plane_icon.png::CompressedTexture2D::2163705769456712728::1775569435::1775569440::1::::<><><>0<>0<>caf2039bb430442ec05b884ecc15a06f<>res://.godot/imported/plane_icon.png-af07eba15464c40c9ea3a833bc1c5f92.ctex::
-::res://scenes/menu_scenes/main_menu/::1775577851
-main_menu.tscn::PackedScene::1492468736166146198::1775577851::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
-::res://scenes/menu_scenes/main_menu/scripts/::1775577110
-main_menu.gd::GDScript::1375488518849932361::1775577110::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/menu_scenes/main_menu/::1775578523
+main_menu.tscn::PackedScene::1492468736166146198::1775578523::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
+::res://scenes/menu_scenes/main_menu/scripts/::1775578558
+main_menu.gd::GDScript::1375488518849932361::1775578558::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/::1774887463
 ::res://scenes/utility_scenes/orbit_cam/::1775049008
 camera_3d.gd::GDScript::4703172151714161758::1774887463::0::1::::<>Camera3D<><>0<>0<><>::
@@ -260,9 +270,9 @@ orbit_cam.tscn::PackedScene::1307298081011399796::1775049008::0::1::::<><><>0<>0
 ::res://scenes/utility_scenes/orbit_cam/scripts/::1774887463
 camera_follow_node.gd::GDScript::702970124986398288::1774887463::0::1::::<>Node3D<><>0<>0<><>::
 orbit_cam.gd::GDScript::4841674790267513985::1774887463::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/::1775572073
+::res://scenes/utility_scenes/vehicle_spawn_handler/::1775744602
 gameplay_gui.tscn::PackedScene::9062508693774492370::1775570542::0::1::::<><><>0<>0<><>::uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png
-vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775572073::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1775744602::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png<>uid://cnutrgawtqixc::::res://scenes/menu_scenes/gameplay_ui/textures/CompassBackground.png
 ::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1775571164
 vehicle_spawn_handler.gd::GDScript::1011273327635510938::1775571164::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1775049066

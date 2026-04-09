@@ -1,5 +1,2 @@
-res://scenes/menu_scenes/main_menu/main_menu.tscn
-res://scenes/menu_scenes/diagram_1/hangar.tscn
-res://scenes/menu_scenes/diagram_1/airplane.tscn
-res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
-res://scenes/menu_scenes/diagram_1/freecam.gd
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd

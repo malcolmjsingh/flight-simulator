@@ -21,6 +21,8 @@ extends Node3D
 @onready var altimeter_label = $Control/GameplayGUI/Altimeter/AltimeterLabel
 @onready var altimeter_icon = $Control/GameplayGUI/Altimeter/AltimeterIcon
 
+@onready var compass_camera = $Control/GameplayGUI/Compass/CompassBackground/COControl
+@onready var compass_plane = $Control/GameplayGUI/Compass/CompassBackground/POControl
 
 var mouse_position: Vector2
 var currentlyGrabbing = false
@@ -61,6 +63,7 @@ func _process(delta: float) -> void:
 		
 	update_speedometer()
 	update_altimeter()
+	update_compass()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -281,3 +284,11 @@ func update_altimeter():
 		var percent_offset = (height + sea_level) * multiplier / (max_altitude - min_altitude)
 		
 		altimeter_icon.position.y = clamp(percent_offset * (max_icon_pos - min_icon_pos) + min_icon_pos, -970.0, -220.0)
+
+func update_compass():
+	if vehicleWithCurrentlyActiveCamera:
+		var vehicle_rotation = vehicleWithCurrentlyActiveCamera.rotation
+		var camera_rotation = Vector3.ZERO
+		
+		compass_camera.rotation = camera_rotation.y
+		compass_plane.rotation = -vehicle_rotation.y
