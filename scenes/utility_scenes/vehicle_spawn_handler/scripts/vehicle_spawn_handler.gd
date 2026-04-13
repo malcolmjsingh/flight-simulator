@@ -36,7 +36,6 @@ var vehicleWithCurrentlyActiveCamera
 var currentlyActiveCamera
 var currentlySelectedActiveVehicleScene = null
 
-
 signal newVehicleAdded
 
 func _ready() -> void:
@@ -226,10 +225,9 @@ func _on_new_vehicle_added() -> void:
 func _on_delete_vehicle_pressed() -> void:
 	active_vehicles_select_box.visible = false
 	if is_instance_valid(currentlySelectedActiveVehicleScene):
-		
 		if currentlySelectedActiveVehicleScene == vehicleWithCurrentlyActiveCamera:
+			vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
 			vehicleWithCurrentlyActiveCamera = null
-		
 		currentlySelectedActiveVehicleScene.queue_free()
 		currentySelectedActiveVehicleButton.queue_free()
 		currentlySelectedActiveVehicleScene = null
@@ -239,14 +237,35 @@ func create_active_vehicle_ui_string(vehicle_name: String, is_camera_active: boo
 	return "Name: %s \nCamera Target: %s \nPosition: \nX: %d Y: %d Z: %d" % [vehicle_name, str(is_camera_active), vehicle_position.x, vehicle_position.y, vehicle_position.z]
 
 func _on_target_camera_pressed() -> void:
-	
-	if currentlySelectedActiveVehicleScene and vehicleWithCurrentlyActiveCamera:
-		if currentlySelectedActiveVehicleScene != vehicleWithCurrentlyActiveCamera:
+	if currentlySelectedActiveVehicleScene:
+		if vehicleWithCurrentlyActiveCamera:
+			if currentlySelectedActiveVehicleScene != vehicleWithCurrentlyActiveCamera:
+				var foundCam = false
+				for child in currentlySelectedActiveVehicleScene.get_children():
+					if child.is_in_group("camera"):
+						foundCam = true
+						vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
+						currentlySelectedActiveVehicleScene.set_meta("is_camera_active", true)
+						var cameraChild = child
+						if cameraChild is Camera3D:
+							cameraChild.make_current()
+							currentlyActiveCamera = cameraChild
+						else:
+							var cameraInstance = cameraChild.get_node("OrbitCam/SpringArm3D/Camera3D")
+							if cameraInstance is Camera3D:
+								cameraInstance.make_current()
+								currentlyActiveCamera = cameraInstance
+						vehicleWithCurrentlyActiveCamera = currentlySelectedActiveVehicleScene
+						break
+				if foundCam == false:
+					print("Failed to find camera")
+			else:
+				print("Note: Selected vehicle already has camera targeted")
+		else:
 			var foundCam = false
 			for child in currentlySelectedActiveVehicleScene.get_children():
 				if child.is_in_group("camera"):
 					foundCam = true
-					vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
 					currentlySelectedActiveVehicleScene.set_meta("is_camera_active", true)
 					var cameraChild = child
 					if cameraChild is Camera3D:
@@ -261,8 +280,7 @@ func _on_target_camera_pressed() -> void:
 					break
 			if foundCam == false:
 				print("Failed to find camera")
-		else:
-			print("Note: Selected vehicle already has camera targeted")
+
 
 # GUI Functions
 
