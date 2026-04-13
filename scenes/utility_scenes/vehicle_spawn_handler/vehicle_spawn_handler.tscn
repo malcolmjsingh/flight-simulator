@@ -334,6 +334,7 @@ offset_right = 37.0
 offset_bottom = 251.0
 
 [node name="ActiveVehiclesSelectBox" type="Control" parent="Control" unique_id=17963204]
+visible = false
 anchors_preset = 0
 offset_top = -233.0
 offset_right = 40.0
