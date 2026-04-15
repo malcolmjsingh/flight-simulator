@@ -1,6 +1,7 @@
 extends Control
 
 var pause_menu_active := false
+var previous_mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,13 +13,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause_menu()
-		print("aa")
 
 func toggle_pause_menu() -> void:
 	pause_menu_active = !pause_menu_active
 	visible = pause_menu_active
 	get_tree().paused = pause_menu_active
-	print("aaa")
+	if pause_menu_active:
+		previous_mouse_mode = Input.mouse_mode
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = previous_mouse_mode
 
 func _on_continue_pressed() -> void:
 	toggle_pause_menu()
