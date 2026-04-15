@@ -1,3 +1,5 @@
+Button
+VBoxContainer
 Control
 TextureRect
 Label
@@ -7,8 +9,6 @@ CollisionShape3D
 StaticBody3D
 MeshInstance3D
 RichTextLabel
-Button
 Panel
 PanelContainer
-VBoxContainer
 ScrollContainer

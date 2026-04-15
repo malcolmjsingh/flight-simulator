@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://vi70h13nxd87"]
+[gd_scene format=3 uid="uid://vi70h13nxd87"]
 
 [ext_resource type="Script" uid="uid://tukdh0xgd1cf" path="res://scenes/menu_scenes/main_menu/scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://clknts8u1o0sq" path="res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb" id="2_rhvh2"]
@@ -20,27 +20,27 @@ glow_enabled = true
 
 [sub_resource type="Theme" id="Theme_rhvh2"]
 
-[node name="Main_Menu" type="Node3D"]
+[node name="Main_Menu" type="Node3D" unique_id=1596171360]
 script = ExtResource("1_l6cm7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1464914730]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 light_color = Color(1, 1, 0.20784314, 1)
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=230036565]
 environment = SubResource("Environment_ekxnf")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=326615609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1144667, 4.3375993)
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=246809995]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=838994116]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 28.0
@@ -49,14 +49,14 @@ offset_bottom = 96.0
 bbcode_enabled = true
 text = "[font_size=40]Dinesh Flight Simulator[/font_size]"
 
-[node name="toDiagramCollisionBox" type="BoxContainer" parent="Control"]
+[node name="toDiagramCollisionBox" type="BoxContainer" parent="Control" unique_id=180915838]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 251.0
 offset_right = 462.0
 offset_bottom = 402.0
 
-[node name="collisionBox" type="BoxContainer" parent="Control"]
+[node name="collisionBox" type="BoxContainer" parent="Control" unique_id=1412142529]
 visibility_layer = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
@@ -67,7 +67,7 @@ offset_bottom = 636.0
 theme = SubResource("Theme_rhvh2")
 vertical = true
 
-[node name="behindBox" type="BoxContainer" parent="Control"]
+[node name="behindBox" type="BoxContainer" parent="Control" unique_id=1361580133]
 visibility_layer = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
@@ -78,27 +78,27 @@ offset_bottom = 636.0
 theme = SubResource("Theme_rhvh2")
 vertical = true
 
-[node name="Button" type="Button" parent="Control/behindBox"]
+[node name="Button" type="Button" parent="Control/behindBox" unique_id=1560002370]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="Control/behindBox"]
+[node name="Button2" type="Button" parent="Control/behindBox" unique_id=255379916]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="Control/behindBox"]
+[node name="Button3" type="Button" parent="Control/behindBox" unique_id=2001814505]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button4" type="Button" parent="Control/behindBox"]
+[node name="Button4" type="Button" parent="Control/behindBox" unique_id=1854192251]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button5" type="Button" parent="Control/behindBox"]
+[node name="Button5" type="Button" parent="Control/behindBox" unique_id=626298351]
 custom_minimum_size = Vector2(0, 115)
 layout_mode = 2
 
-[node name="mainBox" type="BoxContainer" parent="Control"]
+[node name="mainBox" type="BoxContainer" parent="Control" unique_id=1203001721]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_left = 11.0
@@ -108,29 +108,29 @@ offset_bottom = 636.0
 theme = SubResource("Theme_rhvh2")
 vertical = true
 
-[node name="Start" type="Button" parent="Control/mainBox"]
+[node name="Start" type="Button" parent="Control/mainBox" unique_id=1129841157]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Free Flight"
 
-[node name="toDiagram" type="Button" parent="Control/mainBox"]
+[node name="toDiagram" type="Button" parent="Control/mainBox" unique_id=1271013462]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Diagram Placeholder"
 
-[node name="Options" type="Button" parent="Control/mainBox"]
+[node name="Options" type="Button" parent="Control/mainBox" unique_id=967718236]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "Options"
 
-[node name="Quit" type="Button" parent="Control/mainBox"]
+[node name="Quit" type="Button" parent="Control/mainBox" unique_id=986304072]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 text = "Quit"
 
-[node name="ui animaiton" type="AnimationPlayer" parent="Control"]
+[node name="ui animaiton" type="AnimationPlayer" parent="Control" unique_id=932360063]
 
-[node name="realrealrealairliner" parent="." instance=ExtResource("2_rhvh2")]
+[node name="realrealrealairliner" parent="." unique_id=257498699 instance=ExtResource("2_rhvh2")]
 transform = Transform3D(0.6738512, 0, -0.7388671, 0, 1, 0, 0.7388671, 0, 0.6738512, 1.5813489, 0.5368414, 1.4338398)
 
 [connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]

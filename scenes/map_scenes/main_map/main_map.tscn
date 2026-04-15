@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=4 uid="uid://dbaqykawe3oo6"]
+[gd_scene load_steps=17 format=4 uid="uid://dbaqykawe3oo6"]
 
 [ext_resource type="Texture2D" uid="uid://dkojklqwnmpmj" path="res://scenes/map_scenes/main_map/textures/sky.hdr" id="1_68yp2"]
 [ext_resource type="PackedScene" uid="uid://bv23xiqq6lorb" path="res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn" id="3_octsl"]
 [ext_resource type="Texture2D" uid="uid://c6hfk5twok70n" path="res://scenes/map_scenes/main_map/models/water_waterTexture.png" id="4_t86b3"]
 [ext_resource type="Texture2D" uid="uid://q48xap51ooif" path="res://scenes/map_scenes/main_map/models/terrain5_TerrainTexture5.png" id="4_y8ter"]
 [ext_resource type="Script" uid="uid://0o3k8pko6tdm" path="res://scenes/map_scenes/main_map/scripts/water.gd" id="5_t86b3"]
+[ext_resource type="PackedScene" uid="uid://77ja5vjk8ro3" path="res://scenes/menu_scenes/pause_menu/pause_menu.tscn" id="6_ids5g"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t3xe5"]
 panorama = ExtResource("1_68yp2")
@@ -135,3 +136,5 @@ transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 script = ExtResource("5_t86b3")
 water_mesh = NodePath("../WaterPlane")
 water_level = -11.0
+
+[node name="PauseMenuNode" parent="." instance=ExtResource("6_ids5g")]

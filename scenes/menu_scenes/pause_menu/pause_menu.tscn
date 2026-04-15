@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://77ja5vjk8ro3"]
+
+[ext_resource type="Script" uid="uid://cd5gmyll0wvgv" path="res://scenes/menu_scenes/pause_menu/scripts/pause_menu.gd" id="1_5bgjm"]
+
+[sub_resource type="Gradient" id="Gradient_68e08"]
+colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5bgjm"]
+gradient = SubResource("Gradient_68e08")
+
+[node name="PauseMenuNode" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5bgjm")
+
+[node name="Background Blur" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_5bgjm")
+
+[node name="MenuAnchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBox" type="VBoxContainer" parent="MenuAnchor"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Button" parent="MenuAnchor/MenuBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue
+"
+
+[node name="Restart" type="Button" parent="MenuAnchor/MenuBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Restart Scene"
+
+[node name="Settings" type="Button" parent="MenuAnchor/MenuBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="ExitToDesktop" type="Button" parent="MenuAnchor/MenuBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Desktop"
+
+[node name="ExitToMainMenu" type="Button" parent="MenuAnchor/MenuBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Main Menu
+"
+
+[connection signal="pressed" from="MenuAnchor/MenuBox/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/ExitToDesktop" to="." method="_on_exit_to_desktop_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/ExitToMainMenu" to="." method="_on_exit_to_main_menu_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/ExitToMainMenu" to="." method="_on_exit_to_mm_pressed"]
