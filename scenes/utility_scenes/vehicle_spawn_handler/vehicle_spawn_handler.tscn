@@ -336,7 +336,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_7qj7w")
 
-[node name="ActiveVehicleCheckButton" type="CheckButton" parent="Control/ActiveVehiclesBox" unique_id=1764282442]
+[node name="ActiveVehicleCheckToggle" type="CheckButton" parent="Control/ActiveVehiclesBox" unique_id=1764282442]
 layout_mode = 0
 offset_left = -7.0
 offset_top = 227.0
@@ -389,6 +389,6 @@ text = "Target Camera"
 
 [connection signal="toggled" from="Control/SpawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/SpawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]
-[connection signal="toggled" from="Control/ActiveVehiclesBox/ActiveVehicleCheckButton" to="." method="_on_active_vehicle_check_button_toggled"]
+[connection signal="toggled" from="Control/ActiveVehiclesBox/ActiveVehicleCheckToggle" to="." method="_on_active_vehicle_check_button_toggled"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/DeleteVehicle" to="." method="_on_delete_vehicle_pressed"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/TargetCamera" to="." method="_on_target_camera_pressed"]

@@ -196,7 +196,8 @@ func _on_spawn_button_pressed() -> void:
 		spawnProcedure(buttonVehicleResource.scene)
 	else:
 		info_display_panel.text = "Please select a Vehicle before attempting to spawn."
-
+	
+	
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		canGrab = true
@@ -205,6 +206,7 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		currentlyGrabbing = false
 		canGrab = false
 		spawnerGUI.position = Vector2(750, 645)
+	
 
 func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
