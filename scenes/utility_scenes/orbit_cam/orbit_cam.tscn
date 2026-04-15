@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
-[ext_resource type="Script" path="res://scenes/utility_scenes/orbit_cam/camera_3d.gd" id="3_m3wi2"]
+[ext_resource type="Script" uid="uid://b8ais8jmk5i03" path="res://scenes/utility_scenes/orbit_cam/camera_3d.gd" id="3_m3wi2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_660a4"]
 transparency = 1
