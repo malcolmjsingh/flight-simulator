@@ -1,2 +1,4 @@
 res://scenes/vehicle_scenes/commercial_plane/commercial_plane.tscn
 res://scenes/vehicle_scenes/cessna/cessna_aero_control_config.tres
+res://scenes/menu_scenes/pause_menu/pause_menu.tscn
+res://scenes/menu_scenes/pause_menu/scripts/pause_menu.gd

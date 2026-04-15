@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause_menu()
+		print("aa")
 
 func toggle_pause_menu() -> void:
 	pause_menu_active = !pause_menu_active

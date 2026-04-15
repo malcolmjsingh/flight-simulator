@@ -82,5 +82,5 @@ text = "Quit to Main Menu
 [connection signal="pressed" from="MenuAnchor/MenuBox/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="MenuAnchor/MenuBox/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MenuAnchor/MenuBox/ExitToDesktop" to="." method="_on_exit_to_desktop_pressed"]
-[connection signal="pressed" from="MenuAnchor/MenuBox/ExitToMainMenu" to="." method="_on_exit_to_main_menu_pressed"]
 [connection signal="pressed" from="MenuAnchor/MenuBox/ExitToMainMenu" to="." method="_on_exit_to_mm_pressed"]
+[connection signal="pressed" from="MenuAnchor/MenuBox/ExitToMainMenu" to="." method="_on_exit_to_main_menu_pressed"]
