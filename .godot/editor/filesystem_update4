@@ -1,2 +1,1 @@
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://scenes/vehicle_scenes/transport/transport.tscn
