@@ -305,7 +305,7 @@ offset_right = 201.0
 offset_bottom = 162.0
 text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
 
-[node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI" unique_id=1310903387]
+[node name="SpawnOptionDropdown" type="OptionButton" parent="Control/SpawnerGUI" unique_id=1310903387]
 layout_mode = 0
 offset_left = 193.0
 offset_top = 205.0
@@ -389,8 +389,8 @@ text = "Target Camera"
 
 [connection signal="toggled" from="Control/SpawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/SpawnerGUI/Control/spawnButton" to="." method="_on_spawn_button_pressed"]
-[connection signal="pressed" from="Control/SpawnerGUI/SpawnOptionButton" to="." method="_on_spawn_option_dropdown_pressed"]
-[connection signal="pressed" from="Control/SpawnerGUI/SpawnOptionButton" to="." method="_on_spawn_option_button_pressed"]
+[connection signal="pressed" from="Control/SpawnerGUI/SpawnOptionDropdown" to="." method="_on_spawn_option_dropdown_pressed"]
+[connection signal="pressed" from="Control/SpawnerGUI/SpawnOptionDropdown" to="." method="_on_spawn_option_button_pressed"]
 [connection signal="toggled" from="Control/ActiveVehiclesBox/ActiveVehicleCheckToggle" to="." method="_on_active_vehicle_check_button_toggled"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/DeleteVehicle" to="." method="_on_delete_vehicle_pressed"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/TargetCamera" to="." method="_on_target_camera_pressed"]
