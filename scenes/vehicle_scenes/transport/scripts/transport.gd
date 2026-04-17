@@ -1,11 +1,16 @@
-extends Node3D
+extends AeroBody3D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#linear_velocity.z = -100.0
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	global_rotation = Vector3.ZERO
+func _process(delta: float) -> void:
+	
+
+
+
+	pass

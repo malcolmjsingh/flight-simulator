@@ -32,11 +32,11 @@ func _process(delta: float) -> void:
 	elif to_diagram_rect.has_point(mouse_position):
 		if current_gui_state == GUIState.None:
 			current_gui_state = GUIState.ButtonHover
-			ui_animaiton.play("ui_transition_fwd")
+			#ui_animaiton.play("ui_transition_fwd")
 	else:
 		if current_gui_state != GUIState.None:
 			current_gui_state = GUIState.None
-			ui_animaiton.play("ui_transition_bwd")
+			#ui_animaiton.play("ui_transition_bwd")
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/map_scenes/main_map/main_map.tscn")

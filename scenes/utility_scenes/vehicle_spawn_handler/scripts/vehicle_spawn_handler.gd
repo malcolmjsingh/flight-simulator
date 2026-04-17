@@ -90,7 +90,7 @@ func _ready() -> void:
 	#Unselect and spawn options
 	spawn_option_button.select(-1)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#This is functionality for making the spawner box draggable
 	#it gets the camera and the global rect of the dragbox
 	mouse_position = get_viewport().get_mouse_position()

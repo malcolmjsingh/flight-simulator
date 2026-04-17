@@ -1,3 +1,2 @@
-position
-Resource
 vehicle
+Resource

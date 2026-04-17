@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="vehicle" format=3 uid="uid://8octg7qov6h7"]
+[gd_resource type="Resource" script_class="vehicle" load_steps=3 format=3 uid="uid://8octg7qov6h7"]
 
 [ext_resource type="PackedScene" uid="uid://chkdnyeuanvyn" path="res://scenes/vehicle_scenes/car/car.tscn" id="1_frui2"]
 [ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="2_iwgtb"]

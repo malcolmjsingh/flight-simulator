@@ -165,7 +165,7 @@ script/source = "extends Node
 @export var min_speed : float = 225.0
 @export var max_speed : float = 275.0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var wing_sweep_command : float = clamp(remap(aero_body.air_speed, min_speed, max_speed, 0.0, 1.0), 0.0, 1.0)
 	get_parent().set_control_input(\"wing_sweep\", wing_sweep_command)
 "
@@ -173,7 +173,7 @@ func _physics_process(delta: float) -> void:
 [sub_resource type="GDScript" id="GDScript_yuw0c"]
 script/source = "extends MeshInstance3D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$\"WingR\".rotation.y = $\"../SwingR\".rotation.y
 	$\"WingL\".rotation.y = -$\"../SwingR\".rotation.y
 	$WingR/AileronR.rotation.x = $\"../SwingR/AileronR\".rotation.x

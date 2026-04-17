@@ -32,7 +32,7 @@ func _input(event):
 			spring_arm_3d.spring_length = spring_arm_3d.spring_length + 0.1
 		spring_arm_3d.spring_length = clamp(spring_arm_3d.spring_length, closeZoomClamp, farZoomClamp)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("toggle_camera") and not currentlyClampClicking:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

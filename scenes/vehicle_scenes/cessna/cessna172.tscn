@@ -96,7 +96,7 @@ metadata/_custom_type_script = "uid://cdp8dc63ytxx1"
 [sub_resource type="GDScript" id="GDScript_op60t"]
 script/source = "extends MeshInstance3D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	$Wing/AileronR.rotation.x = $\"../WingR1/WingR2/Aileron\".rotation.x
 	if get_node_or_null(\"../WingR1Mirror/WingR2/Aileron\"):
 		$Wing/AileronL.rotation.x = $\"../WingR1Mirror/WingR2/Aileron\".rotation.x

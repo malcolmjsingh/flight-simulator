@@ -16,11 +16,11 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="flight_sim_main"
 run/main_scene="uid://vi70h13nxd87"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
-AeroUnits="*uid://5vah4ayrdxci"
+AeroUnits="*res://addons/godot_aerodynamic_physics/core/singletons/aero_units.gd"
 
 [editor_plugins]
 
@@ -125,4 +125,5 @@ tilt_down={
 3d_physics/layer_2="Vehicles"
 3d_physics/layer_3="Camera"
 3d_physics/layer_4="Water"
+3d_physics/layer_5="Transport Plane"
 3d_physics/layer_15="Atmosphere Areas"
