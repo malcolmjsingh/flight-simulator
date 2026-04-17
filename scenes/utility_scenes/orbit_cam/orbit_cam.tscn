@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://svjajx8mpn2s"]
+[gd_scene format=3 uid="uid://svjajx8mpn2s"]
 
 [ext_resource type="Script" uid="uid://kar2yoylujvs" path="res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd" id="1_660a4"]
 [ext_resource type="Script" uid="uid://ca8lw8667gkpl" path="res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd" id="1_sgmqw"]
@@ -8,18 +8,19 @@
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.26666668)
 
-[node name="CameraFollow" type="Node3D" groups=["camera"]]
+[node name="CameraFollow" type="Node3D" unique_id=1502151082 groups=["camera"]]
 script = ExtResource("1_660a4")
 
-[node name="OrbitCam" type="Node3D" parent="."]
+[node name="OrbitCam" type="Node3D" parent="." unique_id=1048473477]
 script = ExtResource("1_sgmqw")
+farZoomClamp = 15.0
 
-[node name="SpringArm3D" type="SpringArm3D" parent="OrbitCam"]
+[node name="SpringArm3D" type="SpringArm3D" parent="OrbitCam" unique_id=295928704]
 spring_length = 4.0
 
-[node name="Camera3D" type="Camera3D" parent="OrbitCam/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="OrbitCam/SpringArm3D" unique_id=1837487194]
 script = ExtResource("3_m3wi2")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="OrbitCam"]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="OrbitCam" unique_id=2136254611]
 radius = 0.03
 material = SubResource("StandardMaterial3D_660a4")

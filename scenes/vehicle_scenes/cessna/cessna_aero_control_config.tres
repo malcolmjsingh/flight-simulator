@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="AeroControlConfig" load_steps=9 format=3 uid="uid://b7wqkkn4w0h2g"]
+[gd_resource type="Resource" script_class="AeroControlConfig" format=3 uid="uid://b7wqkkn4w0h2g"]
 
 [ext_resource type="Script" uid="uid://dfbhcpt1rr3ai" path="res://addons/godot_aerodynamic_physics/core/controls/aero_control_config_axis.gd" id="1_ejxnj"]
 [ext_resource type="Script" uid="uid://cbgqb7g7mmwtu" path="res://addons/godot_aerodynamic_physics/core/controls/aero_control_config.gd" id="2_pbdx3"]
