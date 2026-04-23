@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://chkdnyeuanvyn"]
+[gd_scene format=4 uid="uid://chkdnyeuanvyn"]
 
 [ext_resource type="Script" uid="uid://nd5byntogp40" path="res://scenes/vehicle_scenes/car/scripts/car.gd" id="1_cr2g6"]
 [ext_resource type="Texture2D" uid="uid://b7k16hgx7odqm" path="res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png" id="1_naplk"]
@@ -214,7 +214,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5tmc3")
 
-[node name="Airdrop" type="VehicleBody3D"]
+[node name="Airdrop" type="VehicleBody3D" unique_id=1448272699]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 collision_layer = 2
 collision_mask = 3
 mass = 100.0
@@ -233,56 +234,56 @@ steering_sensitivity = 0.5
 max_steer = 0.7
 driving_car = true
 
-[node name="Airdrop-body" type="MeshInstance3D" parent="."]
+[node name="Airdrop-body" type="MeshInstance3D" parent="." unique_id=949808946]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4617038, -0.10598021)
 mesh = SubResource("ArrayMesh_6dk67")
 skeleton = NodePath("")
 
-[node name="CarCollision" type="CollisionShape3D" parent="."]
+[node name="CarCollision" type="CollisionShape3D" parent="." unique_id=1406399604]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51019335, 0)
 shape = SubResource("BoxShape3D_naplk")
 
-[node name="CarWheelFL" type="VehicleWheel3D" parent="."]
+[node name="CarWheelFL" type="VehicleWheel3D" parent="." unique_id=850984930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.448, 0.206, 0.794)
 use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.2
 
-[node name="Airdrop-wheel_Ft_L" type="MeshInstance3D" parent="CarWheelFL"]
+[node name="Airdrop-wheel_Ft_L" type="MeshInstance3D" parent="CarWheelFL" unique_id=1953994235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003193617, 0.0012077689, 3.1232834e-05)
 mesh = SubResource("ArrayMesh_eoqg6")
 skeleton = NodePath("")
 
-[node name="CarWheelFR" type="VehicleWheel3D" parent="."]
+[node name="CarWheelFR" type="VehicleWheel3D" parent="." unique_id=2047988813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448, 0.206, 0.794)
 use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.2
 
-[node name="Airdrop-wheel_Ft_R" type="MeshInstance3D" parent="CarWheelFR"]
+[node name="Airdrop-wheel_Ft_R" type="MeshInstance3D" parent="CarWheelFR" unique_id=903867945]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00031852722, 0.0012077689, 3.1232834e-05)
 mesh = SubResource("ArrayMesh_o8f6h")
 skeleton = NodePath("")
 
-[node name="CarWheelBL" type="VehicleWheel3D" parent="."]
+[node name="CarWheelBL" type="VehicleWheel3D" parent="." unique_id=1818746257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.448, 0.206, -0.809)
 use_as_traction = true
 wheel_radius = 0.2
 
-[node name="Airdrop-wheel_Bk_L" type="MeshInstance3D" parent="CarWheelBL"]
+[node name="Airdrop-wheel_Bk_L" type="MeshInstance3D" parent="CarWheelBL" unique_id=887717914]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003232956, 0.0012228489, 0.00030493736)
 mesh = SubResource("ArrayMesh_fl0oq")
 skeleton = NodePath("")
 
-[node name="CarWheelBR" type="VehicleWheel3D" parent="."]
+[node name="CarWheelBR" type="VehicleWheel3D" parent="." unique_id=1553011921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448, 0.206, -0.809)
 use_as_traction = true
 wheel_radius = 0.2
 
-[node name="Airdrop-wheel_Bk_R" type="MeshInstance3D" parent="CarWheelBR"]
+[node name="Airdrop-wheel_Bk_R" type="MeshInstance3D" parent="CarWheelBR" unique_id=1485510851]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00032258034, 0.0012228489, 0.00030493736)
 mesh = SubResource("ArrayMesh_o68g4")
 skeleton = NodePath("")
 
-[node name="CameraFollow" parent="." instance=ExtResource("2_k7txe")]
+[node name="CameraFollow" parent="." unique_id=452480475 instance=ExtResource("2_k7txe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5017171, 0)

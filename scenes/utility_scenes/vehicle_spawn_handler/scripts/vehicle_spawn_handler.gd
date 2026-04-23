@@ -187,13 +187,13 @@ func _on_active_vehicle_button_pressed(myButton: Button):
 	currentlySelectedActiveVehicleScene = myButton.get_meta("AssociatedVehicle")
 	update_current_active_vehicle_ui()
 	currentySelectedActiveVehicleButton = myButton
-	myButton.release_focus()
+	#myButton.release_focus()
 
 func _on_vehicle_button_pressed(myButton: Button):
 	var buttonVehicleResource = myButton.get_meta("VehicleResource")
 	info_display_panel.text = buttonVehicleResource.descriptionString
 	currentlySelectedVehicleButton = myButton
-	myButton.release_focus()
+	#myButton.release_focus()
 
 func _on_spawn_button_pressed() -> void:
 	if currentlySelectedVehicleButton:
@@ -201,7 +201,7 @@ func _on_spawn_button_pressed() -> void:
 		spawnProcedure(buttonVehicleResource.scene)
 	else:
 		info_display_panel.text = "Please select a Vehicle before attempting to spawn."
-	spawn_button.release_focus()
+	#spawn_button.release_focus()
 	
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -211,7 +211,7 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		currentlyGrabbing = false
 		canGrab = false
 		spawnerGUI.position = Vector2(750, 645)
-	check_button.release_focus()
+	#check_button.release_focus()
 
 func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -220,7 +220,7 @@ func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 	else:
 		active_vehicles_box_root.position = Vector2(6, -230)
 		active_vehicles_select_box.position = Vector2(0,-230)
-	active_vehicle_check_toggle.release_focus()
+	#active_vehicle_check_toggle.release_focus()
 
 func _on_new_vehicle_added() -> void:
 	create_active_vehicle_display_buttons_from_scene()
@@ -235,8 +235,8 @@ func _on_delete_vehicle_pressed() -> void:
 		currentySelectedActiveVehicleButton.queue_free()
 		currentlySelectedActiveVehicleScene = null
 		currentlySelectedVehicleButton = null
-	delete_vehicle.release_focus()
-	target_camera.release_focus()
+	#delete_vehicle.release_focus()
+	#target_camera.release_focus()
 
 func _on_target_camera_pressed() -> void:
 	if currentlySelectedActiveVehicleScene:
@@ -382,4 +382,5 @@ func update_compass():
 
 
 func _on_spawn_option_dropdown_pressed() -> void:
-	spawn_option_button.release_focus()
+	pass
+	#spawn_option_button.release_focus()

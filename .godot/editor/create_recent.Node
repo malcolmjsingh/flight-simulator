@@ -1,5 +1,8 @@
-Camera3D
 Node3D
+Control
+AnimationPlayer
+Label
+Camera3D
 ManualAeroSurface3D
 AeroControlComponent
 AeroThruster3D
@@ -8,7 +11,4 @@ CollisionShape3D
 AeroBody3D
 Button
 VBoxContainer
-Control
 TextureRect
-Label
-CheckButton
