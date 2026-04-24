@@ -7,3 +7,12 @@ res://scenes/vehicle_scenes/cessna/cessna172.tscn
 res://scenes/vehicle_scenes/f14/f14.tscn
 res://scenes/vehicle_scenes/car/car.tscn
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/transport.tres
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/su57/su57.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/catalina.tres
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/helicopter.tres
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/su57.tres
+res://scenes/vehicle_scenes/helicopter/blackhawk.tscn
+res://scenes/vehicle_scenes/su57/su572.tscn
+res://scenes/vehicle_scenes/catalina/catalina2.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/ball.tres
+res://scenes/vehicle_scenes/ball/ball2.tscn

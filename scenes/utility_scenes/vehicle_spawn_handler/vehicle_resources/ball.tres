@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="vehicle" format=3 uid="uid://cf7misca4ijeo"]
+
+[ext_resource type="PackedScene" uid="uid://csu6feovn1nyg" path="res://scenes/vehicle_scenes/ball/ball2.tscn" id="1_huu3y"]
+[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="1_wjpvl"]
+
+[resource]
+script = ExtResource("1_wjpvl")
+name = "ball"
+scene = ExtResource("1_huu3y")
+descriptionString = "yuno ball"
+metadata/_custom_type_script = "uid://efdvg5fmieny"
