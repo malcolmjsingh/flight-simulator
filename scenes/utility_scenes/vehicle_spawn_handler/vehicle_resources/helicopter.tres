@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="vehicle" format=3 uid="uid://b12ayj13d0mst"]
 
-[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="1_0kk4x"]
+[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/resources/vehicle_resource.gd" id="1_0kk4x"]
 [ext_resource type="PackedScene" uid="uid://ck8t2q48erc0o" path="res://scenes/vehicle_scenes/helicopter/blackhawk.tscn" id="1_k0upq"]
 
 [resource]

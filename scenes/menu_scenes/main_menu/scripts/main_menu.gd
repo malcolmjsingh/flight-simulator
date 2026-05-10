@@ -13,6 +13,9 @@ var mouse_position: Vector2
 
 var collision_box_rect: Rect2
 var to_diagram_rect: Rect2
+var showDiagramButtons: bool = false
+
+const OPTIONS_SCENE = preload("uid://32118ukhfbms")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +28,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	realrealrealairliner.rotate_y(0.1 * delta)
 	mouse_position = get_viewport().get_mouse_position()
+	
+	"""
+	This code handled the old UI hover system, manually detecting when the mouse
+	entered or exited the gui box.
 	
 	if collision_box_rect.has_point(mouse_position):
 		if current_gui_state == GUIState.ButtonHover:
@@ -40,6 +47,7 @@ func _process(delta: float) -> void:
 			current_gui_state = GUIState.None
 			ui_animaiton.play("ui_transition_bwd")
 			print("ui transition bwd passted")
+	"""
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/map_scenes/main_map/main_map.tscn")
@@ -48,5 +56,16 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_to_diagram_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_1/hangar.tscn")
+	if not showDiagramButtons:
+		ui_animaiton.play("ui_transition_fwd")
+		showDiagramButtons = true
+	else:
+		ui_animaiton.play("ui_transition_bwd")
+		showDiagramButtons = false
+	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_1/hangar.tscn")
 	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_test/diagram_test.tscn")
+
+
+func _on_options_pressed() -> void:
+	var options_scene = OPTIONS_SCENE.instantiate()
+	add_child(options_scene)

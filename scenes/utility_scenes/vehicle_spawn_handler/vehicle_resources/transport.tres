@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="vehicle" format=3 uid="uid://peooor5qbpnt"]
 
 [ext_resource type="PackedScene" uid="uid://bcubakflg2b0b" path="res://scenes/vehicle_scenes/transport/transport.tscn" id="1_nwmet"]
-[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/vehicle_resource.gd" id="1_otpcr"]
+[ext_resource type="Script" uid="uid://efdvg5fmieny" path="res://general_resources/resources/vehicle_resource.gd" id="1_otpcr"]
 
 [resource]
 script = ExtResource("1_otpcr")

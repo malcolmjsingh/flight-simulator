@@ -2,6 +2,7 @@ extends Control
 
 var pause_menu_active := false
 var previous_mouse_mode = Input.MOUSE_MODE_VISIBLE
+const OPTIONS_SCENE = preload("uid://32118ukhfbms")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,7 +33,8 @@ func _on_restart_pressed() -> void:
 	get_tree().change_scene_to_file(scene_path)
 
 func _on_settings_pressed() -> void:
-	print("Settings don't exist.")
+	var options_menu = OPTIONS_SCENE.instantiate()
+	add_child(options_menu)
 	
 func _on_exit_to_desktop_pressed() -> void:
 	get_tree().quit()

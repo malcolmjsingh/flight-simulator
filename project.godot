@@ -21,6 +21,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 AeroUnits="*uid://5vah4ayrdxci"
+GlobalSetting="*uid://bkp3b5nsjhx47"
 
 [editor_plugins]
 
