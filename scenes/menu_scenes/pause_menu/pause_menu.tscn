@@ -65,7 +65,8 @@ text = "Restart Scene"
 [node name="Settings" type="Button" parent="MenuAnchor/MenuBox" unique_id=1418428521]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Settings"
+text = "Options
+"
 
 [node name="ExitToDesktop" type="Button" parent="MenuAnchor/MenuBox" unique_id=825109505]
 layout_mode = 2

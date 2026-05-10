@@ -1,9 +1,3 @@
-res://scenes/vehicle_scenes/ball/ball2.tscn
-res://scenes/map_scenes/main_map/spawn_positions/ground_spawn.tres
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
-res://scenes/vehicle_scenes/transport/transport.tscn
+res://scenes/vehicle_scenes/helicopter/blackhawk.tscn
 res://scenes/vehicle_scenes/cessna/cessna_aero_control_config.tres
 res://scenes/menu_scenes/pause_menu/pause_menu.tscn
-res://scenes/menu_scenes/pause_menu/scripts/pause_menu.gd
-res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
