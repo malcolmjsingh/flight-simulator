@@ -204,7 +204,7 @@ text = "Free Flight"
 [node name="toDiagram" type="Button" parent="Control/mainBox" unique_id=1271013462]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-text = "Diagram Placeholder"
+text = "Diagrams"
 
 [node name="Options" type="Button" parent="Control/mainBox" unique_id=967718236]
 custom_minimum_size = Vector2(0, 120)

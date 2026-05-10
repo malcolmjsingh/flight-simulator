@@ -7,5 +7,5 @@
 script = ExtResource("1_iua5t")
 name = "Su57"
 scene = ExtResource("1_nagvq")
-descriptionString = "\"sue\" \"57\"????"
+descriptionString = "The Sukhoi Su-57 is a Russian stealth multirole fighter aircraft developed by Sukhoi. This plane is one of the most recent in this program first flying in 2010 and starting manufacturing in 2019."
 metadata/_custom_type_script = "uid://efdvg5fmieny"

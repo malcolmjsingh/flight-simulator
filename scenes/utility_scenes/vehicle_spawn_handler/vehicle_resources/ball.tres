@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_wjpvl")
-name = "ball"
+name = "Ball"
 scene = ExtResource("1_huu3y")
-descriptionString = "yuno ball"
+descriptionString = "A small ball with basic collisions."
 metadata/_custom_type_script = "uid://efdvg5fmieny"

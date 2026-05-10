@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_hy4ww")
-name = "Cessna"
+name = "Cessna 172"
 scene = ExtResource("1_veick")
-descriptionString = "the cessna is a rpetty big plane.. the cessna is a pretty big plane... the cessna is a rpetty big plane.. the cessna is a pretty big plane..."
+descriptionString = "The Cessna 172 Skyhawk is an American four-seat, single-engine, fixed-wing aircraft made by the Cessna Aircraft Company. It is typically used for training and/or civilian use. It is the most produced and arguably most successful aircraft in history."
 metadata/_custom_type_script = "uid://efdvg5fmieny"

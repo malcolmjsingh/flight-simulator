@@ -28,17 +28,10 @@ load_path = "res://.godot/imported/CompassCamera.png-5e4d73bd5cb2dc081248b4ef7c3
 
 [sub_resource type="Theme" id="Theme_vr1l0"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7qj7w"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3aca"]
-texture = SubResource("NoiseTexture2D_7qj7w")
-
 [sub_resource type="Theme" id="Theme_1haq7"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vr1l0"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7qj7w"]
-texture = SubResource("NoiseTexture2D_vr1l0")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3aca"]
+bg_color = Color(0.55561996, 0.55561996, 0.55561984, 1)
 
 [sub_resource type="Theme" id="Theme_7qj7w"]
 default_font_size = 12
@@ -237,17 +230,17 @@ layout_mode = 0
 offset_right = 400.0
 offset_bottom = 250.0
 theme = SubResource("Theme_vr1l0")
-theme_override_styles/panel = SubResource("StyleBoxTexture_h3aca")
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=1221237392]
-layout_mode = 0
+layout_mode = 1
 offset_right = 182.0
 offset_bottom = 32.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/SpawnerGUI/PanelContainer" unique_id=2064680204]
 layout_mode = 2
 theme = SubResource("Theme_1haq7")
-text = "Title Gna gna ggfgfffff"
+bbcode_enabled = true
+text = "[center]Vehicle Spawner [/center]"
 
 [node name="vehicleSelectPanel" type="PanelContainer" parent="Control/SpawnerGUI" unique_id=2058519234]
 layout_mode = 0
@@ -267,7 +260,7 @@ layout_mode = 0
 offset_top = -11.0
 offset_right = 400.0
 mouse_default_cursor_shape = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_7qj7w")
+theme_override_styles/panel = SubResource("StyleBoxFlat_h3aca")
 
 [node name="CheckButton" type="CheckButton" parent="Control/SpawnerGUI/dragbox" unique_id=1138856066]
 layout_mode = 0
@@ -297,13 +290,13 @@ offset_top = 166.495
 offset_right = 201.0
 offset_bottom = 197.495
 focus_mode = 0
-text = "spawn"
+text = "Spawn"
 
 [node name="infoDisplayPanel" type="RichTextLabel" parent="Control/SpawnerGUI/Control" unique_id=1381487261]
 layout_mode = 0
 offset_right = 201.0
 offset_bottom = 162.0
-text = "this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a this is some generic eample text a a a a a a a"
+text = "Select a Vehicle to Start"
 
 [node name="SpawnOptionButton" type="OptionButton" parent="Control/SpawnerGUI" unique_id=1711614006]
 layout_mode = 0

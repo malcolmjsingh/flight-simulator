@@ -7,5 +7,5 @@
 script = ExtResource("1_a24ih")
 name = "Catalina"
 scene = ExtResource("1_oas53")
-descriptionString = "this is actually quite a large plane"
+descriptionString = "The Catalina (formally known as the \"Consolidated Model 28\") was an amphibious aircraft used by the US Army during the Second World War. It was able to both fly, and traverse through water."
 metadata/_custom_type_script = "uid://efdvg5fmieny"

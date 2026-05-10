@@ -441,4 +441,4 @@ script = ExtResource("15_l68jr")
 buoyancy_mesh = ExtResource("16_l68jr")
 metadata/_custom_type_script = "uid://blp6761y154ht"
 
-[node name="CameraFollow" parent="." index="12" unique_id=1502151082 instance=ExtResource("16_yqr2s")]
+[node name="CameraFollow" parent="." index="11" unique_id=1502151082 instance=ExtResource("16_yqr2s")]

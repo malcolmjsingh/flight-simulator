@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_mt2pw")
-name = "f14"
+name = "F14"
 scene = ExtResource("1_j1gpo")
-descriptionString = "f14?, what about f13? or f12.... or f11!!!"
+descriptionString = "The Grumman F-14 Tomcat is an American multirole fighter jet manifactured from 1969 to 1991. It was specifically designed to serve as the U.S. Navy's fleet defense interceptor during the Cold War."
 metadata/_custom_type_script = "uid://efdvg5fmieny"
