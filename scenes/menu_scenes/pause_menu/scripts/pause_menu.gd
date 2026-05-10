@@ -39,4 +39,5 @@ func _on_exit_to_desktop_pressed() -> void:
 
 func _on_exit_to_main_menu_pressed() -> void:
 	toggle_pause_menu()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().change_scene_to_file("res://scenes/menu_scenes/main_menu/main_menu.tscn")

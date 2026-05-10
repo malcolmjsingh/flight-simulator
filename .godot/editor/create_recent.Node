@@ -1,3 +1,4 @@
+CollisionShape3D
 Node3D
 Control
 AnimationPlayer
@@ -7,7 +8,6 @@ ManualAeroSurface3D
 AeroControlComponent
 AeroThruster3D
 VehicleWheel3D
-CollisionShape3D
 AeroBody3D
 Button
 VBoxContainer
