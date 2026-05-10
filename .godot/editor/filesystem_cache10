@@ -1,6 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776962316
-README.md::TextFile::-1::1774359898::0::1::::<><><>0<>0<><>::
+::res://::1778364092
+README.md::TextFile::-1::1777037237::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774359898
 ::res://addons/godot_aerodynamic_physics/::1774360026
 CONTRIBUTING.md::TextFile::-1::1774359898::0::1::::<><><>0<>0<><>::
@@ -95,7 +95,7 @@ cessna172.tscn::PackedScene::3962918471095726194::1774359898::0::1::::<><><>0<>0
 cessna172_Image.png::CompressedTexture2D::8312448466900281387::1774359898::1774360026::1::::<><><>0<>0<>4261241a9ac42df864a384bdabbcb8f8<>res://.godot/imported/cessna172_Image.png-1d8068566359c8880fbc6b197b580489.ctex::
 fueslage_aero_mesh.res::ArrayMesh::6089144778879999503::1774360040::0::1::::<><><>0<>0<><>::
 Material.tres::StandardMaterial3D::262827971445483510::1774359898::0::1::::<><><>0<>0<><>::
-::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/drag_ball/::1776962874
+::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/drag_ball/::1776962890
 ball.tscn::PackedScene::5473320956442072353::1774359898::0::1::::<><><>0<>0<><>::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://7scpeqlmo40t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/drag_influencer/aero_drag_influencer.gd<>uid://bm03tdt5so3wj::::res://addons/godot_aerodynamic_physics/demo/misc_demo_assets/camera without rotation.tscn
 ::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/f14/::1774360040
 f14.glb::PackedScene::67197373345569391::1774359898::1774360040::1::::<><><>0<>0<>fcfcfde1542290282e070841d189f9ab<>res://.godot/imported/f14.glb-45bee7aaa8c583b49f99b7431a000101.scn::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://di4yvqikbvn1q::::res://addons/godot_aerodynamic_physics/demo/aircraft_examples/f14/fueslage_aero_mesh.res
@@ -243,8 +243,8 @@ White_board_Roughness.png::CompressedTexture2D::1622648156122974557::1775754435:
 diagram_test.tscn::PackedScene::9149607177363196632::1774359898::0::1::::<><><>0<>0<><>::uid://2inmkt08qdry::::res://scenes/menu_scenes/diagram_test/scripts/diagram_test.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
 ::res://scenes/menu_scenes/diagram_test/scripts/::1774359898
 diagram_test.gd::GDScript::1912425106457578326::1774359898::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/menu_scenes/main_menu/::1776273286
-main_menu.tscn::PackedScene::1492468736166146198::1776273286::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
+::res://scenes/menu_scenes/main_menu/::1777037752
+main_menu.tscn::PackedScene::1492468736166146198::1777037752::0::1::::<><><>0<>0<><>::uid://tukdh0xgd1cf::::res://scenes/menu_scenes/main_menu/scripts/main_menu.gd<>uid://clknts8u1o0sq::::res://scenes/vehicle_scenes/commercial_plane/models/realrealrealairliner.glb
 ::res://scenes/menu_scenes/main_menu/scripts/::1776441697
 main_menu.gd::GDScript::1375488518849932361::1776441697::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/menu_scenes/pause_menu/::1776273808
@@ -255,25 +255,26 @@ pause_menu.gd::GDScript::5045726240492889365::1776441697::0::1::::<>Control<><>0
 ::res://scenes/utility_scenes/orbit_cam/::1776961662
 camera_3d.gd::GDScript::4703172151714161758::1776441697::0::1::::<>Camera3D<><>0<>0<><>::
 orbit_cam.tscn::PackedScene::1307298081011399796::1776961662::0::1::::<><><>0<>0<><>::uid://kar2yoylujvs::::res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd<>uid://ca8lw8667gkpl::::res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd<>uid://b8ais8jmk5i03::::res://scenes/utility_scenes/orbit_cam/camera_3d.gd
-::res://scenes/utility_scenes/orbit_cam/scripts/::1776961662
+::res://scenes/utility_scenes/orbit_cam/scripts/::1776963124
 camera_follow_node.gd::GDScript::702970124986398288::1776441697::0::1::::<>Node3D<><>0<>0<><>::
-orbit_cam.gd::GDScript::4841674790267513985::1776961662::0::1::::<>Node3D<><>0<>0<><>::
+orbit_cam.gd::GDScript::4841674790267513985::1776963124::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/::1776959477
 gameplay_gui.tscn::PackedScene::9062508693774492370::1775754436::0::1::::<><><>0<>0<><>::uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png
 vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1776959477::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf
 ::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1776782474
 vehicle_spawn_handler.gd::GDScript::1011273327635510938::1776782474::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1776962449
+::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1776963124
+ball.tres::Resource/vehicle::5190589512519703754::1776963124::0::1::::<><><>0<>0<><>::uid://csu6feovn1nyg::::res://scenes/vehicle_scenes/ball/ball2.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
 car.tres::Resource/vehicle::716657220500239696::1774881902::0::1::::<><><>0<>0<><>::uid://chkdnyeuanvyn::::res://scenes/vehicle_scenes/car/car.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
+catalina.tres::Resource/vehicle::8746769400038282026::1776962449::0::1::::<><><>0<>0<><>::uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd<>uid://dwyhlf88m47ii::::res://scenes/vehicle_scenes/catalina/catalina2.tscn
 cessna.tres::Resource/vehicle::22818557621172957::1774824799::0::1::::<><><>0<>0<><>::uid://ci3m4i8in8ba8::::res://scenes/vehicle_scenes/cessna/cessna172.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
 f14.tres::Resource/vehicle::4137768911558887189::1774825104::0::1::::<><><>0<>0<><>::uid://cbno0ejht5pgn::::res://scenes/vehicle_scenes/f14/f14.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
-catalina.tres::Resource/vehicle::8746769400038282026::1776962449::0::1::::<><><>0<>0<><>::uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd<>uid://dwyhlf88m47ii::::res://scenes/vehicle_scenes/catalina/catalina2.tscn
 helicopter.tres::Resource/vehicle::4267112190847538591::1776962449::0::1::::<><><>0<>0<><>::uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd<>uid://ck8t2q48erc0o::::res://scenes/vehicle_scenes/helicopter/blackhawk.tscn
 su57.tres::Resource/vehicle::8853720461749046993::1776962449::0::1::::<><><>0<>0<><>::uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd<>uid://c655b8i5croy5::::res://scenes/vehicle_scenes/su57/su572.tscn
 transport.tres::Resource/vehicle::1061965967573202193::1776961760::0::1::::<><><>0<>0<><>::uid://bcubakflg2b0b::::res://scenes/vehicle_scenes/transport/transport.tscn<>uid://efdvg5fmieny::::res://general_resources/vehicle_resource.gd
-::res://scenes/vehicle_scenes/::1776962298
-::res://scenes/vehicle_scenes/ball/::0
-ball2.tscn::PackedScene::6079419496390481834::1776962874::0::1::::<><><>0<>0<><>::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://7scpeqlmo40t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/drag_influencer/aero_drag_influencer.gd<>uid://bm03tdt5so3wj::::res://addons/godot_aerodynamic_physics/demo/misc_demo_assets/camera without rotation.tscn
+::res://scenes/vehicle_scenes/::1776962883
+::res://scenes/vehicle_scenes/ball/::1777037520
+ball2.tscn::PackedScene::6079419496390481834::1777037520::0::1::::<><><>0<>0<><>::uid://3iji867c81k5::::res://addons/godot_aerodynamic_physics/core/aero_body_3d.gd<>uid://7scpeqlmo40t::::res://addons/godot_aerodynamic_physics/core/aero_influencer_3d/drag_influencer/aero_drag_influencer.gd<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
 ::res://scenes/vehicle_scenes/buggy/::1775758567
 buggy.tscn::PackedScene::2321244538729330533::1775758567::0::1::::<><><>0<>0<><>::uid://dsohhifurdtup::::res://scenes/vehicle_scenes/buggy/scripts/buggy.gd<>uid://byofqm11u6oy2::::res://scenes/map_scenes/main_map/textures/SpeedometerBackdrop.png<>uid://dqjutaewotmxo::::res://scenes/map_scenes/main_map/textures/SpeedometerForeground.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://dfijoc8m112ci::::res://scenes/map_scenes/main_map/textures/CompassNOCOLOR.png<>uid://365psumshjib::::res://scenes/map_scenes/main_map/scripts/compass_texture.gd<>uid://bs5lq7wp8c2qo::::res://scenes/map_scenes/main_map/textures/BarMeterBar.png<>uid://dwx87u72cd5ko::::res://scenes/map_scenes/main_map/scripts/altitude_meter_background.gd<>uid://dtngecne5hauo::::res://scenes/map_scenes/main_map/textures/BarMeterForeground.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
 ::res://scenes/vehicle_scenes/buggy/scripts/::1774445823

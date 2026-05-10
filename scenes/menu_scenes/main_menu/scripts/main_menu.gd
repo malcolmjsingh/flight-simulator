@@ -19,6 +19,7 @@ func _ready() -> void:
 	collision_box_rect = collision_box.get_rect()
 	to_diagram_rect = to_diagram_collision_box.get_global_rect()
 	behind_box.modulate = "ffffff00"
+	ui_animaiton.speed_scale = 3.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,11 +33,13 @@ func _process(delta: float) -> void:
 	elif to_diagram_rect.has_point(mouse_position):
 		if current_gui_state == GUIState.None:
 			current_gui_state = GUIState.ButtonHover
-			#ui_animaiton.play("ui_transition_fwd")
+			ui_animaiton.play("ui_transition_fwd")
+			print("ui transition fwd passted")
 	else:
 		if current_gui_state != GUIState.None:
 			current_gui_state = GUIState.None
-			#ui_animaiton.play("ui_transition_bwd")
+			ui_animaiton.play("ui_transition_bwd")
+			print("ui transition bwd passted")
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/map_scenes/main_map/main_map.tscn")
