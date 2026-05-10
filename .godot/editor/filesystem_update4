@@ -5,9 +5,14 @@ res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/car.tres
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/catalina.tres
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
 res://scenes/vehicle_scenes/cessna/cessna_aero_control_config.tres
+<<<<<<< Updated upstream
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/cessna.tres
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/f14.tres
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/su57.tres
 res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/transport.tres
 res://scenes/vehicle_scenes/f14/f14.tscn
 res://scenes/vehicle_scenes/su57/su572.tscn
+=======
+res://scenes/menu_scenes/pause_menu/pause_menu.tscn
+res://scenes/menu_scenes/diagram_1/hangar.tscn
+>>>>>>> Stashed changes

@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cs75jey72v5i8"]
+[gd_scene format=3 uid="uid://cs75jey72v5i8"]
 
-[ext_resource type="PackedScene" uid="uid://386o4av37trj" path="res://scenes/menu_scenes/diagram_1/uploads_files_4309630_NATO_Shelter_V1.glb" id="1_2d16u"]
 [ext_resource type="PackedScene" uid="uid://b3rhpxq4qg6mc" path="res://scenes/menu_scenes/diagram_1/airplane.tscn" id="2_fpkqt"]
 [ext_resource type="Script" uid="uid://dxy2iheygt377" path="res://scenes/menu_scenes/diagram_1/freecam.gd" id="3_fqqng"]
 [ext_resource type="PackedScene" uid="uid://ccncbyed8to31" path="res://scenes/menu_scenes/diagram_1/White_board/White_board.fbx" id="4_34qk5"]
 [ext_resource type="Script" uid="uid://bmtdvbolc1oqp" path="res://scenes/menu_scenes/diagram_1/text.gd" id="5_afel3"]
+[ext_resource type="PackedScene" uid="uid://77ja5vjk8ro3" path="res://scenes/menu_scenes/pause_menu/pause_menu.tscn" id="5_vai23"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fpkqt"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,38 +22,40 @@ glow_enabled = true
 [sub_resource type="ViewportTexture" id="ViewportTexture_afel3"]
 viewport_path = NodePath("White_board/Sprite3D/SubViewport")
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=1902073391]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=340790023]
 environment = SubResource("Environment_34qk5")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=618253440]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="uploads_files_4309630_NATO_Shelter_V1" parent="." instance=ExtResource("1_2d16u")]
+[node name="uploads_files_4309630_NATO_Shelter_V1" parent="." unique_id=105047703]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
-[node name="uploads_files_3026156_737+southwest" parent="." instance=ExtResource("2_fpkqt")]
+[node name="uploads_files_3026156_737+southwest" parent="." unique_id=1008237278 instance=ExtResource("2_fpkqt")]
 transform = Transform3D(-1.3113413e-10, 0, 0.003, 0, 0.003, 0, -0.003, 0, -1.3113413e-10, 15.2036295, 0.070363864, -0.13646504)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=559648959]
 transform = Transform3D(0.016664334, -0.017288318, 0.062192105, 0.004474547, 0.06438602, 0.016699234, -0.06439505, -1.8317363e-09, 0.01725461, 9.162758, 4.443576, -0.15596516)
 script = ExtResource("3_fqqng")
 
-[node name="White_board" parent="." instance=ExtResource("4_34qk5")]
+[node name="White_board" parent="." unique_id=2134177233 instance=ExtResource("4_34qk5")]
 transform = Transform3D(-3.059797e-07, 0, 7, 0, 7, 0, -7, 0, -3.059797e-07, -16.204903, 0.50694543, 0.10203164)
 
-[node name="Sprite3D" type="Sprite3D" parent="White_board"]
+[node name="Sprite3D" type="Sprite3D" parent="White_board" unique_id=1379563780]
 transform = Transform3D(0.1754386, 0, -4.440892e-15, 0, 0.17543861, 0, 4.440892e-15, 0, 0.1754386, -0.012917258, 0.33159313, -0.007178068)
 texture = SubResource("ViewportTexture_afel3")
 
-[node name="SubViewport" type="SubViewport" parent="White_board/Sprite3D"]
+[node name="SubViewport" type="SubViewport" parent="White_board/Sprite3D" unique_id=294025342]
 transparent_bg = true
 size = Vector2i(700, 325)
 script = ExtResource("5_afel3")
 
-[node name="Label" type="Label" parent="White_board/Sprite3D/SubViewport"]
+[node name="Label" type="Label" parent="White_board/Sprite3D/SubViewport" unique_id=1713539116]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="PauseMenuNode" parent="." unique_id=1618830103 instance=ExtResource("5_vai23")]
