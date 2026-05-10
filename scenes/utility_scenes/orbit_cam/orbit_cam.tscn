@@ -51,7 +51,7 @@ script = ExtResource("1_660a4")
 
 [node name="OrbitCam" type="Node3D" parent="." unique_id=1048473477]
 script = ExtResource("1_sgmqw")
-farZoomClamp = 25.0
+farZoomClamp = 50.0
 
 [node name="SpringArm3D" type="SpringArm3D" parent="OrbitCam" unique_id=295928704]
 spring_length = 4.0

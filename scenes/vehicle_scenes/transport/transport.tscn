@@ -570,6 +570,8 @@ size = Vector3(24.47, 0.675, 5.745)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dj515"]
 size = Vector3(6.22, 0.675, 5.745)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ri61h"]
+
 [node name="Transport Plane" type="VehicleBody3D" unique_id=716185404]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.1650944, 0)
 collision_layer = 16386
@@ -829,3 +831,84 @@ shape = SubResource("BoxShape3D_dj515")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1628378940]
 transform = Transform3D(1, 0, 0, 0, 0.9410403, 0.3382945, 0, -0.3382945, 0.9410403, 0, 12.668079, 37.149918)
 script = ExtResource("15_mie2u")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="." unique_id=1470715493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.457054, 11.204208)
+shape = SubResource("SphereShape3D_ri61h")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="." unique_id=1891852674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.457054, -12.574688)
+shape = SubResource("SphereShape3D_ri61h")
+
+[node name="VehicleWheel3D6" type="VehicleWheel3D" parent="." unique_id=571604910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.3776393, -13.078318)
+wheel_radius = 0.7
+suspension_travel = 0.1
+suspension_stiffness = 50.0
+damping_compression = 2.0
+damping_relaxation = 2.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D6" unique_id=2111140142]
+transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
+radius = 0.147615
+height = 0.107076
+sides = 16
+material = SubResource("StandardMaterial3D_4tt3o")
+
+[node name="VehicleWheel3D7" type="VehicleWheel3D" parent="." unique_id=400714944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39, -5.3776393, 11.773)
+wheel_radius = 0.7
+suspension_travel = 0.15
+suspension_stiffness = 75.0
+damping_compression = 3.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D7" unique_id=1735674099]
+transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
+radius = 0.147615
+height = 0.107076
+sides = 16
+material = SubResource("StandardMaterial3D_4tt3o")
+
+[node name="VehicleWheel3D8" type="VehicleWheel3D" parent="." unique_id=1431531732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.390442, -5.377667, 11.772986)
+wheel_radius = 0.7
+suspension_travel = 0.15
+suspension_stiffness = 75.0
+damping_compression = 3.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D8" unique_id=1162547768]
+transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
+radius = 0.147615
+height = 0.107076
+sides = 16
+material = SubResource("StandardMaterial3D_4tt3o")
+
+[node name="VehicleWheel3D9" type="VehicleWheel3D" parent="." unique_id=1933320767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.830801, -5.3776393, -13.078318)
+wheel_radius = 0.7
+suspension_travel = 0.1
+suspension_stiffness = 50.0
+damping_compression = 2.0
+damping_relaxation = 2.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D9" unique_id=604205254]
+transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
+radius = 0.147615
+height = 0.107076
+sides = 16
+material = SubResource("StandardMaterial3D_4tt3o")
+
+[node name="VehicleWheel3D10" type="VehicleWheel3D" parent="." unique_id=1348363649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831, -5.3776393, -13.078)
+wheel_radius = 0.7
+suspension_travel = 0.1
+suspension_stiffness = 50.0
+damping_compression = 2.0
+damping_relaxation = 2.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D10" unique_id=1824612820]
+transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
+radius = 0.147615
+height = 0.107076
+sides = 16
+material = SubResource("StandardMaterial3D_4tt3o")

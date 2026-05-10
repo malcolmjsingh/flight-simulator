@@ -11,6 +11,7 @@ extends Node3D
 @export var closeZoomClamp: float = 1.0
 @export var farZoomClamp: float = 10.0
 
+# Added an export so you can easily tweak the fixed camera position in the inspector!
 @export var fixed_cam_position_offset: Vector3 = Vector3(0, 1.5, 0)
 
 @onready var camera_update_label: Label = $"../Control/CameraUpdateControl/CameraUpdateLabel"
@@ -48,15 +49,7 @@ func _input(event):
 func _process(_delta: float) -> void:
 	camera_control_process_utlity()
 	camera_update_handler()
-	assignVariablesToGlobalVersionOfVariable()
-
-func assignVariablesToGlobalVersionOfVariable():
-	sensitivity = GlobalSetting.mouseSensitivity
-	topClamp = GlobalSetting.cameraTopClamp
-	bottomClamp = GlobalSetting.cameraBottomClamp
-	closeZoomClamp = GlobalSetting.cameraCloseZoomClamp
-	farZoomClamp = GlobalSetting. cameraFarZoomClamp
-	fixed_cam_position_offset = GlobalSetting.cameraFixedPositionOffset
+	
 
 func camera_control_process_utlity():
 	mouse_pos = get_viewport().get_mouse_position()
@@ -97,7 +90,6 @@ func camera_control_process_utlity():
 		camera_update_control.position = mouse_pos
 		animation_player.play("show_and_fade")
 		
-
 func camera_input_handler(event):
 	# Handle Zoom for ALL camera states first
 	if event is InputEventMouseButton:
@@ -112,6 +104,7 @@ func camera_input_handler(event):
 		State.ORBIT:
 			if event is InputEventMouseMotion and (currentlyCameraToggled or currentlyCameraFocusHeld):
 				orbit_cam.rotate_y(-event.relative.x * sensitivity)
+				orbit_cam.rotation.z = 0
 				# Rotate vertically and clamp
 				spring_arm_3d.rotate_x(-event.relative.y * sensitivity)
 				spring_arm_3d.rotation.x = clamp(spring_arm_3d.rotation.x, bottomClamp, topClamp)

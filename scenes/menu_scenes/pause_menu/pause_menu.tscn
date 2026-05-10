@@ -8,7 +8,7 @@ colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0.39215687)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_5bgjm"]
 gradient = SubResource("Gradient_68e08")
 
-[node name="PauseMenuNode" type="Control" unique_id=1977460417]
+[node name="PauseMenuNode" type="Control" unique_id=1618830103]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5bgjm")
 
-[node name="Background Blur" type="TextureRect" parent="." unique_id=1405640311]
+[node name="Background Blur" type="TextureRect" parent="." unique_id=233058773]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_5bgjm")
 
-[node name="MenuAnchor" type="Control" parent="." unique_id=1168058494]
+[node name="MenuAnchor" type="Control" parent="." unique_id=481948473]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,7 +37,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MenuBox" type="VBoxContainer" parent="MenuAnchor" unique_id=610853763]
+[node name="MenuBox" type="VBoxContainer" parent="MenuAnchor" unique_id=1242861929]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -51,28 +51,29 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Continue" type="Button" parent="MenuAnchor/MenuBox" unique_id=1653076651]
+[node name="Continue" type="Button" parent="MenuAnchor/MenuBox" unique_id=1957759385]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Continue
 "
 
-[node name="Restart" type="Button" parent="MenuAnchor/MenuBox" unique_id=938944739]
+[node name="Restart" type="Button" parent="MenuAnchor/MenuBox" unique_id=251668541]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Restart Scene"
 
-[node name="Settings" type="Button" parent="MenuAnchor/MenuBox" unique_id=1313682101]
+[node name="Settings" type="Button" parent="MenuAnchor/MenuBox" unique_id=1418428521]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Settings"
+text = "Options
+"
 
-[node name="ExitToDesktop" type="Button" parent="MenuAnchor/MenuBox" unique_id=1957238065]
+[node name="ExitToDesktop" type="Button" parent="MenuAnchor/MenuBox" unique_id=825109505]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit to Desktop"
 
-[node name="ExitToMainMenu" type="Button" parent="MenuAnchor/MenuBox" unique_id=732437382]
+[node name="ExitToMainMenu" type="Button" parent="MenuAnchor/MenuBox" unique_id=1425287881]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit to Main Menu
