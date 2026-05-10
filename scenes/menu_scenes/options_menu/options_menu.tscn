@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://32118ukhfbms"]
+
+[ext_resource type="Script" uid="uid://bppln5gnt47s7" path="res://scenes/menu_scenes/options_menu/options_menu.gd" id="1_0knl3"]
+
+[node name="OptionsMenu" type="Control" unique_id=1526890102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0knl3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1906291416]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = -172.25
+offset_right = 386.0
+offset_bottom = 172.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1057551816]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1336250639]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_top = 12.25
+offset_right = 33.5
+offset_bottom = 35.25
+grow_horizontal = 2
+text = "Settings"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/Panel" unique_id=1488622724]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 46.25
+offset_right = 751.0
+offset_bottom = 315.25
+columns = 2
+
+[node name="MouseSensLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=814357798]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mouse Sensitivity (Current Value: XXX)"
+
+[node name="MouseSensSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer" unique_id=596459348]
+layout_mode = 2
+max_value = 0.1
+step = 0.001
+
+[node name="CTopClampLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=123268521]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Camera Top Clamp (Current Value: XXX)"
+
+[node name="CTopClampSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer" unique_id=1757879941]
+layout_mode = 2
+max_value = 1.5
+step = 0.001
+
+[node name="CBottomClampLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=1561118144]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Camera Bottom Clamp (Current Value: XXX)"
+
+[node name="CBottomClampSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer" unique_id=1837670972]
+layout_mode = 2
+min_value = -1.5
+max_value = 0.0
+step = 0.001
+
+[node name="CZoomClampCloseLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=546880230]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Camera Zoom Clamp Close (Current Value: XXX)"
+
+[node name="CZoomClampCloseSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer" unique_id=847080101]
+layout_mode = 2
+step = 0.1
+
+[node name="CZoomClampFarLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=1621552837]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Camera Zoom Clamp Far (Current Value: XXX)"
+
+[node name="CZoomClampFarSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer" unique_id=1816294547]
+layout_mode = 2
+max_value = 200.0
+step = 0.1
+
+[node name="CFixedOffsetLabel" type="Label" parent="VBoxContainer/Panel/GridContainer" unique_id=897435838]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fixed Cam Offset (Current Value: Vector3(X,Y,Z))"
+
+[node name="CFixedOffsetHBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/GridContainer" unique_id=469127681]
+layout_mode = 2
+
+[node name="CFixedOffsetXSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer/CFixedOffsetHBoxContainer" unique_id=82261769]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.1
+
+[node name="CFixedOffsetYSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer/CFixedOffsetHBoxContainer" unique_id=1839136637]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.1
+
+[node name="CFixedOffsetZSpinBox" type="SpinBox" parent="VBoxContainer/Panel/GridContainer/CFixedOffsetHBoxContainer" unique_id=1545578757]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.1
+
+[node name="ConfirmChangesButton" type="Button" parent="VBoxContainer/Panel" unique_id=1151874924]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 287.25
+offset_right = 744.0
+offset_bottom = 318.25
+text = "Confirm Changes"
+
+[node name="ReturnButton" type="Button" parent="VBoxContainer/Panel" unique_id=1436657860]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 287.25
+offset_right = 312.0
+offset_bottom = 318.25
+text = "Return"
+
+[connection signal="pressed" from="VBoxContainer/Panel/ConfirmChangesButton" to="." method="_on_confirm_changes_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Panel/ReturnButton" to="." method="_on_return_button_pressed"]
