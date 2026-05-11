@@ -7,7 +7,11 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	"""
+	When loaded, the water will create a 50 x 50 grid of water tiles automatically. This is to circiumvent the extremely laborious and boring task of manually placing 2500 water tiles at the cost of an unoticably longer start up time. 
 	
+	Args + Returns: None
+	"""
 	var yPos = position.y
 	var xPos = position.x
 	var zPos = position.z
@@ -17,12 +21,4 @@ func _ready() -> void:
 			var instance = water_mesh.duplicate()
 			instance.position = Vector3(xPos + x * water_size, yPos + water_level, zPos + z * water_size)
 			add_child(instance)
-		
 	
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	
-	pass
