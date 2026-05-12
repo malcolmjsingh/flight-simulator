@@ -56,12 +56,14 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_to_diagram_pressed() -> void:
+	"""
 	if not showDiagramButtons:
 		ui_animaiton.play("ui_transition_fwd")
 		showDiagramButtons = true
 	else:
 		ui_animaiton.play("ui_transition_bwd")
 		showDiagramButtons = false
+	"""
 	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_1/hangar.tscn")
 	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_test/diagram_test.tscn")
 

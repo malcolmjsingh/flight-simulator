@@ -23,6 +23,11 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 AeroUnits="*uid://5vah4ayrdxci"
 GlobalSetting="*uid://bkp3b5nsjhx47"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_aerodynamic_physics/plugin.cfg")

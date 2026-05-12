@@ -6,11 +6,11 @@ extends Node3D
 @onready var dragbox: Panel = $Control/SpawnerGUI/dragbox
 @onready var dragbox_global_rect: Rect2 = $Control/SpawnerGUI/dragbox.get_global_rect()
 @onready var spawnerGUI: Control = $Control/SpawnerGUI
-@onready var vehicle_select_v_box: VBoxContainer = $Control/SpawnerGUI/vehicleSelectPanel/ScrollContainer/vehicleSelectVBox
-@onready var info_display_panel: RichTextLabel = $Control/SpawnerGUI/Control/infoDisplayPanel
-@onready var spawn_button: Button = $Control/SpawnerGUI/Control/spawnButton
+@onready var vehicle_select_v_box: VBoxContainer = $Control/SpawnerGUI/dragbox/vehicleSelectPanel/ScrollContainer/vehicleSelectVBox
+@onready var info_display_panel: RichTextLabel = $Control/SpawnerGUI/dragbox/Control/infoDisplayPanel
+@onready var spawn_button: Button = $Control/SpawnerGUI/dragbox/Control/spawnButton
 @onready var check_button: CheckButton = $Control/SpawnerGUI/dragbox/CheckButton
-@onready var spawn_option_button: OptionButton = $Control/SpawnerGUI/SpawnOptionButton
+@onready var spawn_option_button: OptionButton = $Control/SpawnerGUI/dragbox/SpawnOptionButton
 @onready var active_vehicles_box: VBoxContainer = $Control/ActiveVehiclesBox/ScrollContainer/activeVehiclesBox
 @onready var active_vehicle_display_label: RichTextLabel = $Control/ActiveVehiclesSelectBox/ActiveVehicleDisplayLabel
 @onready var active_vehicles_select_box: Control = $Control/ActiveVehiclesSelectBox
@@ -89,6 +89,8 @@ func _ready() -> void:
 	
 	#Unselect and spawn options
 	spawn_option_button.select(-1)
+	
+	check_button.button_pressed = true
 
 func _process(_delta: float) -> void:
 	#This is functionality for making the spawner box draggable
@@ -125,8 +127,10 @@ func _input(event: InputEvent) -> void:
 				if event.is_pressed():
 					if dragbox_global_rect.has_point(mouse_position):
 						canGrab = true
-						spawnerGUI.position = Vector2(750, 400)
-						check_button.button_pressed = true
+						# We no longer need to hardcode position Vector2(750, 400).
+						# Triggering the button toggle to FALSE will run the PRESET_CENTER logic automatically!
+						check_button.button_pressed = false 
+						
 	if event is InputEventMouseMotion:
 		if currentlyGrabbing:
 			spawnerGUI.position = spawnerGUI.position + event.relative
@@ -204,14 +208,26 @@ func _on_spawn_button_pressed() -> void:
 	#spawn_button.release_focus()
 	
 func _on_check_button_toggled(toggled_on: bool) -> void:
+	# Get the exact size of the game window and the dragbox
+	var screen_size = get_viewport().get_visible_rect().size
+	var box_size = dragbox.size
+	
 	if toggled_on:
-		canGrab = true
-		spawnerGUI.position = Vector2(750, 400)
-	else:
+		# Toggled ON = Bottom Right (Cannot grab)
 		currentlyGrabbing = false
 		canGrab = false
-		spawnerGUI.position = Vector2(750, 645)
-	#check_button.release_focus()
+		
+		# Mathematically place it at the bottom right.
+		# (Optional: If you want a small margin so it doesn't touch the screen edge, 
+		# change it to: screen_size - box_size - Vector2(10, 10))
+		spawnerGUI.position = screen_size - box_size
+		
+	else:
+		# Untoggled OFF = Middle of screen (Can grab)
+		canGrab = true
+		
+		# Mathematically place it in the exact center of the screen
+		spawnerGUI.position = (screen_size - box_size) / 2.0
 
 func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:

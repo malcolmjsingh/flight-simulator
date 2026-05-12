@@ -1,10 +1,5 @@
-res://scenes/vehicle_scenes/cessna/cessna_aero_control_config.tres
-res://temporary/buggy.tscn
-res://scenes/menu_scenes/diagram_1/hangar.tscn
 res://scenes/menu_scenes/pause_menu/pause_menu.tscn
-res://scenes/menu_scenes/pause_menu/scripts/pause_menu.gd
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/vehicle_scenes/car/scripts/car.gd
-res://scenes/map_scenes/main_map/scripts/water.gd
-res://scenes/map_scenes/main_map/main_map.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/transport.tres
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
