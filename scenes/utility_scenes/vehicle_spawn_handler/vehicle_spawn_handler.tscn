@@ -397,8 +397,8 @@ text = "Target Camera"
 
 [connection signal="toggled" from="Control/SpawnerGUI/dragbox/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/SpawnerGUI/dragbox/Control/spawnButton" to="." method="_on_spawn_button_pressed"]
-[connection signal="pressed" from="Control/SpawnerGUI/dragbox/SpawnOptionButton" to="." method="_on_spawn_option_button_pressed"]
 [connection signal="pressed" from="Control/SpawnerGUI/dragbox/SpawnOptionButton" to="." method="_on_spawn_option_dropdown_pressed"]
+[connection signal="pressed" from="Control/SpawnerGUI/dragbox/SpawnOptionButton" to="." method="_on_spawn_option_button_pressed"]
 [connection signal="toggled" from="Control/ActiveVehiclesBox/ActiveVehicleCheckToggle" to="." method="_on_active_vehicle_check_button_toggled"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/DeleteVehicle" to="." method="_on_delete_vehicle_pressed"]
 [connection signal="pressed" from="Control/ActiveVehiclesSelectBox/TargetCamera" to="." method="_on_target_camera_pressed"]

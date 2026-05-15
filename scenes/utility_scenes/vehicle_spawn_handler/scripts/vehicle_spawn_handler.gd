@@ -82,7 +82,8 @@ func _ready() -> void:
 
 	
 	#Basically the same thing as the prior code but for spawn postiions.
-	#The path of the spawn positions is stored in a piece of metadata called "spawn_positions_path"
+	#The path of the spawn positions is stored in a piece of metadata called "spawn_positions_path" which
+	# is attached to the map.
 	#Each spawn position is a resource with a name and a vector 3 postition.
 	var spawn_positions_path_string = get_tree().current_scene.get_meta("spawn_positions_path")
 	collect_spawn_positions_from_directory(spawn_positions_path_string)
@@ -115,6 +116,8 @@ func _process(_delta: float) -> void:
 	update_compass()
 
 func _input(event: InputEvent) -> void:
+	#This code makes it so you can move the vehicle spawner box around
+	#kind of a useless feature
 	if event is InputEventMouseButton:
 		if event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
 			if canGrab == true:
@@ -127,8 +130,6 @@ func _input(event: InputEvent) -> void:
 				if event.is_pressed():
 					if dragbox_global_rect.has_point(mouse_position):
 						canGrab = true
-						# We no longer need to hardcode position Vector2(750, 400).
-						# Triggering the button toggle to FALSE will run the PRESET_CENTER logic automatically!
 						check_button.button_pressed = false 
 						
 	if event is InputEventMouseMotion:
@@ -140,6 +141,15 @@ func _input(event: InputEvent) -> void:
 # ----------------------------------------------------------------------------------------------------#
 
 func collect_spawn_positions_from_directory(path:String):
+	"""
+	This script loads spawn positions resources from a file directory / folder
+	and appends the resources it find to the spawn position array
+		*this spawn position array is used later alongside the buttons position in the dropdown
+		to get the vector 3 position of where the vehicle should be spawned
+	
+	Args:
+		path (String): The path to the spawn positions as a string
+	"""
 	var dir = DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
@@ -160,6 +170,21 @@ func collect_spawn_positions_from_directory(path:String):
 		push_error("Error: Directory not found")
 
 func process_vehicle_resources_in_folder(path:String):
+	"""
+	This script loads vehicle resources from a file directory / folder
+	and then creates vehicle spawner select buttons for each of the resources
+	it finds in the folder.
+	This function also
+	- Names the Button and sets the button's text to the button's name
+	- Attaches the realted vehicle resource as metadata to the button
+	- Connects the button to a signal
+	- Adds the button to the scene by making it a child of the vehicle spawner
+	v box container
+	
+	Args:
+		path (String): File path to the folder where the vehicle resources
+			are stored as a string
+	"""
 	var dir = DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
@@ -208,6 +233,9 @@ func _on_spawn_button_pressed() -> void:
 	#spawn_button.release_focus()
 	
 func _on_check_button_toggled(toggled_on: bool) -> void:
+	"""
+	pass
+	"""
 	# Get the exact size of the game window and the dragbox
 	var screen_size = get_viewport().get_visible_rect().size
 	var box_size = dragbox.size
@@ -239,10 +267,21 @@ func _on_active_vehicle_check_button_toggled(toggled_on: bool) -> void:
 	#active_vehicle_check_toggle.release_focus()
 
 func _on_new_vehicle_added() -> void:
+	"""
+	This function is attached to the "newVehicleAdded" signal
+	"""
 	create_active_vehicle_display_buttons_from_scene()
 
 func _on_delete_vehicle_pressed() -> void:
+	"""
+	This function is attached to the signal emitted when the "Delete" button is pressed.
+	
+	This function handles attempting to delete a vehicle from the scene. It also edits a bunch of metadata
+	related to the vehicle that was deleted.
+	"""
+	#hides the gui that shows informaiton about the selected vehicle
 	active_vehicles_select_box.visible = false
+	#checks if the selected vehicle actually exsists
 	if is_instance_valid(currentlySelectedActiveVehicleScene):
 		if currentlySelectedActiveVehicleScene == vehicleWithCurrentlyActiveCamera:
 			vehicleWithCurrentlyActiveCamera.set_meta("is_camera_active", false)
@@ -255,9 +294,22 @@ func _on_delete_vehicle_pressed() -> void:
 	#target_camera.release_focus()
 
 func _on_target_camera_pressed() -> void:
-	if currentlySelectedActiveVehicleScene:
+	"""
+	This function is attached to the signal emitted when the "Target Camera" button is pressed.
+	
+	This function handles attempting to retarget the camera onto a selected vehicle.
+		*as a side note, this code is kind of inefficient as i repeat A LOT of the same steps
+			but i'm really too lazy to optimise it
+	"""
+	#checks if you have selected an active vehicle with the active vehicle selection gui (top left)
+	if currentlySelectedActiveVehicleScene: 
+		#check if there is currently is a vehicle which has the camera focused on it.
 		if vehicleWithCurrentlyActiveCamera:
+			#checks if the vehicle you have selected already has the camera focusing on it
 			if currentlySelectedActiveVehicleScene != vehicleWithCurrentlyActiveCamera:
+				#searches for the child node of the vehicle that is a camera and makes that camera active
+				#alongside changing a bunch of metadata for the vehicle that previously had the camera
+				#and the vehicle that now has the camera
 				var foundCam = false
 				for child in currentlySelectedActiveVehicleScene.get_children():
 					if child.is_in_group("camera"):
@@ -280,6 +332,9 @@ func _on_target_camera_pressed() -> void:
 			else:
 				print("Note: Selected vehicle already has camera targeted")
 		else:
+			#this code lowkenguinely might just be the same as the above code but it doesn't attempt to
+			#set the "is_camera_active" metadata of the previous camera to false
+			#regardless, functions pretty much the same as the above code and im too lazy to refractor things
 			var foundCam = false
 			for child in currentlySelectedActiveVehicleScene.get_children():
 				if child.is_in_group("camera"):
@@ -304,12 +359,31 @@ func _on_target_camera_pressed() -> void:
 # ----------------------------------------------------------------------------------------------------#
 
 func create_active_vehicle_ui_string(vehicle_name: String, is_camera_active: bool, vehicle_position: Vector3) -> String:
+	"""
+	Takes in the data related to a vehicle and formats the data into a single string
+	Args:
+		vehicle_name (String)
+		is_camera_active (bool)
+		vehicle_position (String)
+	Returns:
+		(String)
+	"""
 	return "Name: %s \nCamera Target: %s \nPosition: \nX: %d Y: %d Z: %d" % [vehicle_name, str(is_camera_active), vehicle_position.x, vehicle_position.y, vehicle_position.z]
 
 func update_current_active_vehicle_ui():
+	"""
+	Just updates the ui that displays which of the active/instance vehicles you are currently viewing
+	- - - probably didn't need a function for this as its literally just 1 line
+	"""
 	active_vehicle_display_label.text = create_active_vehicle_ui_string(currentlySelectedActiveVehicleScene.name, currentlySelectedActiveVehicleScene.get_meta("is_camera_active"), currentlySelectedActiveVehicleScene.position)
 
 func create_active_vehicle_display_buttons_from_scene():
+	"""
+	Creates the buttons for active vehicles display (top left corner ui)
+	Does this by deleting all of the current buttons and then creating new buttons based on 
+	the children of the vehicle_spawn_handler_storage node 
+	(the children of the vehicle spawn handler node are the instanced/active vehicles)
+	"""
 	var active_vehicle_box_children = active_vehicles_box.get_children()
 	
 	#this is like not efficent
@@ -331,18 +405,29 @@ func create_active_vehicle_display_buttons_from_scene():
 			_on_active_vehicle_button_pressed(button)
 
 func spawnProcedure(scene:PackedScene):
-	if spawn_option_button.get_selected() == -1:
+	"""
+	This is the code for spawning in a vehicle with the vehicle spawner ui (ui in bottom right corner)
+	
+	Args:
+		scene (PackedScene): This is the scene file of the vehicle that we plan to spawn in
+	"""
+	
+	#This segment handles ensuring that there is a spawn location selected
+	if spawn_option_button.get_selected() == -1: #if no spawn location is selected
 		info_display_panel.text = "Please select a Location before attempting to spawn. (You can select a location using the dropdown.)"
-	elif spawn_option_button.get_selected() >= 0:
+	elif spawn_option_button.get_selected() >= 0: #if a spawn location is selected
+		#this segment handles actually creating the instance of the vehicle and setting up things realted to creating the vehicle
 		var sceneInstance = scene.instantiate()
 		vehicleThatWasJustAdded = sceneInstance
 		sceneInstance.set_meta("is_camera_active", false)
 		get_tree().current_scene.get_node("VehicleSpawnHandlerStorage").add_child(sceneInstance)
+		#gets the selected spawn position from the spawn position array and moves the vehicle to that position
 		var spawnOptionsArray = spawn_option_button.get_meta("spawn_position_resources_array")
 		var spawnOptionResource = spawnOptionsArray[spawn_option_button.get_selected()]
 		sceneInstance.position = spawnOptionResource.vec3Position
 		newVehicleAdded.emit()
 		
+		#this code tries to find the camera used by the vehicle in order to focus the camera on the vehicle
 		for child in sceneInstance.get_children():
 			if child.is_in_group("camera"):
 				sceneInstance.set_meta("is_camera_active", true)

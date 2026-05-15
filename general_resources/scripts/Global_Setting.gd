@@ -1,3 +1,8 @@
+"""
+*This file is an "Autoload" file
+These are variables that need to be stored globally due to serving as program settings
+"""
+
 extends Node
 
 var mouseSensitivity: float = 0.005
