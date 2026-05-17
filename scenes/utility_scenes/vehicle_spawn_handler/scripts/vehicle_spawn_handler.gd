@@ -451,6 +451,11 @@ func spawnProcedure(scene:PackedScene):
 # ----------------------------------------------------------------------------------------------------#
 
 func update_speedometer():
+	"""
+	This function updates the speedometer in the HUD to match the speed of the vehicle the camera is currently active for.
+	
+	Args + Returns: None
+	"""
 	if vehicleWithCurrentlyActiveCamera:
 		var velocity = vehicleWithCurrentlyActiveCamera.linear_velocity.length()
 		var multiplier = 3
@@ -458,6 +463,11 @@ func update_speedometer():
 		speedometer_progress_bar.value = int(velocity * multiplier)
 		
 func update_altimeter():
+	"""
+	This function updates the altimeter in the HUD to match the altitude of the vehicle the camera is currently active for.
+	
+	Args + Returns: None
+	"""
 	if vehicleWithCurrentlyActiveCamera:
 		var height = vehicleWithCurrentlyActiveCamera.position.y
 		var sea_level = 220
@@ -474,6 +484,11 @@ func update_altimeter():
 		altimeter_icon.position.y = clamp(percent_offset * (max_icon_pos - min_icon_pos) + min_icon_pos, -970.0, -220.0)
 
 func update_compass():
+	"""
+	This function updates the compass with both the vehicle's horizontal orientation and the camera's horizontal orientation relative to global north.
+	
+	Args + Returns: None
+	"""
 	if vehicleWithCurrentlyActiveCamera:
 		var vehicle_rotation = vehicleWithCurrentlyActiveCamera.rotation
 		var camera_rotation = get_viewport().get_camera_3d().global_rotation
