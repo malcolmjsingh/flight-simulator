@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778981158
+::res://::1779550634
 README.md::TextFile::-1::1778373304::0::1::::<><><>0<>0<><>::
 ::res://addons/::1775093269
 ::res://addons/godot_aerodynamic_physics/::1775093270
@@ -129,7 +129,7 @@ camera without rotation.tscn::PackedScene::3282030445391672565::1775093270::0::1
 flight_info_label.tscn::PackedScene::2603530742513754002::1775093270::0::1::::<><><>0<>0<><>::uid://bqlqnu6j5qden::::res://addons/godot_aerodynamic_physics/demo/misc_demo_assets/wind_indicator.gd
 mouse_control.gd::GDScript::7601725337506711170::1775093270::0::1::::<>Node<><>0<>0<><>::
 wind_indicator.gd::GDScript::3533146123206884961::1775093270::0::1::::<>Node3D<><>0<>0<><>::
-::res://addons/godot_aerodynamic_physics/icons/::1778373355
+::res://addons/godot_aerodynamic_physics/icons/::1778981162
 AeroBody3D.svg::CompressedTexture2D::67360158343215517::1775093270::1775093270::1::::<><><>0<>0<>6ba6890c00b3a8ce8ff3ea0fdbb421e3<>res://.godot/imported/AeroBody3D.svg-c8fbf4a6b3a6da6bd3847c46a2ed7b71.ctex::
 AeroInfluencer3D.svg::CompressedTexture2D::1718661997915938708::1775093270::1778981162::1::::<><><>0<>0<>6a527158395c4c789b2c22af7d423126<>res://.godot/imported/AeroInfluencer3D.svg-eb204b96a1b8ff91f317f42215eb67dc.ctex::
 AeroPropeller3D.svg::CompressedTexture2D::3593061504921146781::1775093270::1778981162::1::::<><><>0<>0<>2c79ec9ca1ca2625b094f596dc07facc<>res://.godot/imported/AeroPropeller3D.svg-975bf9b1b19013332a01e635cf92986e.ctex::
@@ -246,17 +246,16 @@ pause_menu.tscn::PackedScene::2312651146046843716::1778522126::0::1::::<><><>0<>
 ::res://scenes/menu_scenes/pause_menu/scripts/::1778520654
 pause_menu.gd::GDScript::5045726240492889365::1778520654::0::1::::<>Control<><>0<>0<><>::
 ::res://scenes/utility_scenes/::1775093270
-::res://scenes/utility_scenes/orbit_cam/::1778981119
-orbit_cam.tscn::PackedScene::1307298081011399796::1778981119::0::1::::<><><>0<>0<><>::uid://kar2yoylujvs::::res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd<>uid://ca8lw8667gkpl::::res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd<>uid://b8ais8jmk5i03::::res://scenes/utility_scenes/orbit_cam/scripts/camera_3d.gd
-::res://scenes/utility_scenes/orbit_cam/scripts/::1778981119
-camera_3d.gd::GDScript::4703172151714161758::1778981119::0::1::::<>Camera3D<><>0<>0<><>::
-camera_follow_node.gd::GDScript::702970124986398288::1778373304::0::1::::<>Node3D<><>0<>0<><>::
-orbit_cam.gd::GDScript::4841674790267513985::1778981119::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/utility_scenes/vehicle_spawn_handler/::1778981119
+::res://scenes/utility_scenes/orbit_cam/::1779550614
+orbit_cam.tscn::PackedScene::1307298081011399796::1779550614::0::1::::<><><>0<>0<><>::uid://kar2yoylujvs::::res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd<>uid://ca8lw8667gkpl::::res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
+::res://scenes/utility_scenes/orbit_cam/scripts/::1779550614
+camera_follow_node.gd::GDScript::702970124986398288::1778981632::0::1::::<>Node3D<><>0<>0<><>::
+orbit_cam.gd::GDScript::4841674790267513985::1779550614::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/utility_scenes/vehicle_spawn_handler/::1778982283
 gameplay_gui.tscn::PackedScene::9062508693774492370::1776310276::0::1::::<><><>0<>0<><>::uid://cfyjsqm5oe2kg::::res://scenes/menu_scenes/gameplay_ui/textures/Bottom GUI Part.png<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf<>uid://d1gm74jlox2aq::::res://scenes/menu_scenes/gameplay_ui/textures/Altimeter.png<>uid://53d6hdg6uxmu::::res://scenes/menu_scenes/gameplay_ui/textures/plane_icon.png
-vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1778981119::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf
-::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1778981119
-vehicle_spawn_handler.gd::GDScript::1011273327635510938::1778981119::0::1::::<>Node3D<><>0<>0<><>::
+vehicle_spawn_handler.tscn::PackedScene::3917866194181182787::1778982283::0::1::::<><><>0<>0<><>::uid://on4r2xu76vly::::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd<>uid://12hhfqg4c1oj::::res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf
+::res://scenes/utility_scenes/vehicle_spawn_handler/scripts/::1779550616
+vehicle_spawn_handler.gd::GDScript::1011273327635510938::1779550616::0::1::::<>Node3D<><>0<>0<><>::
 ::res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/::1778522166
 ball.tres::Resource/vehicle::5190589512519703754::1778439751::0::1::::<><><>0<>0<><>::uid://csu6feovn1nyg::::res://scenes/vehicle_scenes/ball/ball2.tscn<>uid://efdvg5fmieny::::res://general_resources/resources/vehicle_resource.gd
 car.tres::Resource/vehicle::716657220500239696::1778439751::0::1::::<><><>0<>0<><>::uid://nd5byntogp40::::res://scenes/vehicle_scenes/car/scripts/car.gd<>uid://efdvg5fmieny::::res://general_resources/resources/vehicle_resource.gd<>uid://b7k16hgx7odqm::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureColor.png<>uid://dom2y24s40tny::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-bodyTextureEmission.png<>uid://b4mgv2uyaqrs5::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel.png<>uid://b3uhwtwehc2u::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_3.png<>uid://bifq8nmdqox17::::res://scenes/vehicle_scenes/car/models/Airdrop_Airdrop-wheel_4.png<>uid://svjajx8mpn2s::::res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn

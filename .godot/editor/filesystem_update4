@@ -1,5 +1,5 @@
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd
-res://scenes/utility_scenes/orbit_cam/scripts/camera_3d.gd
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/vehicle_scenes/cessna/cessna172.tscn
+res://scenes/vehicle_scenes/cessna/cessna_aero_control_config.tres
+res://scenes/vehicle_scenes/transport/transport.tscn
+res://scenes/map_scenes/main_map/spawn_positions/ground_spawn.tres
