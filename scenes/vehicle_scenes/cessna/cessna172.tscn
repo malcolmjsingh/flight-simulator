@@ -303,6 +303,9 @@ metadata/_custom_type_script = "uid://cblxodmmwvpt6"
 albedo_color = Color(0.137255, 0.156863, 0.180392, 1)
 roughness = 0.8
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_bpstj"]
+radius = 0.335
+
 [node name="cessna172" unique_id=1576602439 instance=ExtResource("1_7rcro")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3002385, 0)
 collision_layer = 16386
@@ -519,3 +522,7 @@ buoyancy_mesh = ExtResource("15_op60t")
 metadata/_custom_type_script = "uid://blp6761y154ht"
 
 [node name="CameraFollow" parent="." index="20" unique_id=1570613120 instance=ExtResource("15_dvun1")]
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="." index="23" unique_id=992978504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8982935, -2.9662204)
+shape = SubResource("SphereShape3D_bpstj")

@@ -573,7 +573,6 @@ size = Vector3(6.22, 0.675, 5.745)
 [sub_resource type="SphereShape3D" id="SphereShape3D_ri61h"]
 
 [node name="Transport Plane" type="VehicleBody3D" unique_id=716185404]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.1650944, 0)
 collision_layer = 16386
 collision_mask = 3
 mass = 1111.0
@@ -591,7 +590,7 @@ control_config = ExtResource("5_8ur6i")
 metadata/_custom_type_script = "uid://cc5dwx5pqkaur"
 
 [node name="WingR1" type="Node3D" parent="." unique_id=915106949]
-transform = Transform3D(0.999858, -0.0168242, 0, 0.0168242, 0.999858, 0, 0, 0, 1, 1.50973, 0.675157, -1.85714)
+transform = Transform3D(0.999858, -0.0168242, 0, 0.0168242, 0.999858, 0, 0, 0, 1, 1.50973, 6.7677093, -1.85714)
 script = ExtResource("9_jwp4v")
 manual_config = SubResource("Resource_5oq5f")
 wing_config = SubResource("Resource_4u4b6")
@@ -622,14 +621,14 @@ actuation_config = SubResource("Resource_4mn0n")
 metadata/_custom_type_script = "uid://d1725od371u4a"
 
 [node name="HorizontalStab" type="Node3D" parent="." unique_id=249727866]
-transform = Transform3D(1, 0, 0, 0, 0.99889, 0.0471065, 0, -0.0471065, 0.99889, 0, 3.1511908, 22.11432)
+transform = Transform3D(1, 0, 0, 0, 0.99889, 0.0471065, 0, -0.0471065, 0.99889, 0, 9.243743, 22.11432)
 script = ExtResource("9_jwp4v")
 manual_config = SubResource("Resource_5oq5f")
 wing_config = SubResource("Resource_g185g")
 metadata/_custom_type_script = "uid://d1725od371u4a"
 
 [node name="Elevator2" type="Node3D" parent="." unique_id=1141451651]
-transform = Transform3D(1, 0, 0, 0, 0.99889, 0.0471065, 0, -0.0471065, 0.99889, 0, 0.23601997, 23.451681)
+transform = Transform3D(1, 0, 0, 0, 0.99889, 0.0471065, 0, -0.0471065, 0.99889, 0, 6.3285723, 23.451681)
 script = ExtResource("9_jwp4v")
 manual_config = SubResource("Resource_5oq5f")
 wing_config = SubResource("Resource_2trr8")
@@ -637,7 +636,7 @@ actuation_config = SubResource("Resource_qhb2b")
 metadata/_custom_type_script = "uid://d1725od371u4a"
 
 [node name="VerticalStab" type="Node3D" parent="." unique_id=1896014232]
-transform = Transform3D(3.70173e-17, 1, 3.94809e-17, -0.762205, 6.15827e-17, -0.647335, -0.647335, -1.38778e-17, 0.762205, 0, 4.35998, 22.113895)
+transform = Transform3D(3.70173e-17, 1, 3.94809e-17, -0.762205, 6.15827e-17, -0.647335, -0.647335, -1.38778e-17, 0.762205, 0, 10.452533, 22.113895)
 script = ExtResource("9_jwp4v")
 manual_config = SubResource("Resource_5oq5f")
 wing_config = SubResource("Resource_3wa4j")
@@ -652,7 +651,7 @@ actuation_config = SubResource("Resource_dufvg")
 metadata/_custom_type_script = "uid://d1725od371u4a"
 
 [node name="VehicleWheel3D" type="VehicleWheel3D" parent="." unique_id=2043915683]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.3776393, -13.078318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7149129, -13.078318)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
@@ -667,35 +666,21 @@ sides = 16
 material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D2" type="VehicleWheel3D" parent="." unique_id=1566656627]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39, -5.3776393, 11.773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39, 0.7149129, 11.773)
 wheel_radius = 0.7
 suspension_travel = 0.15
 suspension_stiffness = 75.0
 damping_compression = 3.0
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D2" unique_id=402079808]
-transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
-radius = 0.147615
-height = 0.107076
-sides = 16
-material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D3" type="VehicleWheel3D" parent="." unique_id=754382839]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.390442, -5.377667, 11.772986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.390442, 0.71488523, 11.772986)
 wheel_radius = 0.7
 suspension_travel = 0.15
 suspension_stiffness = 75.0
 damping_compression = 3.0
 
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D3" unique_id=2004175028]
-transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
-radius = 0.147615
-height = 0.107076
-sides = 16
-material = SubResource("StandardMaterial3D_4tt3o")
-
 [node name="VehicleWheel3D4" type="VehicleWheel3D" parent="." unique_id=487488923]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.830801, -5.3776393, -13.078318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.830801, 0.7149129, -13.078318)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
@@ -710,7 +695,7 @@ sides = 16
 material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D5" type="VehicleWheel3D" parent="." unique_id=1312682652]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831, -5.3776393, -13.078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831, 0.7149129, -13.078)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
@@ -725,7 +710,7 @@ sides = 16
 material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="AeroThruster3D" type="Node3D" parent="." unique_id=372658875]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.832152, -0.96180487, 8.08014)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.832152, 5.1307473, 8.08014)
 script = ExtResource("16_hysdi")
 throttle_control_config = SubResource("Resource_mr63w")
 max_thrust_force = 2000.0
@@ -734,7 +719,7 @@ show_thrust = true
 metadata/_custom_type_script = "uid://3kjm0rdymoth"
 
 [node name="AeroThruster3D2" type="Node3D" parent="." unique_id=918251069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.669451, -1.8381668, 8.08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.669451, 4.2543855, 8.08)
 script = ExtResource("16_hysdi")
 throttle_control_config = SubResource("Resource_mr63w")
 max_thrust_force = 2000.0
@@ -743,7 +728,7 @@ show_thrust = true
 metadata/_custom_type_script = "uid://3kjm0rdymoth"
 
 [node name="AeroThruster3D3" type="Node3D" parent="." unique_id=1439810940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.832, -0.962, 8.08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.832, 5.1305523, 8.08)
 script = ExtResource("16_hysdi")
 throttle_control_config = SubResource("Resource_mr63w")
 max_thrust_force = 2000.0
@@ -752,7 +737,7 @@ show_thrust = true
 metadata/_custom_type_script = "uid://3kjm0rdymoth"
 
 [node name="AeroThruster3D4" type="Node3D" parent="." unique_id=1617573666]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.669, -1.838, 8.08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.669, 4.254552, 8.08)
 script = ExtResource("16_hysdi")
 throttle_control_config = SubResource("Resource_mr63w")
 max_thrust_force = 2000.0
@@ -761,14 +746,16 @@ show_thrust = true
 metadata/_custom_type_script = "uid://3kjm0rdymoth"
 
 [node name="AeroBuoyancyMesh3D" type="Node3D" parent="." unique_id=102172922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.092552, 0)
 script = ExtResource("12_7onvw")
 buoyancy_mesh = ExtResource("13_my5tt")
 metadata/_custom_type_script = "uid://blp6761y154ht"
 
 [node name="CameraFollow" parent="." unique_id=102462410 instance=ExtResource("14_lua24")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 6.092552, 0)
 
 [node name="Transport Model" type="MeshInstance3D" parent="." unique_id=1684992467]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.009559246, -0.6521902, 2.0711708)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.009559246, 5.440362, 2.0711708)
 mesh = SubResource("ArrayMesh_mie2u")
 skeleton = NodePath("")
 
@@ -793,55 +780,55 @@ mesh = SubResource("ArrayMesh_f4wt3")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1616940707]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.33641052, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 5.7561417, 0)
 shape = SubResource("CapsuleShape3D_bm2lp")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1681982864]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.881612, -0.8857244, -1.1241032)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.881612, 5.2068276, -1.1241032)
 shape = SubResource("CylinderShape3D_mie2u")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1406131866]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 15.616021, -1.7781565, 2.445982)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 15.616021, 4.314396, 2.445982)
 shape = SubResource("CylinderShape3D_mie2u")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=2104858154]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -15.566723, -1.7449701, 2.4490166)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -15.566723, 4.347582, 2.4490166)
 shape = SubResource("CylinderShape3D_mie2u")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1018751746]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.8492756, -0.9140805, -1.2569098)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.8492756, 5.1784716, -1.2569098)
 shape = SubResource("CylinderShape3D_mie2u")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=1914579087]
-transform = Transform3D(0.8686466, -0.102042526, 0.4848096, 0.11667073, 0.9931707, 0, -0.48149866, 0.056563094, 0.8746197, -11.690749, 0.9630797, 1.6528668)
+transform = Transform3D(0.8686466, -0.102042526, 0.4848096, 0.11667073, 0.9931707, 0, -0.48149866, 0.056563094, 0.8746197, -11.690749, 7.0556316, 1.6528668)
 shape = SubResource("BoxShape3D_hysdi")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=2115613573]
-transform = Transform3D(0.8686968, 0.109481044, -0.48309395, -0.10969152, 0.9935735, 0.02792164, 0.48304617, 0.02873587, 0.87512326, 11.691, 0.963, 1.653)
+transform = Transform3D(0.8686968, 0.109481044, -0.48309395, -0.10969152, 0.9935735, 0.02792164, 0.48304617, 0.02873587, 0.87512326, 11.691, 7.055552, 1.653)
 shape = SubResource("BoxShape3D_hysdi")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="." unique_id=1661185201]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2523823, 22.124613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.344934, 22.124613)
 shape = SubResource("BoxShape3D_mr63w")
 
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="." unique_id=1587707631]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 5.9153967, 22.857422)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 12.007949, 22.857422)
 shape = SubResource("BoxShape3D_dj515")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1628378940]
-transform = Transform3D(1, 0, 0, 0, 0.9410403, 0.3382945, 0, -0.3382945, 0.9410403, 0, 12.668079, 37.149918)
+transform = Transform3D(1, 0, 0, 0, 0.9410403, 0.3382945, 0, -0.3382945, 0.9410403, 0, 18.760632, 37.149918)
 script = ExtResource("15_mie2u")
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="." unique_id=1470715493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.457054, 11.204208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.63549805, 11.204208)
 shape = SubResource("SphereShape3D_ri61h")
 
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="." unique_id=1891852674]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.457054, -12.574688)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.63549805, -12.574688)
 shape = SubResource("SphereShape3D_ri61h")
 
 [node name="VehicleWheel3D6" type="VehicleWheel3D" parent="." unique_id=571604910]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.3776393, -13.078318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7149129, -13.078318)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
@@ -856,35 +843,21 @@ sides = 16
 material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D7" type="VehicleWheel3D" parent="." unique_id=400714944]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39, -5.3776393, 11.773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39, 0.7149129, 11.773)
 wheel_radius = 0.7
 suspension_travel = 0.15
 suspension_stiffness = 75.0
 damping_compression = 3.0
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D7" unique_id=1735674099]
-transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
-radius = 0.147615
-height = 0.107076
-sides = 16
-material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D8" type="VehicleWheel3D" parent="." unique_id=1431531732]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.390442, -5.377667, 11.772986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.390442, 0.71488523, 11.772986)
 wheel_radius = 0.7
 suspension_travel = 0.15
 suspension_stiffness = 75.0
 damping_compression = 3.0
 
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="VehicleWheel3D8" unique_id=1162547768]
-transform = Transform3D(-4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 0, 0, 0)
-radius = 0.147615
-height = 0.107076
-sides = 16
-material = SubResource("StandardMaterial3D_4tt3o")
-
 [node name="VehicleWheel3D9" type="VehicleWheel3D" parent="." unique_id=1933320767]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.830801, -5.3776393, -13.078318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.830801, 0.7149129, -13.078318)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
@@ -899,7 +872,7 @@ sides = 16
 material = SubResource("StandardMaterial3D_4tt3o")
 
 [node name="VehicleWheel3D10" type="VehicleWheel3D" parent="." unique_id=1348363649]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831, -5.3776393, -13.078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831, 0.7149129, -13.078)
 wheel_radius = 0.7
 suspension_travel = 0.1
 suspension_stiffness = 50.0
