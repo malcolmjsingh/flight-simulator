@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://wfn2tnv62jdq" path="res://uploads_files_6586461_airport.fbx" id="1_o13ab"]
+
+[node name="uploads_files_6586461_airport" unique_id=1221521465 instance=ExtResource("1_o13ab")]

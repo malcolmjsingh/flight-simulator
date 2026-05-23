@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://dplp1c6nl212i" path="res://scenes/menu_scenes/a/uploads_files_2603325_bean_bag_color_grey.glb" id="1_bn7dt"]
+
+[node name="uploads_files_2603325_bean_bag_color_grey" unique_id=495889750 instance=ExtResource("1_bn7dt")]

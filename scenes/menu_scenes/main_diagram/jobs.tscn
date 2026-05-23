@@ -1,0 +1,395 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://cudwbkj3nexmf" path="res://scenes/menu_scenes/a/flightattendant.gd" id="1_bqefy"]
+[ext_resource type="Script" uid="uid://d3fobngnpqu40" path="res://scenes/menu_scenes/a/fi.gd" id="1_hodx6"]
+[ext_resource type="Script" uid="uid://bh42mtarb3k2p" path="res://scenes/menu_scenes/a/ame.gd" id="1_llfee"]
+[ext_resource type="Script" uid="uid://d0nn7elkfv107" path="res://scenes/menu_scenes/a/uav.gd" id="1_oa7b7"]
+[ext_resource type="Script" uid="uid://yd32r1y1tfyw" path="res://scenes/menu_scenes/a/fte.gd" id="2_gvboj"]
+[ext_resource type="Script" uid="uid://blj3bjmvdt2lm" path="res://scenes/menu_scenes/a/amo.gd" id="2_hv6jo"]
+[ext_resource type="Script" uid="uid://dmoptbjo1my0r" path="res://scenes/menu_scenes/a/atc.gd" id="2_o10ig"]
+[ext_resource type="Script" uid="uid://bkbh7fl5bo2h5" path="res://scenes/menu_scenes/a/avs.gd" id="2_q0qk8"]
+[ext_resource type="Script" uid="uid://brnq66foqr8lu" path="res://scenes/menu_scenes/a/technician.gd" id="2_w0ffe"]
+[ext_resource type="Script" uid="uid://blh7m60npe565" path="res://scenes/menu_scenes/a/ae.gd" id="2_w6pia"]
+[ext_resource type="Script" uid="uid://dhb818a0u02y8" path="res://scenes/menu_scenes/a/asi.gd" id="9_iqs2s"]
+[ext_resource type="Script" uid="uid://bivuwnmbbp6m6" path="res://scenes/menu_scenes/a/specialist.gd" id="9_irwbk"]
+[ext_resource type="Script" uid="uid://duvgdutlyg3l2" path="res://scenes/menu_scenes/a/cap.gd" id="11_2m3xk"]
+[ext_resource type="Script" uid="uid://gfpb7odnjar5" path="res://scenes/menu_scenes/a/propellerinfo.gd" id="14_hsrmu"]
+[ext_resource type="Script" uid="uid://b7j8epag8jydr" path="res://scenes/menu_scenes/a/jetinfo.gd" id="15_v53lj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cmodb"]
+size = Vector3(0.1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsrmu"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o10ig"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v53lj"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2m3xk"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0tfc"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w0ffe"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j11v6"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_irwbk"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syy73"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w6pia"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4bfu"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gvboj"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3loj5"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hv6jo"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6fq1"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_llfee"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abior"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q0qk8"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ethmy"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oa7b7"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqefy"]
+size = Vector3(0.1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bmqs"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_47hry"]
+points = PackedVector3Array(-0.05, -0.25, -1.5795, 0.05, -0.25, -1.5795, -0.05, -0.25, 1.5795002, -0.05, 0.25, -1.5795, 0.05, 0.25, -1.5795, 0.05, -0.25, 1.5795002, -0.05, 0.25, 1.5795002, 0.05, 0.25, 1.5795002)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uq31u"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hodx6"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3r4j"]
+albedo_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iqs2s"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2m3xk"]
+size = Vector3(0.1, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_47hry"]
+size = Vector3(0.1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_musr0"]
+albedo_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hsrmu"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f0tfc"]
+size = Vector3(0.1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0u3oo"]
+albedo_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j11v6"]
+points = PackedVector3Array(-0.05, -0.25, -0.5, 0.05, -0.25, -0.5, -0.05, -0.25, 0.5, -0.05, 0.25, -0.5, 0.05, 0.25, -0.5, 0.05, -0.25, 0.5, -0.05, 0.25, 0.5, 0.05, 0.25, 0.5)
+
+[node name="Node3D" type="Node3D" unique_id=886157635]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1475874907]
+transform = Transform3D(0.9999991, 0, 0, 0, 0.9999991, 0, 0, 0, 0.9999991, -81.478, 0.39, 19.437)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_hsrmu")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D" unique_id=1000389522]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Flight Instructor"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D" unique_id=1098831107]
+script = ExtResource("1_hodx6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D" unique_id=452709718]
+shape = SubResource("ConvexPolygonShape3D_o10ig")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1737986788]
+transform = Transform3D(0.9999991, 0, 0, 0, 0.9999991, 0, 0, 0, 0.9999991, -81.478, 0.39, 18.384)
+material_override = SubResource("StandardMaterial3D_v53lj")
+mesh = SubResource("BoxMesh_cmodb")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D2" unique_id=683180785]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Air Traffic 
+Controller"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D2" unique_id=976345093]
+script = ExtResource("2_o10ig")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Area3D" unique_id=692863764]
+shape = SubResource("ConvexPolygonShape3D_2m3xk")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1774744846]
+transform = Transform3D(0.9999991, 0, 0, 0, 0.9999991, 0, 0, 0, 0.9999991, -81.478, 0.913, 21.543)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_f0tfc")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D3" unique_id=1655786074]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Aircraft
+Maintenance 
+Engineer"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D3" unique_id=1705321098]
+script = ExtResource("1_llfee")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Area3D" unique_id=472484182]
+shape = SubResource("ConvexPolygonShape3D_w0ffe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1056985541]
+transform = Transform3D(0.99999905, 0, 0, 0, 0.99999905, 0, 0, 0, 0.99999905, -81.478, 0.913, 18.384)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_j11v6")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D4" unique_id=1232786692]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Aeronautical 
+Engineer"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D4" unique_id=259482043]
+script = ExtResource("2_w6pia")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/Area3D" unique_id=1738103867]
+shape = SubResource("ConvexPolygonShape3D_irwbk")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1830886502]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -81.478, 0.913, 19.437)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_syy73")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D5" unique_id=1387668570]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Flight
+Test
+Engineer"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D5" unique_id=1836832553]
+script = ExtResource("2_gvboj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/Area3D" unique_id=182275088]
+shape = SubResource("ConvexPolygonShape3D_w6pia")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=2060268510]
+transform = Transform3D(0.99999917, 0, 0, 0, 0.99999917, 0, 0, 0, 0.99999917, -81.478, 0.913, 20.49)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_p4bfu")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D6" unique_id=1447845270]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Avionics
+Technician"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D6" unique_id=1472973957]
+script = ExtResource("2_w0ffe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/Area3D" unique_id=1056091611]
+shape = SubResource("ConvexPolygonShape3D_gvboj")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1279281238]
+transform = Transform3D(0.9999991, 0, 0, 0, 0.9999991, 0, 0, 0, 0.9999991, -81.478, 1.436, 19.437)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_3loj5")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D7" unique_id=208174959]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "UAV 
+Operator"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D7" unique_id=1732709090]
+script = ExtResource("1_oa7b7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D7/Area3D" unique_id=1716361615]
+shape = SubResource("ConvexPolygonShape3D_hv6jo")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=1226463991]
+transform = Transform3D(0.99999905, 0, 0, 0, 0.99999905, 0, 0, 0, 0.99999905, -81.478, 1.436, 18.384)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_s6fq1")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D8" unique_id=1201735808]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Airline
+Management
+Operations"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D8" unique_id=1084935846]
+script = ExtResource("2_hv6jo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D8/Area3D" unique_id=908709035]
+shape = SubResource("ConvexPolygonShape3D_llfee")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=40545075]
+transform = Transform3D(0.99999905, 0, 0, 0, 0.99999905, 0, 0, 0, 0.99999905, -81.478, 1.436, 21.543)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_abior")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D9" unique_id=808633582]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Flight
+Attendant"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D9" unique_id=133579950]
+script = ExtResource("1_bqefy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D9/Area3D" unique_id=62735514]
+shape = SubResource("ConvexPolygonShape3D_q0qk8")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=1528943651]
+transform = Transform3D(0.99999917, 0, 0, 0, 0.99999917, 0, 0, 0, 0.99999917, -81.478, 1.436, 20.49)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_ethmy")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D10" unique_id=166496557]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Aviation
+Weather 
+Specialist"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D10" unique_id=37262076]
+script = ExtResource("2_q0qk8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D10/Area3D" unique_id=559592319]
+shape = SubResource("ConvexPolygonShape3D_oa7b7")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=486579289]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -81.48, 1.959, 20.49)
+mesh = SubResource("BoxMesh_bqefy")
+surface_material_override/0 = SubResource("StandardMaterial3D_8bmqs")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D11" unique_id=844254976]
+transform = Transform3D(-4.3711417e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711417e-08, 0.06, 0, 0)
+text = "Commercial 
+Airline 
+Pilot"
+font_size = 20
+autowrap_trim_flags = 0
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D11" unique_id=297546116]
+script = ExtResource("11_2m3xk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D11/Area3D" unique_id=705530141]
+shape = SubResource("ConvexPolygonShape3D_47hry")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=960519192]
+transform = Transform3D(0.9999992, 0, 0, 0, 0.9999992, 0, 0, 0, 0.9999992, -81.478, 0.39, 20.49)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_uq31u")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D12" unique_id=1075282358]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Aviation Safety 
+Inspector / Quality 
+Assurance Officer
+"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D12" unique_id=1516522142]
+script = ExtResource("9_iqs2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D12/Area3D" unique_id=1035685124]
+shape = SubResource("ConvexPolygonShape3D_hodx6")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="." unique_id=864777257]
+transform = Transform3D(0.9999991, 0, 0, 0, 0.9999991, 0, 0, 0, 0.9999991, -81.478, 0.39, 21.543)
+mesh = SubResource("BoxMesh_cmodb")
+surface_material_override/0 = SubResource("StandardMaterial3D_v3r4j")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D13" unique_id=1743518961]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Simulator
+Specialist"
+font_size = 20
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D13" unique_id=1708006483]
+script = ExtResource("9_irwbk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D13/Area3D" unique_id=1409978116]
+shape = SubResource("ConvexPolygonShape3D_iqs2s")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="." unique_id=1532580092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.478, 1.959, 21.543)
+mesh = SubResource("BoxMesh_2m3xk")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D14" unique_id=1653941292]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Click the 
+buttons to 
+Explore!
+"
+font_size = 20
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="." unique_id=448193216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.478, 1.959, 19.437)
+mesh = SubResource("BoxMesh_47hry")
+surface_material_override/0 = SubResource("StandardMaterial3D_musr0")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D15" unique_id=299379538]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Propeller
+Planes"
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D15" unique_id=887418780]
+script = ExtResource("14_hsrmu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D15/Area3D" unique_id=1532244260]
+shape = SubResource("ConvexPolygonShape3D_hsrmu")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="." unique_id=421536827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.478, 1.959, 18.384)
+mesh = SubResource("BoxMesh_f0tfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_0u3oo")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D16" unique_id=1743290022]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0, 0)
+text = "Jet Planes"
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D16" unique_id=1828251223]
+script = ExtResource("15_v53lj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D16/Area3D" unique_id=137155131]
+shape = SubResource("ConvexPolygonShape3D_j11v6")

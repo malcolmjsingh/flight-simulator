@@ -91,6 +91,8 @@ func _on_to_diagram_pressed() -> void:
 	"""
 	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_1/hangar.tscn")
 	#get_tree().change_scene_to_file("res://scenes/menu_scenes/diagram_test/diagram_test.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu_scenes/main_diagram/hangar.tscn")
+	
 
 
 func _on_options_pressed() -> void:

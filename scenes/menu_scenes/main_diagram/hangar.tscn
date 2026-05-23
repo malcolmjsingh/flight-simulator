@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://c3r01t07rpbxv"]
+
+[ext_resource type="PackedScene" uid="uid://cisrnf2dib8hk" path="res://scenes/menu_scenes/main_diagram/uploads_files_4309630_NATO_Shelter_V1.glb" id="1_2d16u"]
+[ext_resource type="PackedScene" uid="uid://b3rhpxq4qg6mc" path="res://scenes/menu_scenes/diagram_1/airplane.tscn" id="2_fpkqt"]
+[ext_resource type="Script" uid="uid://wjo8vipmksiq" path="res://scenes/menu_scenes/main_diagram/freecam.gd" id="3_fqqng"]
+[ext_resource type="PackedScene" uid="uid://ccncbyed8to31" path="res://scenes/menu_scenes/diagram_1/White_board/White_board.fbx" id="4_34qk5"]
+[ext_resource type="PackedScene" uid="uid://cerlq45l2obco" path="res://scenes/menu_scenes/main_diagram/uploads_files_6586461_airport.fbx" id="6_g2g6c"]
+[ext_resource type="PackedScene" path="res://scenes/menu_scenes/main_diagram/cockpit.tscn" id="6_lmc8s"]
+[ext_resource type="PackedScene" path="res://scenes/menu_scenes/main_diagram/seat.tscn" id="8_p8fl2"]
+[ext_resource type="PackedScene" path="res://scenes/menu_scenes/main_diagram/jobs.tscn" id="8_v5iy8"]
+[ext_resource type="PackedScene" uid="uid://77ja5vjk8ro3" path="res://scenes/menu_scenes/pause_menu/pause_menu.tscn" id="9_2l61j"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fpkqt"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_fqqng"]
+sky_material = SubResource("ProceduralSkyMaterial_fpkqt")
+
+[sub_resource type="Environment" id="Environment_34qk5"]
+background_mode = 2
+sky = SubResource("Sky_fqqng")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_afel3"]
+viewport_path = NodePath("White_board/Sprite3D/SubViewport")
+
+[sub_resource type="GDScript" id="GDScript_lmc8s"]
+script/source = "extends SubViewport
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	# size = $Label.rect_size
+	pass
+"
+
+[sub_resource type="BoxMesh" id="BoxMesh_lmc8s"]
+size = Vector3(2, 0.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5iy8"]
+albedo_color = Color(0.2901961, 0.2901961, 0.2901961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p8fl2"]
+size = Vector3(2, 0.3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1itio"]
+albedo_color = Color(0.2901961, 0.2901961, 0.2901961, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1195074520]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1146906247]
+environment = SubResource("Environment_34qk5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1853404469]
+transform = Transform3D(-0.057735022, -0.028867515, 0.016666666, 0, 0.033333328, 0.057735026, -0.033333335, 0.049999997, -0.028867507, -69.511246, 0, 13.387246)
+shadow_enabled = true
+
+[node name="uploads_files_4309630_NATO_Shelter_V1" parent="." unique_id=768787011 instance=ExtResource("1_2d16u")]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, -69.511246, 0, 13.387246)
+
+[node name="uploads_files_3026156_737+southwest" parent="." unique_id=1095390713 instance=ExtResource("2_fpkqt")]
+transform = Transform3D(-1.3113412e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113412e-10, -88.72582, 0.07036382, 13.250783)
+
+[node name="White_board" parent="." unique_id=213778082 instance=ExtResource("4_34qk5")]
+transform = Transform3D(-3.059797e-07, 0, 6.999998, 0, 6.999998, 0, -6.999998, 0, -3.059797e-07, -85.716125, 0.5069453, 13.48928)
+
+[node name="Sprite3D" type="Sprite3D" parent="White_board" unique_id=1760432614]
+transform = Transform3D(0.1754386, 0, -4.440892e-15, 0, 0.17543861, 0, 4.440892e-15, 0, 0.1754386, -0.012917258, 0.33159313, -0.007178068)
+texture = SubResource("ViewportTexture_afel3")
+
+[node name="SubViewport" type="SubViewport" parent="White_board/Sprite3D" unique_id=473447573]
+transparent_bg = true
+size = Vector2i(700, 325)
+script = SubResource("GDScript_lmc8s")
+
+[node name="Label" type="Label" parent="White_board/Sprite3D/SubViewport" unique_id=741540671]
+theme_override_font_sizes/font_size = 14
+
+[node name="uploads_files_6586461_airport" parent="." unique_id=1221521465 instance=ExtResource("6_g2g6c")]
+
+[node name="B737-800 Cockpit Final Product for sale" parent="." unique_id=322819131 instance=ExtResource("6_lmc8s")]
+transform = Transform3D(-4.0999534e-08, 0.023655068, -0.9397015, 9.651392e-10, 0.9397015, 0.023655068, 0.94, 6.691872e-11, -4.101079e-08, -81.04357, -0.3080003, 19.378336)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="B737-800 Cockpit Final Product for sale" unique_id=1581439977]
+transform = Transform3D(0.99999994, -2.8380076e-15, 3.5527137e-15, 3.469447e-16, 1, -3.1059497e-18, -1.7763568e-14, -3.1057983e-18, 1, 0, 0.47563624, 0.5232239)
+mesh = SubResource("BoxMesh_lmc8s")
+surface_material_override/0 = SubResource("StandardMaterial3D_v5iy8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="B737-800 Cockpit Final Product for sale" unique_id=1188875469]
+transform = Transform3D(0.9999997, 6.3837824e-16, 1.7763568e-14, 6.591949e-16, 1, -3.1059486e-18, -1.7763568e-14, -3.1059497e-18, 1, 0, 0.3732779, -0.7337189)
+mesh = SubResource("BoxMesh_p8fl2")
+surface_material_override/0 = SubResource("StandardMaterial3D_1itio")
+
+[node name="Jobs" parent="." unique_id=886157635 instance=ExtResource("8_v5iy8")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.13442077, 0, -12.669999)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=940890556]
+script = ExtResource("3_fqqng")
+
+[node name="uploads_files_2603325_bean_bag_color_grey" parent="." unique_id=495889750 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207446, 0, 0.29999992, 0, -0.10207446, 0, -0.2821007, -79.9561, 0, 7.890675)
+
+[node name="uploads_files_2603325_bean_bag_color_grey2" parent="." unique_id=364739413 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207446, 0, 0.29999992, 0, -0.10207446, 0, -0.2821007, -79.9561, 0, 8.52112)
+
+[node name="uploads_files_2603325_bean_bag_color_grey3" parent="." unique_id=730199349 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207446, 0, 0.29999992, 0, -0.10207446, 0, -0.2821007, -79.9561, 0, 9.205989)
+
+[node name="uploads_files_2603325_bean_bag_color_grey4" parent="." unique_id=1469242621 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207446, 0, 0.29999992, 0, -0.10207446, 0, -0.2821007, -79.9561, 0, 9.866587)
+
+[node name="uploads_files_2603325_bean_bag_color_grey5" parent="." unique_id=1398314314 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207447, 0, 0.29999992, 0, -0.10207447, 0, -0.2821007, -79.9561, 0, 10.539104)
+
+[node name="uploads_files_2603325_bean_bag_color_grey6" parent="." unique_id=1534877972 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207445, 0, 0.29999992, 0, -0.10207445, 0, -0.2821007, -78.848305, 0, 7.8906746)
+
+[node name="uploads_files_2603325_bean_bag_color_grey7" parent="." unique_id=159347802 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207445, 0, 0.29999992, 0, -0.10207445, 0, -0.2821007, -78.848305, 0, 8.52112)
+
+[node name="uploads_files_2603325_bean_bag_color_grey8" parent="." unique_id=2017038769 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207445, 0, 0.29999992, 0, -0.10207445, 0, -0.2821007, -78.848305, 0, 9.205989)
+
+[node name="uploads_files_2603325_bean_bag_color_grey9" parent="." unique_id=469105143 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207445, 0, 0.29999992, 0, -0.10207445, 0, -0.2821007, -78.848305, 0, 9.866587)
+
+[node name="uploads_files_2603325_bean_bag_color_grey10" parent="." unique_id=957944806 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207446, 0, 0.29999992, 0, -0.10207446, 0, -0.2821007, -78.848305, 0, 10.539104)
+
+[node name="uploads_files_2603325_bean_bag_color_grey11" parent="." unique_id=1720949245 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.102074444, 0, 0.29999992, 0, -0.102074444, 0, -0.2821007, -77.59204, 0, 7.8906746)
+
+[node name="uploads_files_2603325_bean_bag_color_grey12" parent="." unique_id=167336957 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.102074444, 0, 0.29999992, 0, -0.102074444, 0, -0.2821007, -77.59204, 0, 8.52112)
+
+[node name="uploads_files_2603325_bean_bag_color_grey13" parent="." unique_id=1595378308 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.102074444, 0, 0.29999992, 0, -0.102074444, 0, -0.2821007, -77.59204, 0, 9.205989)
+
+[node name="uploads_files_2603325_bean_bag_color_grey14" parent="." unique_id=814092397 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.102074444, 0, 0.29999992, 0, -0.102074444, 0, -0.2821007, -77.59204, 0, 9.866586)
+
+[node name="uploads_files_2603325_bean_bag_color_grey15" parent="." unique_id=2018646254 instance=ExtResource("8_p8fl2")]
+transform = Transform3D(-0.2821007, 0, 0.10207445, 0, 0.29999992, 0, -0.10207445, 0, -0.2821007, -77.59204, 0, 10.539104)
+
+[node name="PauseMenuNode" parent="." unique_id=1618830103 instance=ExtResource("9_2l61j")]

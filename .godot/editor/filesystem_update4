@@ -1,5 +1,1 @@
-res://scenes/utility_scenes/orbit_cam/orbit_cam.tscn
-res://scenes/utility_scenes/orbit_cam/scripts/camera_follow_node.gd
-res://scenes/utility_scenes/orbit_cam/scripts/camera_3d.gd
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://scenes/menu_scenes/main_diagram/hangar.tscn
