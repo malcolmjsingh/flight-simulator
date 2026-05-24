@@ -59,6 +59,8 @@ func _ready() -> void:
 		print("failed to find parent")
 	
 	GlobalSignal.options_updated.connect(_on_options_updated)
+	#makes sure the settings are set to the global
+	_on_options_updated()
 
 func _input(event):
 	camera_input_handler(event)

@@ -169,22 +169,27 @@ vertical = true
 [node name="Button" type="Button" parent="Control/behindBox" unique_id=1560002370]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+text = "Also Diagrams"
 
 [node name="Button2" type="Button" parent="Control/behindBox" unique_id=255379916]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+text = "Another Diagrams Button"
 
 [node name="Button3" type="Button" parent="Control/behindBox" unique_id=2001814505]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+text = "Third/Fourth Diagrams Button"
 
 [node name="Button4" type="Button" parent="Control/behindBox" unique_id=1854192251]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+text = "Second Last Diagrams Button"
 
 [node name="Button5" type="Button" parent="Control/behindBox" unique_id=626298351]
 custom_minimum_size = Vector2(0, 115)
 layout_mode = 2
+text = "Last Diagrams Button"
 
 [node name="mainBox" type="BoxContainer" parent="Control" unique_id=1203001721]
 custom_minimum_size = Vector2(0, 100)

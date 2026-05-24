@@ -1,1 +1,6 @@
-res://scenes/menu_scenes/main_diagram/hangar.tscn
+res://scenes/menu_scenes/main_menu/main_menu.tscn
+res://scenes/menu_scenes/options_menu/options_menu.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/car.tres
+res://scenes/menu_scenes/options_menu/scripts/options_menu.gd
+res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
+res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd

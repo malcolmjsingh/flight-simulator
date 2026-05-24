@@ -29,7 +29,7 @@ func _ready() -> void:
 	c_top_clamp_spin_box.value = GlobalSetting.cameraTopClamp
 	c_bottom_clamp_spin_box.value = GlobalSetting.cameraBottomClamp
 	c_zoom_clamp_close_spin_box.value = GlobalSetting.cameraCloseZoomClamp
-	c_zoom_clamp_close_spin_box.value = GlobalSetting.cameraFarZoomClamp
+	c_zoom_clamp_far_spin_box.value = GlobalSetting.cameraFarZoomClamp
 	c_fixed_offset_x_spin_box.value = GlobalSetting.cameraFixedPositionOffset[0]
 	c_fixed_offset_y_spin_box.value = GlobalSetting.cameraFixedPositionOffset[1]
 	c_fixed_offset_z_spin_box.value = GlobalSetting.cameraFixedPositionOffset[2]
@@ -51,8 +51,8 @@ func _on_options_updated():
 	mouse_sens_label.text = "Mouse Sensitivity (Current Value: %.3f)" % GlobalSetting.mouseSensitivity
 	c_top_clamp_label.text = "Camera Top Clamp (Current Value: %.3f)" % GlobalSetting.cameraTopClamp
 	c_bottom_clamp_label.text = "Camera Bottom Clamp (Current Value: %.3f)" % GlobalSetting.cameraBottomClamp
-	c_zoom_clamp_close_label.text = "Camera Zoom Close (Current Value: %.1f)" % GlobalSetting.cameraCloseZoomClamp
-	c_zoom_clamp_far_label.text = "Camera Zoom Clamp Close (Current Value: %.1f)" % GlobalSetting.cameraFarZoomClamp
+	c_zoom_clamp_close_label.text = "Camera Zoom Clamp Close (Current Value: %.1f)" % GlobalSetting.cameraCloseZoomClamp
+	c_zoom_clamp_far_label.text = "Camera Zoom Clamp Far (Current Value: %.1f)" % GlobalSetting.cameraFarZoomClamp
 	c_fixed_offset_label.text = "Fixed Cam Offset (Current Value: Vector3(%.1f,%.1f,%.1f))" % [GlobalSetting.cameraFixedPositionOffset[0], GlobalSetting.cameraFixedPositionOffset[1], GlobalSetting.cameraFixedPositionOffset[2]] 
 
 func _on_confirm_changes_button_pressed() -> void:
@@ -67,7 +67,7 @@ func _on_confirm_changes_button_pressed() -> void:
 	GlobalSetting.cameraTopClamp = c_top_clamp_spin_box.value
 	GlobalSetting.cameraBottomClamp = c_bottom_clamp_spin_box.value
 	GlobalSetting.cameraCloseZoomClamp = c_zoom_clamp_close_spin_box.value
-	GlobalSetting.cameraFarZoomClamp = c_zoom_clamp_close_spin_box.value
+	GlobalSetting.cameraFarZoomClamp = c_zoom_clamp_far_spin_box.value
 	GlobalSetting.cameraFixedPositionOffset = Vector3(c_fixed_offset_x_spin_box.value, c_fixed_offset_y_spin_box.value, c_fixed_offset_z_spin_box.value)
 	
 	#emits the global options updated signal
