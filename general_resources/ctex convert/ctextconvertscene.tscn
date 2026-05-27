@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://s0bqkeg1w3qm"]
+
+[ext_resource type="Script" uid="uid://g0pkqu6ggmy6" path="res://general_resources/ctex convert/ctextopng.gd" id="1_qmrgc"]
+
+[node name="Ctextconvertscene" type="Node2D" unique_id=1017226055]
+script = ExtResource("1_qmrgc")

@@ -1,30 +1,20 @@
 [gd_scene format=3 uid="uid://bv23xiqq6lorb"]
 
 [ext_resource type="Script" uid="uid://on4r2xu76vly" path="res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd" id="1_7qj7w"]
+[ext_resource type="Texture2D" uid="uid://dguwnxgvljtev" path="res://scenes/utility_scenes/vehicle_spawn_handler/textures/bottomGuiPart.png" id="2_dgs8f"]
 [ext_resource type="FontFile" uid="uid://12hhfqg4c1oj" path="res://scenes/map_scenes/main_map/textures/Fonts/JetBrainsMonoNL-Bold.ttf" id="3_1haq7"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3aca"]
-load_path = "res://.godot/imported/Bottom GUI Part.png-f44c79856f696b3592a35ccf0f5e8c8d.ctex"
+[ext_resource type="Texture2D" uid="uid://bksf55agg64kl" path="res://scenes/utility_scenes/vehicle_spawn_handler/textures/Altimeter.png" id="4_0qc6i"]
+[ext_resource type="Texture2D" uid="uid://cevhlwlv4uecp" path="res://scenes/utility_scenes/vehicle_spawn_handler/textures/plane_icon.png" id="5_sdfc2"]
+[ext_resource type="Texture2D" uid="uid://dsd1h6v6cxerh" path="res://scenes/utility_scenes/vehicle_spawn_handler/textures/CompassBackground.png" id="6_jkwms"]
+[ext_resource type="Texture2D" uid="uid://u3dkkivyf43l" path="res://scenes/utility_scenes/vehicle_spawn_handler/textures/CompassCamera.png" id="7_vi4kw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nphxd"]
 font = ExtResource("3_1haq7")
 font_size = 58
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1haq7"]
-load_path = "res://.godot/imported/Altimeter.png-8d4236176386ba5606a1e5c948ec2a1c.ctex"
-
 [sub_resource type="LabelSettings" id="LabelSettings_2hkos"]
 font = ExtResource("3_1haq7")
 font_size = 48
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nphxd"]
-load_path = "res://.godot/imported/plane_icon.png-af07eba15464c40c9ea3a833bc1c5f92.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2hkos"]
-load_path = "res://.godot/imported/CompassBackground.png-fd1ae311e645a370b2de3925d8317470.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kc1yl"]
-load_path = "res://.godot/imported/CompassCamera.png-5e4d73bd5cb2dc081248b4ef7c3b7291.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3aca"]
 bg_color = Color(0.55561996, 0.55561996, 0.55561984, 1)
@@ -81,7 +71,7 @@ offset_top = -196.0
 offset_right = 362.5
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("CompressedTexture2D_h3aca")
+texture = ExtResource("2_dgs8f")
 
 [node name="SpeedLabel" type="Label" parent="Control/GameplayGUI/MainHUDPiece/Backdrop" unique_id=764583531]
 layout_mode = 1
@@ -130,7 +120,7 @@ anchor_bottom = 1.0
 offset_top = -1000.0
 offset_right = 200.0
 grow_vertical = 0
-texture = SubResource("CompressedTexture2D_1haq7")
+texture = ExtResource("4_0qc6i")
 
 [node name="AltimeterLabel" type="Label" parent="Control/GameplayGUI/Altimeter" unique_id=52217095]
 layout_mode = 0
@@ -148,7 +138,7 @@ offset_top = -226.66663
 offset_right = 552.0
 offset_bottom = 285.33337
 scale = Vector2(0.25, 0.25)
-texture = SubResource("CompressedTexture2D_nphxd")
+texture = ExtResource("5_sdfc2")
 
 [node name="Compass" type="Control" parent="Control/GameplayGUI" unique_id=1177276543]
 layout_mode = 1
@@ -166,7 +156,7 @@ offset_top = 83.0
 offset_right = -72.0
 offset_bottom = 123.0
 scale = Vector2(0.1, 0.1)
-texture = SubResource("CompressedTexture2D_2hkos")
+texture = ExtResource("6_jkwms")
 
 [node name="COControl" type="Control" parent="Control/GameplayGUI/Compass/CompassBackground" unique_id=2147136397]
 layout_mode = 1
@@ -191,7 +181,7 @@ offset_right = 500.0
 offset_bottom = 500.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_kc1yl")
+texture = ExtResource("7_vi4kw")
 
 [node name="POControl" type="Control" parent="Control/GameplayGUI/Compass/CompassBackground" unique_id=444973165]
 layout_mode = 1
@@ -216,7 +206,7 @@ offset_right = 256.0
 offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_nphxd")
+texture = ExtResource("5_sdfc2")
 
 [node name="SpawnerGUI" type="Control" parent="Control" unique_id=1154842143]
 layout_mode = 1

@@ -155,15 +155,19 @@ func collect_spawn_positions_from_directory(path:String):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if (not dir.current_is_dir()) and ((file_name.ends_with(".tres")) or (file_name.ends_with(".res"))):
-				var full_path = path + "/" + file_name
-				var resource = ResourceLoader.load(full_path)
+			if not dir.current_is_dir():
+				# Remove the .remap extension
+				var clean_file_name = file_name.trim_suffix(".remap")
 				
-				if resource is spawn_position:
-					var spawn_pos_array = spawn_option_button.get_meta("spawn_position_resources_array")
-					spawn_pos_array.append(resource)
-					spawn_option_button.add_item(resource.name)
+				if clean_file_name.ends_with(".tres") or clean_file_name.ends_with(".res"):
+					var full_path = path + "/" + clean_file_name
+					var resource = ResourceLoader.load(full_path)
 					
+					if resource is spawn_position: # Assuming class_name spawn_position
+						var spawn_pos_array = spawn_option_button.get_meta("spawn_position_resources_array")
+						spawn_pos_array.append(resource)
+						spawn_option_button.add_item(resource.name)
+						
 			file_name = dir.get_next()
 		dir.list_dir_end()
 	else:
@@ -190,18 +194,23 @@ func process_vehicle_resources_in_folder(path:String):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if (not dir.current_is_dir()) and ((file_name.ends_with(".tres")) or (file_name.ends_with(".res"))):
-				var full_path = path + "/" + file_name
-				var resource = ResourceLoader.load(full_path)
-				if resource is vehicle:
-					var button = Button.new()
-					button.text = resource.name
-					button.name = resource.name
-					button.set_meta("VehicleResource", resource)
-					button.add_to_group("vehicleButtons")
-					button.pressed.connect(_on_vehicle_button_pressed.bind(button))
-					vehicle_select_v_box.add_child(button)
+			if not dir.current_is_dir():
+				# Remove the .remap extension if it exists (only happens in exported builds)
+				var clean_file_name = file_name.trim_suffix(".remap")
+				
+				if clean_file_name.ends_with(".tres") or clean_file_name.ends_with(".res"):
+					var full_path = path + "/" + clean_file_name
+					var resource = ResourceLoader.load(full_path)
 					
+					if resource is vehicle: # Note: 'vehicle' assumes you have a class_name vehicle
+						var button = Button.new()
+						button.text = resource.name
+						button.name = resource.name
+						button.set_meta("VehicleResource", resource)
+						button.add_to_group("vehicleButtons")
+						button.pressed.connect(_on_vehicle_button_pressed.bind(button))
+						vehicle_select_v_box.add_child(button)
+						
 			file_name = dir.get_next()
 		dir.list_dir_end()
 	else:

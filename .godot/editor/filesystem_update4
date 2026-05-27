@@ -1,6 +1,16 @@
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/blackhawk/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/boat/hull.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/catalina/fueslage.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/catalina/float.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/cessna172/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/f14/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/floaty_ball/Buoyancy mesh ball.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/missile/fueslage_aero_mesh.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/sailboat/hull.res
+res://addons/godot_aerodynamic_physics/demo/aircraft_examples/tilt_rotor/fueslage_aero_mesh.res
 res://scenes/menu_scenes/main_menu/main_menu.tscn
-res://scenes/menu_scenes/options_menu/options_menu.tscn
-res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_resources/car.tres
-res://scenes/menu_scenes/options_menu/scripts/options_menu.gd
-res://scenes/menu_scenes/main_menu/scripts/main_menu.gd
-res://scenes/utility_scenes/orbit_cam/scripts/orbit_cam.gd
+res://scenes/utility_scenes/vehicle_spawn_handler/vehicle_spawn_handler.tscn
+res://scenes/utility_scenes/vehicle_spawn_handler/scripts/vehicle_spawn_handler.gd
+res://general_resources/scripts/ctextopng.gd
+res://general_resources/ctex convert/ctextopng.gd
+res://general_resources/ctex convert/ctextconvertscene.tscn
